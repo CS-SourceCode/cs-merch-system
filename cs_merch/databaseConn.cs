@@ -33,7 +33,7 @@ namespace cs_merch
 
         public dynamic GetQueryData()
         {
-            using (var databasecon = new MySqlConnection("Server=localhost;Database=cs_merchandise;Uid=root;Pwd=;"))
+            using (var databasecon = new MySqlConnection("Server=localhost;Database=cs_merchandise;Uid=root;Pwd=root;"))
             {
                 databasecon.Open();
                 _cmd.CommandText = _sql;

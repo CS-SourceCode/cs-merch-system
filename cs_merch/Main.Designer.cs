@@ -43,7 +43,7 @@
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.panel_merch_options = new System.Windows.Forms.Panel();
             this.sell_removeall = new System.Windows.Forms.Button();
-            this.sell_quantity = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+            this.item_quantity = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.sell_removeitem = new System.Windows.Forms.Button();
             this.sell_additem = new System.Windows.Forms.Button();
             this.panel_merch = new System.Windows.Forms.Panel();
@@ -59,8 +59,8 @@
             this.tableLayoutPanel7 = new System.Windows.Forms.TableLayoutPanel();
             this.label2 = new System.Windows.Forms.Label();
             this.tableLayoutPanel8 = new System.Windows.Forms.TableLayoutPanel();
-            this.customer_selectedid = new Bunifu.Framework.UI.BunifuMetroTextbox();
-            this.customer_selected = new Bunifu.Framework.UI.BunifuMetroTextbox();
+            this.selectedCustIDTxt = new Bunifu.Framework.UI.BunifuMetroTextbox();
+            this.selectedCustNameTxt = new Bunifu.Framework.UI.BunifuMetroTextbox();
             this.panel4 = new System.Windows.Forms.Panel();
             this.customer_list = new System.Windows.Forms.DataGridView();
             this.customer_search = new Bunifu.Framework.UI.BunifuMaterialTextbox();
@@ -80,7 +80,7 @@
             this.tableLayoutPanel11 = new System.Windows.Forms.TableLayoutPanel();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.order_total = new Bunifu.Framework.UI.BunifuMetroTextbox();
+            this.price_total = new Bunifu.Framework.UI.BunifuMetroTextbox();
             this.order_change = new Bunifu.Framework.UI.BunifuMetroTextbox();
             this.orders = new System.Windows.Forms.TabPage();
             this.merchandise = new System.Windows.Forms.TabPage();
@@ -291,7 +291,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel_merch_options.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panel_merch_options.Controls.Add(this.sell_removeall);
-            this.panel_merch_options.Controls.Add(this.sell_quantity);
+            this.panel_merch_options.Controls.Add(this.item_quantity);
             this.panel_merch_options.Controls.Add(this.sell_removeitem);
             this.panel_merch_options.Controls.Add(this.sell_additem);
             this.panel_merch_options.Location = new System.Drawing.Point(436, 3);
@@ -314,27 +314,28 @@
             this.sell_removeall.TabIndex = 23;
             this.sell_removeall.Text = "Remove All";
             this.sell_removeall.UseVisualStyleBackColor = false;
+            this.sell_removeall.Click += new System.EventHandler(this.sell_removeall_Click);
             // 
-            // sell_quantity
+            // item_quantity
             // 
-            this.sell_quantity.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.item_quantity.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.sell_quantity.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.sell_quantity.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sell_quantity.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.sell_quantity.HintForeColor = System.Drawing.Color.Empty;
-            this.sell_quantity.HintText = "Enter Quantity";
-            this.sell_quantity.isPassword = false;
-            this.sell_quantity.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.sell_quantity.LineIdleColor = System.Drawing.Color.Purple;
-            this.sell_quantity.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.sell_quantity.LineThickness = 3;
-            this.sell_quantity.Location = new System.Drawing.Point(5, 4);
-            this.sell_quantity.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
-            this.sell_quantity.Name = "sell_quantity";
-            this.sell_quantity.Size = new System.Drawing.Size(147, 45);
-            this.sell_quantity.TabIndex = 24;
-            this.sell_quantity.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.item_quantity.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.item_quantity.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.item_quantity.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.item_quantity.HintForeColor = System.Drawing.Color.Empty;
+            this.item_quantity.HintText = "Enter Quantity";
+            this.item_quantity.isPassword = false;
+            this.item_quantity.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.item_quantity.LineIdleColor = System.Drawing.Color.Purple;
+            this.item_quantity.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.item_quantity.LineThickness = 3;
+            this.item_quantity.Location = new System.Drawing.Point(5, 4);
+            this.item_quantity.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.item_quantity.Name = "item_quantity";
+            this.item_quantity.Size = new System.Drawing.Size(147, 45);
+            this.item_quantity.TabIndex = 24;
+            this.item_quantity.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // sell_removeitem
             // 
@@ -351,6 +352,7 @@
             this.sell_removeitem.TabIndex = 22;
             this.sell_removeitem.Text = "Remove";
             this.sell_removeitem.UseVisualStyleBackColor = false;
+            this.sell_removeitem.Click += new System.EventHandler(this.sell_removeitem_Click);
             // 
             // sell_additem
             // 
@@ -367,6 +369,7 @@
             this.sell_additem.TabIndex = 21;
             this.sell_additem.Text = "Add";
             this.sell_additem.UseVisualStyleBackColor = false;
+            this.sell_additem.Click += new System.EventHandler(this.sell_additem_Click);
             // 
             // panel_merch
             // 
@@ -422,7 +425,7 @@
             this.label1.ForeColor = System.Drawing.Color.Purple;
             this.label1.Location = new System.Drawing.Point(3, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(129, 25);
+            this.label1.Size = new System.Drawing.Size(124, 25);
             this.label1.TabIndex = 2;
             this.label1.Text = "Merchandise";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -470,6 +473,7 @@
             this.customer_new.TabIndex = 23;
             this.customer_new.Text = "New Customer";
             this.customer_new.UseVisualStyleBackColor = false;
+            this.customer_new.Click += new System.EventHandler(this.customer_new_Click);
             // 
             // customer_select
             // 
@@ -486,6 +490,7 @@
             this.customer_select.TabIndex = 22;
             this.customer_select.Text = "Select Customer";
             this.customer_select.UseVisualStyleBackColor = false;
+            this.customer_select.Click += new System.EventHandler(this.customer_select_Click);
             // 
             // panel_customer
             // 
@@ -535,7 +540,7 @@
             this.label2.ForeColor = System.Drawing.Color.Purple;
             this.label2.Location = new System.Drawing.Point(3, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(98, 22);
+            this.label2.Size = new System.Drawing.Size(96, 21);
             this.label2.TabIndex = 0;
             this.label2.Text = "Customer";
             this.label2.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -545,8 +550,8 @@
             this.tableLayoutPanel8.ColumnCount = 2;
             this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel8.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 353F));
-            this.tableLayoutPanel8.Controls.Add(this.customer_selectedid, 0, 0);
-            this.tableLayoutPanel8.Controls.Add(this.customer_selected, 1, 0);
+            this.tableLayoutPanel8.Controls.Add(this.selectedCustIDTxt, 0, 0);
+            this.tableLayoutPanel8.Controls.Add(this.selectedCustNameTxt, 1, 0);
             this.tableLayoutPanel8.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel8.Location = new System.Drawing.Point(3, 26);
             this.tableLayoutPanel8.Name = "tableLayoutPanel8";
@@ -555,45 +560,45 @@
             this.tableLayoutPanel8.Size = new System.Drawing.Size(415, 41);
             this.tableLayoutPanel8.TabIndex = 1;
             // 
-            // customer_selectedid
+            // selectedCustIDTxt
             // 
-            this.customer_selectedid.BorderColorFocused = System.Drawing.Color.Purple;
-            this.customer_selectedid.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(21)))), ((int)(((byte)(72)))));
-            this.customer_selectedid.BorderColorMouseHover = System.Drawing.Color.Purple;
-            this.customer_selectedid.BorderThickness = 3;
-            this.customer_selectedid.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.customer_selectedid.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.customer_selectedid.Enabled = false;
-            this.customer_selectedid.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.customer_selectedid.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.customer_selectedid.isPassword = false;
-            this.customer_selectedid.Location = new System.Drawing.Point(4, 4);
-            this.customer_selectedid.Margin = new System.Windows.Forms.Padding(4);
-            this.customer_selectedid.Name = "customer_selectedid";
-            this.customer_selectedid.Size = new System.Drawing.Size(54, 33);
-            this.customer_selectedid.TabIndex = 0;
-            this.customer_selectedid.Text = "bunifuMetroTextbox1";
-            this.customer_selectedid.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.selectedCustIDTxt.BorderColorFocused = System.Drawing.Color.Purple;
+            this.selectedCustIDTxt.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(21)))), ((int)(((byte)(72)))));
+            this.selectedCustIDTxt.BorderColorMouseHover = System.Drawing.Color.Purple;
+            this.selectedCustIDTxt.BorderThickness = 3;
+            this.selectedCustIDTxt.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.selectedCustIDTxt.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.selectedCustIDTxt.Enabled = false;
+            this.selectedCustIDTxt.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.selectedCustIDTxt.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.selectedCustIDTxt.isPassword = false;
+            this.selectedCustIDTxt.Location = new System.Drawing.Point(4, 4);
+            this.selectedCustIDTxt.Margin = new System.Windows.Forms.Padding(4);
+            this.selectedCustIDTxt.Name = "selectedCustIDTxt";
+            this.selectedCustIDTxt.Size = new System.Drawing.Size(54, 33);
+            this.selectedCustIDTxt.TabIndex = 0;
+            this.selectedCustIDTxt.Text = "bunifuMetroTextbox1";
+            this.selectedCustIDTxt.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
-            // customer_selected
+            // selectedCustNameTxt
             // 
-            this.customer_selected.BorderColorFocused = System.Drawing.Color.Purple;
-            this.customer_selected.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(21)))), ((int)(((byte)(72)))));
-            this.customer_selected.BorderColorMouseHover = System.Drawing.Color.Purple;
-            this.customer_selected.BorderThickness = 3;
-            this.customer_selected.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.customer_selected.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.customer_selected.Enabled = false;
-            this.customer_selected.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.customer_selected.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.customer_selected.isPassword = false;
-            this.customer_selected.Location = new System.Drawing.Point(66, 4);
-            this.customer_selected.Margin = new System.Windows.Forms.Padding(4);
-            this.customer_selected.Name = "customer_selected";
-            this.customer_selected.Size = new System.Drawing.Size(345, 33);
-            this.customer_selected.TabIndex = 1;
-            this.customer_selected.Text = "bunifuMetroTextbox2";
-            this.customer_selected.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.selectedCustNameTxt.BorderColorFocused = System.Drawing.Color.Purple;
+            this.selectedCustNameTxt.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(21)))), ((int)(((byte)(72)))));
+            this.selectedCustNameTxt.BorderColorMouseHover = System.Drawing.Color.Purple;
+            this.selectedCustNameTxt.BorderThickness = 3;
+            this.selectedCustNameTxt.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.selectedCustNameTxt.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.selectedCustNameTxt.Enabled = false;
+            this.selectedCustNameTxt.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.selectedCustNameTxt.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.selectedCustNameTxt.isPassword = false;
+            this.selectedCustNameTxt.Location = new System.Drawing.Point(66, 4);
+            this.selectedCustNameTxt.Margin = new System.Windows.Forms.Padding(4);
+            this.selectedCustNameTxt.Name = "selectedCustNameTxt";
+            this.selectedCustNameTxt.Size = new System.Drawing.Size(345, 33);
+            this.selectedCustNameTxt.TabIndex = 1;
+            this.selectedCustNameTxt.Text = "bunifuMetroTextbox2";
+            this.selectedCustNameTxt.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // panel4
             // 
@@ -693,7 +698,7 @@
             this.label3.ForeColor = System.Drawing.Color.Purple;
             this.label3.Location = new System.Drawing.Point(3, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(64, 24);
+            this.label3.Size = new System.Drawing.Size(60, 24);
             this.label3.TabIndex = 3;
             this.label3.Text = "Order";
             // 
@@ -820,7 +825,7 @@
             this.tableLayoutPanel11.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 66.35802F));
             this.tableLayoutPanel11.Controls.Add(this.label5, 0, 1);
             this.tableLayoutPanel11.Controls.Add(this.label4, 0, 0);
-            this.tableLayoutPanel11.Controls.Add(this.order_total, 1, 0);
+            this.tableLayoutPanel11.Controls.Add(this.price_total, 1, 0);
             this.tableLayoutPanel11.Controls.Add(this.order_change, 1, 1);
             this.tableLayoutPanel11.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel11.Location = new System.Drawing.Point(3, 421);
@@ -857,25 +862,25 @@
             this.label4.Text = "TOTAL";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // order_total
+            // price_total
             // 
-            this.order_total.BorderColorFocused = System.Drawing.Color.Purple;
-            this.order_total.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(21)))), ((int)(((byte)(72)))));
-            this.order_total.BorderColorMouseHover = System.Drawing.Color.Purple;
-            this.order_total.BorderThickness = 3;
-            this.order_total.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.order_total.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.order_total.Enabled = false;
-            this.order_total.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.order_total.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.order_total.isPassword = false;
-            this.order_total.Location = new System.Drawing.Point(113, 4);
-            this.order_total.Margin = new System.Windows.Forms.Padding(4);
-            this.order_total.Name = "order_total";
-            this.order_total.Size = new System.Drawing.Size(207, 51);
-            this.order_total.TabIndex = 6;
-            this.order_total.Text = "bunifuMetroTextbox1";
-            this.order_total.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.price_total.BorderColorFocused = System.Drawing.Color.Purple;
+            this.price_total.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(21)))), ((int)(((byte)(72)))));
+            this.price_total.BorderColorMouseHover = System.Drawing.Color.Purple;
+            this.price_total.BorderThickness = 3;
+            this.price_total.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.price_total.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.price_total.Enabled = false;
+            this.price_total.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.price_total.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.price_total.isPassword = false;
+            this.price_total.Location = new System.Drawing.Point(113, 4);
+            this.price_total.Margin = new System.Windows.Forms.Padding(4);
+            this.price_total.Name = "price_total";
+            this.price_total.Size = new System.Drawing.Size(207, 51);
+            this.price_total.TabIndex = 6;
+            this.price_total.Text = "bunifuMetroTextbox1";
+            this.price_total.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // order_change
             // 
@@ -1173,7 +1178,7 @@
         private System.Windows.Forms.Panel panel_customer_options;
         private System.Windows.Forms.Panel panel_customer;
         private System.Windows.Forms.Button sell_removeall;
-        private Bunifu.Framework.UI.BunifuMaterialTextbox sell_quantity;
+        private Bunifu.Framework.UI.BunifuMaterialTextbox item_quantity;
         private System.Windows.Forms.Button sell_removeitem;
         private System.Windows.Forms.Button sell_additem;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
@@ -1186,8 +1191,8 @@
         private Bunifu.Framework.UI.BunifuMaterialTextbox customer_search;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel8;
-        private Bunifu.Framework.UI.BunifuMetroTextbox customer_selectedid;
-        private Bunifu.Framework.UI.BunifuMetroTextbox customer_selected;
+        private Bunifu.Framework.UI.BunifuMetroTextbox selectedCustIDTxt;
+        private Bunifu.Framework.UI.BunifuMetroTextbox selectedCustNameTxt;
         private System.Windows.Forms.Button customer_new;
         private System.Windows.Forms.Button customer_select;
         private System.Windows.Forms.Panel panel5;
@@ -1206,7 +1211,7 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel11;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private Bunifu.Framework.UI.BunifuMetroTextbox order_total;
+        private Bunifu.Framework.UI.BunifuMetroTextbox price_total;
         private Bunifu.Framework.UI.BunifuMetroTextbox order_change;
         private Bunifu.Framework.UI.BunifuElipse dashboard_e;
         private Bunifu.Framework.UI.BunifuElipse sales_e;
