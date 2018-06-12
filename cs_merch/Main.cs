@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -280,7 +280,18 @@ namespace cs_merch
                                     .Where("o.order_id", selectedOrder)
                                     .Group("order_id")
                                     .GetQueryData();
-            decimal balance = customerDetails.Rows[0][7] - customerDetails.Rows[0][8];
+            try
+            {
+                orders_or.Text = customerDetails.Rows[0][0].ToString();
+                orders_orderdate = customerDetails.Rows[0][1].ToString();
+                orders_custname = customerDetails.Rows[0][2].ToString();
+                orders_custcluster = customerDetails.Rows[0][3].ToString();
+                orders_ordercontact = customerDetails.Rows[0][4].ToString();
+                ordes_orderstatus = customerDetails.Rows[0][5].ToString();
+                orders_paystatus = customerDetails.Rows[0][6].ToString();
+                orders_totaldue = customerDetails.Rows[0][7].ToString();
+                orders_amtpaid = customerDetails.Rows[0][8].ToString();
+                orders_balance = customerDetails.Rows[0][7] - customerDetails.Rows[0][8];
             /*
             orderCname.Text = customerDetails.Rows[0][0].ToString();
             orderCcontact.Text = customerDetails.Rows[0][1].ToString();
@@ -306,6 +317,11 @@ namespace cs_merch
                                            .NJoin("merchandise=m")
                                            .Where("ol.order_id", selectedOrder)
                                            .GetQueryData();
+            }
+            catch (Exception e)
+            {
+            }
+
         }
         private DataTable _connData;
 
