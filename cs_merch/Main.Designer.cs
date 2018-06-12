@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.exit_login = new System.Windows.Forms.Button();
+            this.exit_main = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.superpanel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -83,9 +83,29 @@
             this.price_total = new Bunifu.Framework.UI.BunifuMetroTextbox();
             this.order_change = new Bunifu.Framework.UI.BunifuMetroTextbox();
             this.orders = new System.Windows.Forms.TabPage();
+            this.tableLayoutPanel13 = new System.Windows.Forms.TableLayoutPanel();
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.tableLayoutPanel15 = new System.Windows.Forms.TableLayoutPanel();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.panel10 = new System.Windows.Forms.Panel();
+            this.tableLayoutPanel16 = new System.Windows.Forms.TableLayoutPanel();
+            this.label7 = new System.Windows.Forms.Label();
+            this.tableLayoutPanel17 = new System.Windows.Forms.TableLayoutPanel();
+            this.panel11 = new System.Windows.Forms.Panel();
+            this.label8 = new System.Windows.Forms.Label();
+            this.panel14 = new System.Windows.Forms.Panel();
+            this.label10 = new System.Windows.Forms.Label();
+            this.panel15 = new System.Windows.Forms.Panel();
+            this.label11 = new System.Windows.Forms.Label();
+            this.panel_orders = new System.Windows.Forms.Panel();
+            this.panel12 = new System.Windows.Forms.Panel();
+            this.tableLayoutPanel14 = new System.Windows.Forms.TableLayoutPanel();
+            this.label6 = new System.Windows.Forms.Label();
             this.merchandise = new System.Windows.Forms.TabPage();
             this.reports = new System.Windows.Forms.TabPage();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.tableLayoutPanel12 = new System.Windows.Forms.TableLayoutPanel();
+            this.panel6 = new System.Windows.Forms.Panel();
             this.btnReports = new System.Windows.Forms.Button();
             this.btnUsers = new System.Windows.Forms.Button();
             this.btnOrders = new System.Windows.Forms.Button();
@@ -100,6 +120,38 @@
             this.merchandise_e = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.reports_e = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.users_e = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.panel16 = new System.Windows.Forms.Panel();
+            this.label12 = new System.Windows.Forms.Label();
+            this.panel17 = new System.Windows.Forms.Panel();
+            this.label13 = new System.Windows.Forms.Label();
+            this.panel18 = new System.Windows.Forms.Panel();
+            this.label14 = new System.Windows.Forms.Label();
+            this.panel19 = new System.Windows.Forms.Panel();
+            this.label15 = new System.Windows.Forms.Label();
+            this.panel13 = new System.Windows.Forms.Panel();
+            this.label9 = new System.Windows.Forms.Label();
+            this.panel20 = new System.Windows.Forms.Panel();
+            this.label16 = new System.Windows.Forms.Label();
+            this.panel21 = new System.Windows.Forms.Panel();
+            this.label17 = new System.Windows.Forms.Label();
+            this.tableLayoutPanel18 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel19 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel20 = new System.Windows.Forms.TableLayoutPanel();
+            this.label18 = new System.Windows.Forms.Label();
+            this.payments_list = new System.Windows.Forms.DataGridView();
+            this.tableLayoutPanel21 = new System.Windows.Forms.TableLayoutPanel();
+            this.label19 = new System.Windows.Forms.Label();
+            this.claim_list = new System.Windows.Forms.DataGridView();
+            this.tableLayoutPanel22 = new System.Windows.Forms.TableLayoutPanel();
+            this.label20 = new System.Windows.Forms.Label();
+            this.customer_merch = new System.Windows.Forms.DataGridView();
+            this.claim_amount1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tableLayoutPanel23 = new System.Windows.Forms.TableLayoutPanel();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.orders_list = new System.Windows.Forms.DataGridView();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.superpanel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -128,31 +180,66 @@
             ((System.ComponentModel.ISupportInitialize)(this.orderline)).BeginInit();
             this.tableLayoutPanel10.SuspendLayout();
             this.tableLayoutPanel11.SuspendLayout();
+            this.orders.SuspendLayout();
+            this.tableLayoutPanel13.SuspendLayout();
+            this.panel9.SuspendLayout();
+            this.tableLayoutPanel15.SuspendLayout();
+            this.panel8.SuspendLayout();
+            this.panel10.SuspendLayout();
+            this.tableLayoutPanel16.SuspendLayout();
+            this.tableLayoutPanel17.SuspendLayout();
+            this.panel11.SuspendLayout();
+            this.panel14.SuspendLayout();
+            this.panel15.SuspendLayout();
+            this.panel_orders.SuspendLayout();
+            this.panel12.SuspendLayout();
+            this.tableLayoutPanel14.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.tableLayoutPanel12.SuspendLayout();
+            this.panel6.SuspendLayout();
+            this.panel7.SuspendLayout();
+            this.panel16.SuspendLayout();
+            this.panel17.SuspendLayout();
+            this.panel18.SuspendLayout();
+            this.panel19.SuspendLayout();
+            this.panel13.SuspendLayout();
+            this.panel20.SuspendLayout();
+            this.panel21.SuspendLayout();
+            this.tableLayoutPanel18.SuspendLayout();
+            this.tableLayoutPanel19.SuspendLayout();
+            this.tableLayoutPanel20.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.payments_list)).BeginInit();
+            this.tableLayoutPanel21.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.claim_list)).BeginInit();
+            this.tableLayoutPanel22.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.customer_merch)).BeginInit();
+            this.tableLayoutPanel23.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.orders_list)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // exit_login
+            // exit_main
             // 
-            this.exit_login.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
-            this.exit_login.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.exit_login.Dock = System.Windows.Forms.DockStyle.Right;
-            this.exit_login.FlatAppearance.BorderSize = 0;
-            this.exit_login.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(77)))), ((int)(((byte)(77)))));
-            this.exit_login.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(77)))), ((int)(((byte)(77)))));
-            this.exit_login.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.exit_login.ForeColor = System.Drawing.Color.White;
-            this.exit_login.Location = new System.Drawing.Point(1157, 0);
-            this.exit_login.Name = "exit_login";
-            this.exit_login.Size = new System.Drawing.Size(41, 22);
-            this.exit_login.TabIndex = 2;
-            this.exit_login.Text = "X";
-            this.exit_login.UseVisualStyleBackColor = false;
-            this.exit_login.Click += new System.EventHandler(this.exit_login_Click);
+            this.exit_main.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
+            this.exit_main.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.exit_main.Dock = System.Windows.Forms.DockStyle.Right;
+            this.exit_main.FlatAppearance.BorderSize = 0;
+            this.exit_main.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(77)))), ((int)(((byte)(77)))));
+            this.exit_main.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(77)))), ((int)(((byte)(77)))));
+            this.exit_main.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.exit_main.ForeColor = System.Drawing.Color.White;
+            this.exit_main.Location = new System.Drawing.Point(1157, 0);
+            this.exit_main.Name = "exit_main";
+            this.exit_main.Size = new System.Drawing.Size(41, 22);
+            this.exit_main.TabIndex = 2;
+            this.exit_main.Text = "X";
+            this.exit_main.UseVisualStyleBackColor = false;
+            this.exit_main.Click += new System.EventHandler(this.exit_login_Click);
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
-            this.panel1.Controls.Add(this.exit_login);
+            this.panel1.Controls.Add(this.exit_main);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
@@ -416,6 +503,8 @@
             this.sell_merchandise.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.sell_merchandise.Size = new System.Drawing.Size(421, 259);
             this.sell_merchandise.TabIndex = 1;
+            this.sell_merchandise.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.sell_merchandise_CellClick_1);
+            this.sell_merchandise.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.sell_merchandise_CellContentDoubleClick_1);
             // 
             // label1
             // 
@@ -425,7 +514,7 @@
             this.label1.ForeColor = System.Drawing.Color.Purple;
             this.label1.Location = new System.Drawing.Point(3, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(124, 25);
+            this.label1.Size = new System.Drawing.Size(129, 25);
             this.label1.TabIndex = 2;
             this.label1.Text = "Merchandise";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -540,7 +629,7 @@
             this.label2.ForeColor = System.Drawing.Color.Purple;
             this.label2.Location = new System.Drawing.Point(3, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(96, 21);
+            this.label2.Size = new System.Drawing.Size(98, 22);
             this.label2.TabIndex = 0;
             this.label2.Text = "Customer";
             this.label2.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -698,7 +787,7 @@
             this.label3.ForeColor = System.Drawing.Color.Purple;
             this.label3.Location = new System.Drawing.Point(3, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(60, 24);
+            this.label3.Size = new System.Drawing.Size(64, 24);
             this.label3.TabIndex = 3;
             this.label3.Text = "Order";
             // 
@@ -904,6 +993,7 @@
             // 
             // orders
             // 
+            this.orders.Controls.Add(this.tableLayoutPanel13);
             this.orders.Location = new System.Drawing.Point(4, 25);
             this.orders.Name = "orders";
             this.orders.Padding = new System.Windows.Forms.Padding(3);
@@ -911,6 +1001,241 @@
             this.orders.TabIndex = 1;
             this.orders.Text = "Orders";
             this.orders.UseVisualStyleBackColor = true;
+            // 
+            // tableLayoutPanel13
+            // 
+            this.tableLayoutPanel13.ColumnCount = 2;
+            this.tableLayoutPanel13.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 34.21053F));
+            this.tableLayoutPanel13.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 65.78947F));
+            this.tableLayoutPanel13.Controls.Add(this.panel9, 1, 0);
+            this.tableLayoutPanel13.Controls.Add(this.panel_orders, 0, 0);
+            this.tableLayoutPanel13.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel13.Location = new System.Drawing.Point(3, 3);
+            this.tableLayoutPanel13.Name = "tableLayoutPanel13";
+            this.tableLayoutPanel13.RowCount = 1;
+            this.tableLayoutPanel13.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel13.Size = new System.Drawing.Size(950, 610);
+            this.tableLayoutPanel13.TabIndex = 0;
+            // 
+            // panel9
+            // 
+            this.panel9.BackColor = System.Drawing.Color.Transparent;
+            this.panel9.Controls.Add(this.tableLayoutPanel15);
+            this.panel9.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel9.Location = new System.Drawing.Point(327, 3);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(620, 604);
+            this.panel9.TabIndex = 1;
+            // 
+            // tableLayoutPanel15
+            // 
+            this.tableLayoutPanel15.ColumnCount = 1;
+            this.tableLayoutPanel15.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel15.Controls.Add(this.panel8, 0, 0);
+            this.tableLayoutPanel15.Controls.Add(this.tableLayoutPanel18, 0, 1);
+            this.tableLayoutPanel15.Controls.Add(this.tableLayoutPanel23, 0, 2);
+            this.tableLayoutPanel15.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel15.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel15.Name = "tableLayoutPanel15";
+            this.tableLayoutPanel15.RowCount = 3;
+            this.tableLayoutPanel15.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 27.0073F));
+            this.tableLayoutPanel15.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 72.9927F));
+            this.tableLayoutPanel15.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 55F));
+            this.tableLayoutPanel15.Size = new System.Drawing.Size(620, 604);
+            this.tableLayoutPanel15.TabIndex = 0;
+            // 
+            // panel8
+            // 
+            this.panel8.Controls.Add(this.panel10);
+            this.panel8.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel8.Location = new System.Drawing.Point(3, 3);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(614, 142);
+            this.panel8.TabIndex = 0;
+            // 
+            // panel10
+            // 
+            this.panel10.Controls.Add(this.tableLayoutPanel16);
+            this.panel10.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel10.Location = new System.Drawing.Point(0, 0);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(614, 142);
+            this.panel10.TabIndex = 0;
+            // 
+            // tableLayoutPanel16
+            // 
+            this.tableLayoutPanel16.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tableLayoutPanel16.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.tableLayoutPanel16.ColumnCount = 1;
+            this.tableLayoutPanel16.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel16.Controls.Add(this.label7, 0, 0);
+            this.tableLayoutPanel16.Controls.Add(this.tableLayoutPanel17, 0, 1);
+            this.tableLayoutPanel16.Location = new System.Drawing.Point(3, 3);
+            this.tableLayoutPanel16.Name = "tableLayoutPanel16";
+            this.tableLayoutPanel16.RowCount = 2;
+            this.tableLayoutPanel16.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 19.23077F));
+            this.tableLayoutPanel16.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 80.76923F));
+            this.tableLayoutPanel16.Size = new System.Drawing.Size(608, 135);
+            this.tableLayoutPanel16.TabIndex = 0;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Dock = System.Windows.Forms.DockStyle.Left;
+            this.label7.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.Purple;
+            this.label7.Location = new System.Drawing.Point(3, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(69, 25);
+            this.label7.TabIndex = 4;
+            this.label7.Text = "Details";
+            this.label7.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // tableLayoutPanel17
+            // 
+            this.tableLayoutPanel17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(253)))), ((int)(((byte)(253)))));
+            this.tableLayoutPanel17.ColumnCount = 4;
+            this.tableLayoutPanel17.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel17.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel17.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel17.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel17.Controls.Add(this.panel21, 2, 4);
+            this.tableLayoutPanel17.Controls.Add(this.panel20, 2, 3);
+            this.tableLayoutPanel17.Controls.Add(this.panel13, 2, 1);
+            this.tableLayoutPanel17.Controls.Add(this.panel19, 2, 2);
+            this.tableLayoutPanel17.Controls.Add(this.panel16, 0, 4);
+            this.tableLayoutPanel17.Controls.Add(this.panel11, 0, 0);
+            this.tableLayoutPanel17.Controls.Add(this.panel14, 0, 2);
+            this.tableLayoutPanel17.Controls.Add(this.panel15, 0, 3);
+            this.tableLayoutPanel17.Controls.Add(this.panel17, 0, 1);
+            this.tableLayoutPanel17.Controls.Add(this.panel18, 2, 0);
+            this.tableLayoutPanel17.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel17.Location = new System.Drawing.Point(3, 28);
+            this.tableLayoutPanel17.Name = "tableLayoutPanel17";
+            this.tableLayoutPanel17.RowCount = 5;
+            this.tableLayoutPanel17.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel17.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel17.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel17.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel17.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel17.Size = new System.Drawing.Size(602, 104);
+            this.tableLayoutPanel17.TabIndex = 5;
+            // 
+            // panel11
+            // 
+            this.panel11.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel11.Controls.Add(this.label8);
+            this.panel11.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel11.Location = new System.Drawing.Point(3, 3);
+            this.panel11.Name = "panel11";
+            this.panel11.Size = new System.Drawing.Size(144, 14);
+            this.panel11.TabIndex = 0;
+            // 
+            // label8
+            // 
+            this.label8.Dock = System.Windows.Forms.DockStyle.Left;
+            this.label8.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(0, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(98, 14);
+            this.label8.TabIndex = 0;
+            this.label8.Text = "Order No:";
+            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // panel14
+            // 
+            this.panel14.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel14.Controls.Add(this.label10);
+            this.panel14.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel14.Location = new System.Drawing.Point(3, 43);
+            this.panel14.Name = "panel14";
+            this.panel14.Size = new System.Drawing.Size(144, 14);
+            this.panel14.TabIndex = 2;
+            // 
+            // label10
+            // 
+            this.label10.Dock = System.Windows.Forms.DockStyle.Left;
+            this.label10.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(0, 0);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(98, 14);
+            this.label10.TabIndex = 1;
+            this.label10.Text = "Customer";
+            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // panel15
+            // 
+            this.panel15.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel15.Controls.Add(this.label11);
+            this.panel15.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel15.Location = new System.Drawing.Point(3, 63);
+            this.panel15.Name = "panel15";
+            this.panel15.Size = new System.Drawing.Size(144, 14);
+            this.panel15.TabIndex = 3;
+            // 
+            // label11
+            // 
+            this.label11.Dock = System.Windows.Forms.DockStyle.Left;
+            this.label11.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(0, 0);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(98, 14);
+            this.label11.TabIndex = 1;
+            this.label11.Text = "Cluster:";
+            this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // panel_orders
+            // 
+            this.panel_orders.BackColor = System.Drawing.Color.Transparent;
+            this.panel_orders.Controls.Add(this.panel12);
+            this.panel_orders.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel_orders.Location = new System.Drawing.Point(3, 3);
+            this.panel_orders.Name = "panel_orders";
+            this.panel_orders.Size = new System.Drawing.Size(318, 604);
+            this.panel_orders.TabIndex = 0;
+            // 
+            // panel12
+            // 
+            this.panel12.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel12.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel12.Controls.Add(this.tableLayoutPanel14);
+            this.panel12.Location = new System.Drawing.Point(6, 6);
+            this.panel12.Name = "panel12";
+            this.panel12.Size = new System.Drawing.Size(309, 592);
+            this.panel12.TabIndex = 0;
+            // 
+            // tableLayoutPanel14
+            // 
+            this.tableLayoutPanel14.ColumnCount = 1;
+            this.tableLayoutPanel14.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel14.Controls.Add(this.label6, 0, 0);
+            this.tableLayoutPanel14.Controls.Add(this.orders_list, 0, 2);
+            this.tableLayoutPanel14.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel14.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel14.Name = "tableLayoutPanel14";
+            this.tableLayoutPanel14.RowCount = 3;
+            this.tableLayoutPanel14.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 26.59575F));
+            this.tableLayoutPanel14.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 73.40426F));
+            this.tableLayoutPanel14.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 497F));
+            this.tableLayoutPanel14.Size = new System.Drawing.Size(309, 592);
+            this.tableLayoutPanel14.TabIndex = 0;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Dock = System.Windows.Forms.DockStyle.Left;
+            this.label6.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.Purple;
+            this.label6.Location = new System.Drawing.Point(3, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(71, 25);
+            this.label6.TabIndex = 3;
+            this.label6.Text = "Orders";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // merchandise
             // 
@@ -933,18 +1258,42 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(253)))), ((int)(((byte)(253)))));
-            this.panel2.Controls.Add(this.btnReports);
-            this.panel2.Controls.Add(this.btnUsers);
-            this.panel2.Controls.Add(this.btnOrders);
-            this.panel2.Controls.Add(this.btnSell);
-            this.panel2.Controls.Add(this.btnMerch);
-            this.panel2.Controls.Add(this.btnSales);
-            this.panel2.Controls.Add(this.btnDashboard);
+            this.panel2.Controls.Add(this.tableLayoutPanel12);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel2.Location = new System.Drawing.Point(0, 22);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(220, 676);
             this.panel2.TabIndex = 1;
+            // 
+            // tableLayoutPanel12
+            // 
+            this.tableLayoutPanel12.ColumnCount = 1;
+            this.tableLayoutPanel12.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel12.Controls.Add(this.panel6, 0, 1);
+            this.tableLayoutPanel12.Controls.Add(this.panel7, 0, 0);
+            this.tableLayoutPanel12.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel12.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel12.Name = "tableLayoutPanel12";
+            this.tableLayoutPanel12.RowCount = 2;
+            this.tableLayoutPanel12.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 27.36686F));
+            this.tableLayoutPanel12.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 72.63313F));
+            this.tableLayoutPanel12.Size = new System.Drawing.Size(220, 676);
+            this.tableLayoutPanel12.TabIndex = 0;
+            // 
+            // panel6
+            // 
+            this.panel6.Controls.Add(this.btnReports);
+            this.panel6.Controls.Add(this.btnUsers);
+            this.panel6.Controls.Add(this.btnOrders);
+            this.panel6.Controls.Add(this.btnSell);
+            this.panel6.Controls.Add(this.btnMerch);
+            this.panel6.Controls.Add(this.btnSales);
+            this.panel6.Controls.Add(this.btnDashboard);
+            this.panel6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel6.Location = new System.Drawing.Point(3, 187);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(214, 486);
+            this.panel6.TabIndex = 0;
             // 
             // btnReports
             // 
@@ -954,14 +1303,13 @@
             this.btnReports.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnReports.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnReports.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnReports.Location = new System.Drawing.Point(12, 416);
+            this.btnReports.Location = new System.Drawing.Point(9, 283);
             this.btnReports.Name = "btnReports";
             this.btnReports.Size = new System.Drawing.Size(196, 48);
-            this.btnReports.TabIndex = 17;
+            this.btnReports.TabIndex = 24;
             this.btnReports.Text = "Reports";
             this.btnReports.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnReports.UseVisualStyleBackColor = false;
-            this.btnReports.Click += new System.EventHandler(this.btnReports_Click);
             // 
             // btnUsers
             // 
@@ -971,14 +1319,13 @@
             this.btnUsers.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnUsers.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnUsers.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnUsers.Location = new System.Drawing.Point(12, 470);
+            this.btnUsers.Location = new System.Drawing.Point(9, 337);
             this.btnUsers.Name = "btnUsers";
             this.btnUsers.Size = new System.Drawing.Size(196, 48);
-            this.btnUsers.TabIndex = 16;
+            this.btnUsers.TabIndex = 23;
             this.btnUsers.Text = "Users";
             this.btnUsers.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnUsers.UseVisualStyleBackColor = false;
-            this.btnUsers.Click += new System.EventHandler(this.btnUsers_Click);
             // 
             // btnOrders
             // 
@@ -988,14 +1335,13 @@
             this.btnOrders.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnOrders.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnOrders.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnOrders.Location = new System.Drawing.Point(12, 304);
+            this.btnOrders.Location = new System.Drawing.Point(9, 171);
             this.btnOrders.Name = "btnOrders";
             this.btnOrders.Size = new System.Drawing.Size(196, 48);
-            this.btnOrders.TabIndex = 15;
+            this.btnOrders.TabIndex = 22;
             this.btnOrders.Text = "       Orders";
             this.btnOrders.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnOrders.UseVisualStyleBackColor = false;
-            this.btnOrders.Click += new System.EventHandler(this.btnOrders_Click);
             // 
             // btnSell
             // 
@@ -1005,14 +1351,13 @@
             this.btnSell.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSell.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSell.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnSell.Location = new System.Drawing.Point(12, 250);
+            this.btnSell.Location = new System.Drawing.Point(9, 117);
             this.btnSell.Name = "btnSell";
             this.btnSell.Size = new System.Drawing.Size(196, 48);
-            this.btnSell.TabIndex = 14;
+            this.btnSell.TabIndex = 21;
             this.btnSell.Text = "       Sell";
             this.btnSell.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSell.UseVisualStyleBackColor = false;
-            this.btnSell.Click += new System.EventHandler(this.btnSell_Click);
             // 
             // btnMerch
             // 
@@ -1022,14 +1367,13 @@
             this.btnMerch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnMerch.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMerch.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnMerch.Location = new System.Drawing.Point(12, 362);
+            this.btnMerch.Location = new System.Drawing.Point(9, 229);
             this.btnMerch.Name = "btnMerch";
             this.btnMerch.Size = new System.Drawing.Size(196, 48);
-            this.btnMerch.TabIndex = 13;
+            this.btnMerch.TabIndex = 20;
             this.btnMerch.Text = "Merchandise";
             this.btnMerch.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnMerch.UseVisualStyleBackColor = false;
-            this.btnMerch.Click += new System.EventHandler(this.btnMerch_Click);
             // 
             // btnSales
             // 
@@ -1039,14 +1383,13 @@
             this.btnSales.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSales.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSales.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnSales.Location = new System.Drawing.Point(12, 196);
+            this.btnSales.Location = new System.Drawing.Point(9, 63);
             this.btnSales.Name = "btnSales";
             this.btnSales.Size = new System.Drawing.Size(196, 48);
-            this.btnSales.TabIndex = 12;
+            this.btnSales.TabIndex = 19;
             this.btnSales.Text = "Sales";
             this.btnSales.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSales.UseVisualStyleBackColor = false;
-            this.btnSales.Click += new System.EventHandler(this.btnSales_Click);
             // 
             // btnDashboard
             // 
@@ -1056,14 +1399,13 @@
             this.btnDashboard.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDashboard.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDashboard.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btnDashboard.Location = new System.Drawing.Point(12, 142);
+            this.btnDashboard.Location = new System.Drawing.Point(9, 9);
             this.btnDashboard.Name = "btnDashboard";
             this.btnDashboard.Size = new System.Drawing.Size(196, 48);
-            this.btnDashboard.TabIndex = 11;
+            this.btnDashboard.TabIndex = 18;
             this.btnDashboard.Text = "Dashboard";
             this.btnDashboard.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnDashboard.UseVisualStyleBackColor = false;
-            this.btnDashboard.Click += new System.EventHandler(this.btnDashboard_Click);
             // 
             // dashboard_e
             // 
@@ -1099,6 +1441,406 @@
             // 
             this.users_e.ElipseRadius = 5;
             this.users_e.TargetControl = this.btnUsers;
+            // 
+            // panel7
+            // 
+            this.panel7.Controls.Add(this.pictureBox1);
+            this.panel7.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel7.Location = new System.Drawing.Point(3, 3);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(214, 178);
+            this.panel7.TabIndex = 1;
+            // 
+            // panel16
+            // 
+            this.panel16.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel16.Controls.Add(this.label12);
+            this.panel16.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel16.Location = new System.Drawing.Point(3, 83);
+            this.panel16.Name = "panel16";
+            this.panel16.Size = new System.Drawing.Size(144, 18);
+            this.panel16.TabIndex = 4;
+            // 
+            // label12
+            // 
+            this.label12.Dock = System.Windows.Forms.DockStyle.Left;
+            this.label12.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(0, 0);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(98, 18);
+            this.label12.TabIndex = 1;
+            this.label12.Text = "Contact:";
+            this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // panel17
+            // 
+            this.panel17.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel17.Controls.Add(this.label13);
+            this.panel17.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel17.Location = new System.Drawing.Point(3, 23);
+            this.panel17.Name = "panel17";
+            this.panel17.Size = new System.Drawing.Size(144, 14);
+            this.panel17.TabIndex = 1;
+            // 
+            // label13
+            // 
+            this.label13.Dock = System.Windows.Forms.DockStyle.Left;
+            this.label13.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(0, 0);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(109, 14);
+            this.label13.TabIndex = 0;
+            this.label13.Text = "Order Date:";
+            this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // panel18
+            // 
+            this.panel18.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel18.Controls.Add(this.label14);
+            this.panel18.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel18.Location = new System.Drawing.Point(303, 3);
+            this.panel18.Name = "panel18";
+            this.panel18.Size = new System.Drawing.Size(144, 14);
+            this.panel18.TabIndex = 2;
+            // 
+            // label14
+            // 
+            this.label14.Dock = System.Windows.Forms.DockStyle.Left;
+            this.label14.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(0, 0);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(114, 14);
+            this.label14.TabIndex = 0;
+            this.label14.Text = "Order Status:";
+            this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // panel19
+            // 
+            this.panel19.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel19.Controls.Add(this.label15);
+            this.panel19.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel19.Location = new System.Drawing.Point(303, 43);
+            this.panel19.Name = "panel19";
+            this.panel19.Size = new System.Drawing.Size(144, 14);
+            this.panel19.TabIndex = 2;
+            // 
+            // label15
+            // 
+            this.label15.Dock = System.Windows.Forms.DockStyle.Left;
+            this.label15.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Location = new System.Drawing.Point(0, 0);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(109, 14);
+            this.label15.TabIndex = 0;
+            this.label15.Text = "Total Due:";
+            this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // panel13
+            // 
+            this.panel13.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel13.Controls.Add(this.label9);
+            this.panel13.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel13.Location = new System.Drawing.Point(303, 23);
+            this.panel13.Name = "panel13";
+            this.panel13.Size = new System.Drawing.Size(144, 14);
+            this.panel13.TabIndex = 2;
+            // 
+            // label9
+            // 
+            this.label9.Dock = System.Windows.Forms.DockStyle.Left;
+            this.label9.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(0, 0);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(109, 14);
+            this.label9.TabIndex = 0;
+            this.label9.Text = "Payment Status:";
+            this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // panel20
+            // 
+            this.panel20.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel20.Controls.Add(this.label16);
+            this.panel20.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel20.Location = new System.Drawing.Point(303, 63);
+            this.panel20.Name = "panel20";
+            this.panel20.Size = new System.Drawing.Size(144, 14);
+            this.panel20.TabIndex = 2;
+            // 
+            // label16
+            // 
+            this.label16.Dock = System.Windows.Forms.DockStyle.Left;
+            this.label16.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Location = new System.Drawing.Point(0, 0);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(109, 14);
+            this.label16.TabIndex = 0;
+            this.label16.Text = "Amount Paid:";
+            this.label16.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // panel21
+            // 
+            this.panel21.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel21.Controls.Add(this.label17);
+            this.panel21.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel21.Location = new System.Drawing.Point(303, 83);
+            this.panel21.Name = "panel21";
+            this.panel21.Size = new System.Drawing.Size(144, 18);
+            this.panel21.TabIndex = 2;
+            // 
+            // label17
+            // 
+            this.label17.Dock = System.Windows.Forms.DockStyle.Left;
+            this.label17.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.Location = new System.Drawing.Point(0, 0);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(109, 18);
+            this.label17.TabIndex = 0;
+            this.label17.Text = "Balance:";
+            this.label17.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // tableLayoutPanel18
+            // 
+            this.tableLayoutPanel18.ColumnCount = 2;
+            this.tableLayoutPanel18.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel18.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel18.Controls.Add(this.tableLayoutPanel19, 0, 0);
+            this.tableLayoutPanel18.Controls.Add(this.tableLayoutPanel22, 1, 0);
+            this.tableLayoutPanel18.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel18.Location = new System.Drawing.Point(3, 151);
+            this.tableLayoutPanel18.Name = "tableLayoutPanel18";
+            this.tableLayoutPanel18.RowCount = 1;
+            this.tableLayoutPanel18.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel18.Size = new System.Drawing.Size(614, 394);
+            this.tableLayoutPanel18.TabIndex = 1;
+            // 
+            // tableLayoutPanel19
+            // 
+            this.tableLayoutPanel19.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.tableLayoutPanel19.ColumnCount = 1;
+            this.tableLayoutPanel19.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel19.Controls.Add(this.tableLayoutPanel20, 0, 0);
+            this.tableLayoutPanel19.Controls.Add(this.tableLayoutPanel21, 0, 1);
+            this.tableLayoutPanel19.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel19.Location = new System.Drawing.Point(3, 3);
+            this.tableLayoutPanel19.Name = "tableLayoutPanel19";
+            this.tableLayoutPanel19.RowCount = 2;
+            this.tableLayoutPanel19.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 28.64078F));
+            this.tableLayoutPanel19.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 71.35922F));
+            this.tableLayoutPanel19.Size = new System.Drawing.Size(301, 388);
+            this.tableLayoutPanel19.TabIndex = 0;
+            // 
+            // tableLayoutPanel20
+            // 
+            this.tableLayoutPanel20.ColumnCount = 1;
+            this.tableLayoutPanel20.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel20.Controls.Add(this.label18, 0, 0);
+            this.tableLayoutPanel20.Controls.Add(this.payments_list, 0, 1);
+            this.tableLayoutPanel20.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel20.Location = new System.Drawing.Point(3, 3);
+            this.tableLayoutPanel20.Name = "tableLayoutPanel20";
+            this.tableLayoutPanel20.RowCount = 2;
+            this.tableLayoutPanel20.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 19.64286F));
+            this.tableLayoutPanel20.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 80.35714F));
+            this.tableLayoutPanel20.Size = new System.Drawing.Size(295, 105);
+            this.tableLayoutPanel20.TabIndex = 0;
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Dock = System.Windows.Forms.DockStyle.Left;
+            this.label18.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.ForeColor = System.Drawing.Color.Purple;
+            this.label18.Location = new System.Drawing.Point(3, 0);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(100, 20);
+            this.label18.TabIndex = 5;
+            this.label18.Text = "Payments";
+            this.label18.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // payments_list
+            // 
+            this.payments_list.AllowUserToAddRows = false;
+            this.payments_list.AllowUserToDeleteRows = false;
+            this.payments_list.BackgroundColor = System.Drawing.Color.WhiteSmoke;
+            this.payments_list.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.payments_list.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.payments_list.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.payments_list.Location = new System.Drawing.Point(3, 23);
+            this.payments_list.Name = "payments_list";
+            this.payments_list.ReadOnly = true;
+            this.payments_list.RowTemplate.Height = 24;
+            this.payments_list.Size = new System.Drawing.Size(289, 79);
+            this.payments_list.TabIndex = 6;
+            // 
+            // tableLayoutPanel21
+            // 
+            this.tableLayoutPanel21.ColumnCount = 1;
+            this.tableLayoutPanel21.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel21.Controls.Add(this.claim_list, 0, 1);
+            this.tableLayoutPanel21.Controls.Add(this.label19, 0, 0);
+            this.tableLayoutPanel21.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel21.Location = new System.Drawing.Point(3, 114);
+            this.tableLayoutPanel21.Name = "tableLayoutPanel21";
+            this.tableLayoutPanel21.RowCount = 2;
+            this.tableLayoutPanel21.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.333333F));
+            this.tableLayoutPanel21.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 91.66666F));
+            this.tableLayoutPanel21.Size = new System.Drawing.Size(295, 271);
+            this.tableLayoutPanel21.TabIndex = 1;
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Dock = System.Windows.Forms.DockStyle.Left;
+            this.label19.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.ForeColor = System.Drawing.Color.Purple;
+            this.label19.Location = new System.Drawing.Point(3, 0);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(68, 22);
+            this.label19.TabIndex = 6;
+            this.label19.Text = "Claims";
+            this.label19.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // claim_list
+            // 
+            this.claim_list.AllowUserToAddRows = false;
+            this.claim_list.AllowUserToDeleteRows = false;
+            this.claim_list.BackgroundColor = System.Drawing.Color.WhiteSmoke;
+            this.claim_list.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.claim_list.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.claim_list.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.claim_list.Location = new System.Drawing.Point(3, 25);
+            this.claim_list.Name = "claim_list";
+            this.claim_list.ReadOnly = true;
+            this.claim_list.RowTemplate.Height = 24;
+            this.claim_list.Size = new System.Drawing.Size(289, 243);
+            this.claim_list.TabIndex = 7;
+            // 
+            // tableLayoutPanel22
+            // 
+            this.tableLayoutPanel22.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.tableLayoutPanel22.ColumnCount = 1;
+            this.tableLayoutPanel22.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel22.Controls.Add(this.customer_merch, 0, 1);
+            this.tableLayoutPanel22.Controls.Add(this.label20, 0, 0);
+            this.tableLayoutPanel22.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel22.Location = new System.Drawing.Point(310, 3);
+            this.tableLayoutPanel22.Name = "tableLayoutPanel22";
+            this.tableLayoutPanel22.RowCount = 2;
+            this.tableLayoutPanel22.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5.927835F));
+            this.tableLayoutPanel22.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 94.07217F));
+            this.tableLayoutPanel22.Size = new System.Drawing.Size(301, 388);
+            this.tableLayoutPanel22.TabIndex = 1;
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Dock = System.Windows.Forms.DockStyle.Left;
+            this.label20.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.ForeColor = System.Drawing.Color.Purple;
+            this.label20.Location = new System.Drawing.Point(3, 0);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(129, 22);
+            this.label20.TabIndex = 6;
+            this.label20.Text = "Merchandise";
+            this.label20.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // customer_merch
+            // 
+            this.customer_merch.AllowUserToAddRows = false;
+            this.customer_merch.AllowUserToDeleteRows = false;
+            this.customer_merch.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.customer_merch.BackgroundColor = System.Drawing.Color.WhiteSmoke;
+            this.customer_merch.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.customer_merch.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.customer_merch.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.claim_amount1});
+            this.customer_merch.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.customer_merch.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
+            this.customer_merch.Location = new System.Drawing.Point(4, 26);
+            this.customer_merch.Margin = new System.Windows.Forms.Padding(4);
+            this.customer_merch.Name = "customer_merch";
+            this.customer_merch.RowHeadersVisible = false;
+            this.customer_merch.RowTemplate.Height = 24;
+            this.customer_merch.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.customer_merch.Size = new System.Drawing.Size(293, 358);
+            this.customer_merch.TabIndex = 34;
+            // 
+            // claim_amount1
+            // 
+            this.claim_amount1.HeaderText = "CLAIM";
+            this.claim_amount1.Name = "claim_amount1";
+            // 
+            // tableLayoutPanel23
+            // 
+            this.tableLayoutPanel23.ColumnCount = 2;
+            this.tableLayoutPanel23.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel23.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel23.Controls.Add(this.button2, 1, 0);
+            this.tableLayoutPanel23.Controls.Add(this.button1, 0, 0);
+            this.tableLayoutPanel23.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel23.Location = new System.Drawing.Point(3, 551);
+            this.tableLayoutPanel23.Name = "tableLayoutPanel23";
+            this.tableLayoutPanel23.RowCount = 1;
+            this.tableLayoutPanel23.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel23.Size = new System.Drawing.Size(614, 50);
+            this.tableLayoutPanel23.TabIndex = 2;
+            // 
+            // button1
+            // 
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(3, 3);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(301, 44);
+            this.button1.TabIndex = 23;
+            this.button1.Text = "Pay Due";
+            this.button1.UseVisualStyleBackColor = false;
+            // 
+            // button2
+            // 
+            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
+            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.Location = new System.Drawing.Point(310, 3);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(301, 44);
+            this.button2.TabIndex = 24;
+            this.button2.Text = "Claim";
+            this.button2.UseVisualStyleBackColor = false;
+            // 
+            // orders_list
+            // 
+            this.orders_list.AllowUserToAddRows = false;
+            this.orders_list.AllowUserToDeleteRows = false;
+            this.orders_list.BackgroundColor = System.Drawing.Color.WhiteSmoke;
+            this.orders_list.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.orders_list.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.orders_list.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.orders_list.Location = new System.Drawing.Point(3, 97);
+            this.orders_list.Name = "orders_list";
+            this.orders_list.ReadOnly = true;
+            this.orders_list.RowTemplate.Height = 24;
+            this.orders_list.Size = new System.Drawing.Size(303, 492);
+            this.orders_list.TabIndex = 7;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::cs_merch.Properties.Resources.CSMS;
+            this.pictureBox1.Location = new System.Drawing.Point(-74, -18);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(364, 252);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // Main
             // 
@@ -1142,25 +1884,58 @@
             this.tableLayoutPanel10.ResumeLayout(false);
             this.tableLayoutPanel11.ResumeLayout(false);
             this.tableLayoutPanel11.PerformLayout();
+            this.orders.ResumeLayout(false);
+            this.tableLayoutPanel13.ResumeLayout(false);
+            this.panel9.ResumeLayout(false);
+            this.tableLayoutPanel15.ResumeLayout(false);
+            this.panel8.ResumeLayout(false);
+            this.panel10.ResumeLayout(false);
+            this.tableLayoutPanel16.ResumeLayout(false);
+            this.tableLayoutPanel16.PerformLayout();
+            this.tableLayoutPanel17.ResumeLayout(false);
+            this.panel11.ResumeLayout(false);
+            this.panel14.ResumeLayout(false);
+            this.panel15.ResumeLayout(false);
+            this.panel_orders.ResumeLayout(false);
+            this.panel12.ResumeLayout(false);
+            this.tableLayoutPanel14.ResumeLayout(false);
+            this.tableLayoutPanel14.PerformLayout();
             this.panel2.ResumeLayout(false);
+            this.tableLayoutPanel12.ResumeLayout(false);
+            this.panel6.ResumeLayout(false);
+            this.panel7.ResumeLayout(false);
+            this.panel16.ResumeLayout(false);
+            this.panel17.ResumeLayout(false);
+            this.panel18.ResumeLayout(false);
+            this.panel19.ResumeLayout(false);
+            this.panel13.ResumeLayout(false);
+            this.panel20.ResumeLayout(false);
+            this.panel21.ResumeLayout(false);
+            this.tableLayoutPanel18.ResumeLayout(false);
+            this.tableLayoutPanel19.ResumeLayout(false);
+            this.tableLayoutPanel20.ResumeLayout(false);
+            this.tableLayoutPanel20.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.payments_list)).EndInit();
+            this.tableLayoutPanel21.ResumeLayout(false);
+            this.tableLayoutPanel21.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.claim_list)).EndInit();
+            this.tableLayoutPanel22.ResumeLayout(false);
+            this.tableLayoutPanel22.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.customer_merch)).EndInit();
+            this.tableLayoutPanel23.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.orders_list)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Button exit_login;
+        private System.Windows.Forms.Button exit_main;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel superpanel2;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button btnReports;
-        private System.Windows.Forms.Button btnUsers;
-        private System.Windows.Forms.Button btnOrders;
-        private System.Windows.Forms.Button btnSell;
-        private System.Windows.Forms.Button btnMerch;
-        private System.Windows.Forms.Button btnSales;
-        private System.Windows.Forms.Button btnDashboard;
         private System.Windows.Forms.TabControl main_browser;
         private System.Windows.Forms.TabPage dashboard;
         private System.Windows.Forms.TabPage sales;
@@ -1220,5 +1995,64 @@
         private Bunifu.Framework.UI.BunifuElipse merchandise_e;
         private Bunifu.Framework.UI.BunifuElipse reports_e;
         private Bunifu.Framework.UI.BunifuElipse users_e;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel12;
+        private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Button btnReports;
+        private System.Windows.Forms.Button btnUsers;
+        private System.Windows.Forms.Button btnOrders;
+        private System.Windows.Forms.Button btnSell;
+        private System.Windows.Forms.Button btnMerch;
+        private System.Windows.Forms.Button btnSales;
+        private System.Windows.Forms.Button btnDashboard;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel13;
+        private System.Windows.Forms.Panel panel_orders;
+        private System.Windows.Forms.Panel panel9;
+        private System.Windows.Forms.Panel panel12;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel14;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel15;
+        private System.Windows.Forms.Panel panel8;
+        private System.Windows.Forms.Panel panel10;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel16;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel17;
+        private System.Windows.Forms.Panel panel11;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Panel panel14;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Panel panel15;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Panel panel21;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Panel panel20;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Panel panel13;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Panel panel19;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Panel panel16;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Panel panel17;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Panel panel18;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel18;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel19;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel20;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.DataGridView payments_list;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel21;
+        private System.Windows.Forms.DataGridView claim_list;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel22;
+        private System.Windows.Forms.DataGridView customer_merch;
+        private System.Windows.Forms.DataGridViewTextBoxColumn claim_amount1;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel23;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.DataGridView orders_list;
     }
 }

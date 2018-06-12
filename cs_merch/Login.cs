@@ -23,6 +23,7 @@ namespace cs_merch
 
         private void exit_login_Click(object sender, EventArgs e)
         {
+            Program.looper = false;
             this.Close();
         }
 

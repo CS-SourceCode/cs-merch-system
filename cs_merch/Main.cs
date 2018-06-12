@@ -21,8 +21,6 @@ namespace cs_merch
             InitializeComponent();
             setMerchandise();
             setCustomerlist();
-            selectedCustIDTxt.Enabled = false;
-            selectedCustNameTxt.Enabled = false;
             getOrderId();
         }
 
@@ -240,9 +238,102 @@ namespace cs_merch
             sell_additem.Text = "Update";
         }
 
-        private void sell_merchandise_CellClick(object sender, DataGridViewCellEventArgs e)
+        private void sell_removeitem_Click(object sender, EventArgs e)
         {
+            if (orderline.Rows.Count > 0)
+            {
+                orderline.Rows.RemoveAt(orderline.CurrentRow.Index);
+            }
+            else
+            {
+                MessageBox.Show("No Item in Orderline");
+            }
 
+            price_total.Text = (from DataGridViewRow row in orderline.Rows
+                                where row.Cells[2].FormattedValue.ToString() != string.Empty
+                                select Convert.ToDecimal(row.Cells[2].FormattedValue)).Sum().ToString();
+            total_price = (from DataGridViewRow row in orderline.Rows
+                           where row.Cells[2].FormattedValue.ToString() != string.Empty
+                           select Convert.ToDecimal(row.Cells[2].FormattedValue)).Sum();
+        }
+
+        private void sell_removeall_Click(object sender, EventArgs e)
+        {
+            sell_additem.Text = "Add";
+            orderline.Rows.Clear();
+            orderline.Refresh();
+            price_total.Text = "0.00";
+        }
+
+        private void customer_select_Click(object sender, EventArgs e)
+        {
+            currCustomerNo = Convert.ToInt32(customer_list.CurrentRow.Cells["customer_id"].Value);
+            custfn = customer_list.CurrentRow.Cells["firstname"].Value.ToString();
+            custln = customer_list.CurrentRow.Cells["lastname"].Value.ToString();
+            selectedCustIDTxt.Text = currCustomerNo.ToString();
+            selectedCustNameTxt.Text = custfn + " " + custln;
+        }
+
+        private void customer_new_Click(object sender, EventArgs e)
+        {
+            using (Unfocus p = new Unfocus(this))
+            {
+                //p.Location = new Point(48, 15);
+                //p.Location = new Point(0, 0);
+                p.Size = this.ClientRectangle.Size;
+                p.StartPosition = FormStartPosition.CenterScreen;
+                p.BringToFront();
+
+                Main_customer addcust = new Main_customer(this);
+                addcust.main = this;
+                addcust.ShowDialog(this);
+            }
+        }
+
+        public void claimOrder(string olID, string quantity)
+        {
+            var quantityClaimed = conn.Select("orderline", "quantity_claimed")
+                .Where("orderlineID", olID)
+                .GetQueryData();
+            quantityClaimed += int.Parse(quantity);
+            conn.Update("orderline", "quantity_claimed", quantityClaimed)
+                .Where("orderline_id", olID)
+                .GetQueryData();
+            conn.Insert("order_claim", "orderline_id", olID, "quantity_no", quantity, "date_claimed",
+                    DateTime.Now.ToString("yyyy-MM-dd"))
+                .GetQueryData();
+
+        }
+
+        public void payOrder(string oID, string payment) => payOrder(oID, Convert.ToInt32(payment));
+
+        public void payOrder(string oID, int payment)
+        {
+            // toDo: 1 insert for payment
+            var present_pay = conn.Select("order_payment", "SUM(payment)")
+                                    .NJoin("orders")
+                                    .Where("order_id", oID)
+                                    .Group("order_id")
+                                    .GetQueryData()
+                                    .Rows[0][0];
+            int total_pay = Convert.ToInt32(present_pay) + payment;
+            MessageBox.Show(total_pay.ToString());
+            conn.Insert("order_payment", "order_id", oID, "payment", payment.ToString(), "payment_date",
+                DateTime.Now.ToString("yyyy-MM-dd"))
+                .GetQueryData();
+            var total_price = conn.Select("orderline", "SUM(total_price)")
+                .Where("order_id", oID)
+                .Group("order_id")
+                .GetQueryData()
+                .Rows[0][0];
+            if (total_pay >= total_price)
+                conn.Update("orders", "payment_status", "1")
+                    .Where("order_id", oID)
+                    .GetQueryData();
+        }
+
+        private void sell_merchandise_CellClick_1(object sender, DataGridViewCellEventArgs e)
+        {
             if (e.RowIndex > -1)
             {
                 temp_merchname = sell_merchandise.Rows[e.RowIndex].Cells["merch_name"].Value.ToString();
@@ -273,7 +364,8 @@ namespace cs_merch
                 sell_additem.Text = "Add";
             }
         }
-        private void sell_merchandise_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+
+        private void sell_merchandise_CellContentDoubleClick_1(object sender, DataGridViewCellEventArgs e)
         {
             temp_qty = Convert.ToInt32(item_quantity.Text);
             // Create a new row first as it will include the columns you've created at design-time.
@@ -329,89 +421,6 @@ namespace cs_merch
                            select Convert.ToDecimal(row.Cells[2].FormattedValue)).Sum();
 
             sell_additem.Text = "Update";
-        }
-
-        private void sell_removeitem_Click(object sender, EventArgs e)
-        {
-            if (orderline.Rows.Count > 0)
-            {
-                orderline.Rows.RemoveAt(orderline.CurrentRow.Index);
-            }
-            else
-            {
-                MessageBox.Show("No Item in Orderline");
-            }
-
-            price_total.Text = (from DataGridViewRow row in orderline.Rows
-                                where row.Cells[2].FormattedValue.ToString() != string.Empty
-                                select Convert.ToDecimal(row.Cells[2].FormattedValue)).Sum().ToString();
-            total_price = (from DataGridViewRow row in orderline.Rows
-                           where row.Cells[2].FormattedValue.ToString() != string.Empty
-                           select Convert.ToDecimal(row.Cells[2].FormattedValue)).Sum();
-        }
-
-        private void sell_removeall_Click(object sender, EventArgs e)
-        {
-            sell_additem.Text = "Add";
-            orderline.Rows.Clear();
-            orderline.Refresh();
-            price_total.Text = "0.00";
-        }
-
-        private void customer_select_Click(object sender, EventArgs e)
-        {
-            currCustomerNo = Convert.ToInt32(customer_list.CurrentRow.Cells["customer_id"].Value);
-            custfn = customer_list.CurrentRow.Cells["firstname"].Value.ToString();
-            custln = customer_list.CurrentRow.Cells["lastname"].Value.ToString();
-            selectedCustIDTxt.Text = currCustomerNo.ToString();
-            selectedCustNameTxt.Text = custfn + " " + custln;
-        }
-
-        private void customer_new_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        public void claimOrder(string olID, string quantity)
-        {
-            var quantityClaimed = conn.Select("orderline", "quantity_claimed")
-                .Where("orderlineID", olID)
-                .GetQueryData();
-            quantityClaimed += int.Parse(quantity);
-            conn.Update("orderline", "quantity_claimed", quantityClaimed)
-                .Where("orderline_id", olID)
-                .GetQueryData();
-            conn.Insert("order_claim", "orderline_id", olID, "quantity_no", quantity, "date_claimed",
-                    DateTime.Now.ToString("yyyy-MM-dd"))
-                .GetQueryData();
-
-        }
-
-        public void payOrder(string oID, string payment) => payOrder(oID, Convert.ToInt32(payment));
-
-        public void payOrder(string oID, int payment)
-        {
-            // toDo: 1 insert for payment
-            var present_pay = conn.Select("order_payment", "SUM(payment)")
-                                    .NJoin("orders")
-                                    .Where("order_id", oID)
-                                    .Group("order_id")
-                                    .GetQueryData()
-                                    .Rows[0][0];
-            int total_pay = Convert.ToInt32(present_pay) + payment;
-            MessageBox.Show(total_pay.ToString());
-            conn.Insert("order_payment", "order_id", oID, "payment", payment.ToString(), "payment_date",
-                DateTime.Now.ToString("yyyy-MM-dd"))
-                .GetQueryData();
-            var total_price = conn.Select("orderline", "SUM(total_price)")
-                .Where("order_id", oID)
-                .Group("order_id")
-                .GetQueryData()
-                .Rows[0][0];
-            if (total_pay >= total_price)
-                conn.Update("orders", "payment_status", "1")
-                    .Where("order_id", oID)
-                    .GetQueryData();
         }
     }
 }
