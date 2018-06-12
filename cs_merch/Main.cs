@@ -71,9 +71,7 @@ namespace cs_merch
 
         private void getOrderId()
         {
-            order_no.Enabled = false;
-            price_total.Enabled = false;
-            var orders_dt = conn.Select("orders", "order_id").GetQueryData();
+            var orders_dt = conn.Select("orders", "MAX(order_id)").GetQueryData();
 
             if (orders_dt.Rows.Count == 0)
             {
@@ -83,7 +81,7 @@ namespace cs_merch
             }
             else
             {
-                int order_id = orders_dt.Rows[orders_dt.Rows.Count - 1][0] + 1;
+                int order_id = orders_dt.Rows[0][0] + 1;
                 order_no.Text = order_id.ToString();
             }
 
@@ -290,46 +288,111 @@ namespace cs_merch
             }
         }
 
-        public void claimOrder(string olID, string quantity)
+        private void reloadOrders()
         {
-            var quantityClaimed = conn.Select("orderline", "quantity_claimed")
-                .Where("orderlineID", olID)
+            orders_list.DataSource = conn.Select("orders=o", "o.order_id", "MIN(op.payment_date) AS 'Order Date'", "o.order_status", "CONCAT(c.lastname, ', ', c.firstname) as customer")
+                .NJoin("order_payment=op")
+                .NJoin("customer=c")
+                .Group("order_id")
                 .GetQueryData();
-            quantityClaimed += int.Parse(quantity);
-            conn.Update("orderline", "quantity_claimed", quantityClaimed)
-                .Where("orderline_id", olID)
-                .GetQueryData();
-            conn.Insert("order_claim", "orderline_id", olID, "quantity_no", quantity, "date_claimed",
-                    DateTime.Now.ToString("yyyy-MM-dd"))
-                .GetQueryData();
-
         }
 
-        public void payOrder(string oID, string payment) => payOrder(oID, Convert.ToInt32(payment));
-
-        public void payOrder(string oID, int payment)
+        private void showOrderDetails()
         {
+            string selectedOrder = orders_list.SelectedRows[0].Cells[0].Value.ToString();
+            var customerDetails = conn.Select("orders=o", "CONCAT(c.firstname,' ',c.lastname) as name", "c.contact", "c.cluster", "MIN(op.payment_date)", "o.payment_status", "SUM(op.payment)", "o.order_status ")
+                                    .NJoin("customer=c")
+                                    .NJoin("order_payment=op")
+                                    .Where("o.order_id", selectedOrder)
+                                    .Group("order_id")
+                                    .GetQueryData();
+            orderCname.Text = customerDetails.Rows[0][0].ToString();
+            orderCcontact.Text = customerDetails.Rows[0][1].ToString();
+            orderCcluster.Text = customerDetails.Rows[0][2].ToString();
+            orderOdate.Text = customerDetails.Rows[0][3].ToString();
+            orderOpstatus.Text = customerDetails.Rows[0][4].ToString();
+            orderOcdate.Text = customerDetails.Rows[0][5].ToString();
+            orderOstatus.Text = customerDetails.Rows[0][6].ToString();
+            customer_merch.DataSource = conn.Select("orderline=ol", "ol.orderline_id", "m.merch_name", "ol.quantity", "ol.quantity_claimed")
+                                        .NJoin("merchandise=m")
+                                        .NJoin("orders=o")
+                                        .Where("o.order_id", selectedOrder)
+                                        .GetQueryData();
+            _connData = conn.GetData();
+            customer_merch.Columns[0].DisplayIndex = 4;
+            customer_merch.Columns[1].Visible = false;
+            customer_merch.Columns[1].ReadOnly = true;
+            customer_merch.Columns[2].ReadOnly = true;
+            customer_merch.Columns[3].ReadOnly = true;
+            claim_list.DataSource = conn.Select("order_claim=oc", "m.merch_name", "oc.quantity_no", "oc.date_claimed")
+                                           .NJoin("orderline=ol")
+                                           .NJoin("merchandise=m")
+                                           .Where("ol.order_id", selectedOrder)
+                                           .GetQueryData();
+        }
+        private DataTable _connData;
+
+        public void claimOrder(string olID, string quantity)
+        {
+            try
+            {
+                claimOrder(olID, Convert.ToDecimal(quantity));
+            }
+            catch (FormatException x)
+            {
+                MessageBox.Show("Invalid Input :" + quantity);
+            }
+        }
+
+        public void claimOrder(string olID, decimal quantity)
+        {
+            if (quantity == 0)
+                return;
+            var itemDetails = conn.Select("orderline", "quantity", "quantity_claimed")
+                .Where("orderline_id", olID)
+                .GetQueryData();
+            decimal quantityClaimed = Convert.ToDecimal(itemDetails.Rows[0][1].ToString());
+            decimal total = Convert.ToDecimal(itemDetails.Rows[0][0].ToString());
+            decimal max = total - quantityClaimed;
+            //checks if claimed quantity is more than possible, if true will set quantity to max possible
+            quantity = quantity > max ? max : quantity;
+            quantityClaimed += quantity;
+            conn.Update("orderline", "quantity_claimed", quantityClaimed.ToString())
+                .Where("orderline_id", olID)
+                .GetQueryData();
+            conn.Insert("order_claim", "orderline_id", olID, "quantity_no", quantity.ToString(), "date_claimed",
+                DateTime.Now.ToString("yyyy-MM-dd"))
+                .GetQueryData();
+            showOrderDetails();
+        }
+
+        public void payOrder(string oID, string payment) => payOrder(oID, Convert.ToDecimal(payment));
+
+        public void payOrder(string oID, decimal payment)
+        {
+            var test = new DatabaseConn();
             // toDo: 1 insert for payment
-            var present_pay = conn.Select("order_payment", "SUM(payment)")
+            var present_pay = test.Select("order_payment", "SUM(payment)")
                                     .NJoin("orders")
                                     .Where("order_id", oID)
                                     .Group("order_id")
                                     .GetQueryData()
                                     .Rows[0][0];
-            int total_pay = Convert.ToInt32(present_pay) + payment;
+            decimal total_pay = Convert.ToDecimal(present_pay) + payment;
             MessageBox.Show(total_pay.ToString());
-            conn.Insert("order_payment", "order_id", oID, "payment", payment.ToString(), "payment_date",
+            test.Insert("order_payment", "order_id", oID, "payment", payment.ToString(), "payment_date",
                 DateTime.Now.ToString("yyyy-MM-dd"))
                 .GetQueryData();
-            var total_price = conn.Select("orderline", "SUM(total_price)")
+            var total_price = test.Select("orderline", "SUM(total_price)")
                 .Where("order_id", oID)
                 .Group("order_id")
                 .GetQueryData()
                 .Rows[0][0];
             if (total_pay >= total_price)
-                conn.Update("orders", "payment_status", "1")
+                test.Update("orders", "payment_status", "1")
                     .Where("order_id", oID)
                     .GetQueryData();
+            showOrderDetails();
         }
 
         private void sell_merchandise_CellClick_1(object sender, DataGridViewCellEventArgs e)
@@ -421,6 +484,28 @@ namespace cs_merch
                            select Convert.ToDecimal(row.Cells[2].FormattedValue)).Sum();
 
             sell_additem.Text = "Update";
+        }
+
+        private void order_checkout_Click(object sender, EventArgs e)
+        {
+            using (Unfocus p = new Unfocus(this))
+            {
+                //p.Location = new Point(48, 15);
+                //p.Location = new Point(0, 0);
+                p.Size = this.ClientRectangle.Size;
+                p.StartPosition = FormStartPosition.CenterScreen;
+                p.BringToFront();
+
+                Main_payment chkout = new Main_payment(this, total_price);
+                chkout.checkoutform = this;
+                chkout.ShowDialog(this);
+            }
+        }
+
+        private void sales_browser_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (sales_browser.SelectedIndex == 1)
+                reloadOrders();
         }
     }
 }

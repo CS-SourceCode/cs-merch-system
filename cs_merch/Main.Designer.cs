@@ -91,16 +91,46 @@
             this.tableLayoutPanel16 = new System.Windows.Forms.TableLayoutPanel();
             this.label7 = new System.Windows.Forms.Label();
             this.tableLayoutPanel17 = new System.Windows.Forms.TableLayoutPanel();
+            this.panel21 = new System.Windows.Forms.Panel();
+            this.label17 = new System.Windows.Forms.Label();
+            this.panel20 = new System.Windows.Forms.Panel();
+            this.label16 = new System.Windows.Forms.Label();
+            this.panel13 = new System.Windows.Forms.Panel();
+            this.label9 = new System.Windows.Forms.Label();
+            this.panel19 = new System.Windows.Forms.Panel();
+            this.label15 = new System.Windows.Forms.Label();
+            this.panel16 = new System.Windows.Forms.Panel();
+            this.label12 = new System.Windows.Forms.Label();
             this.panel11 = new System.Windows.Forms.Panel();
             this.label8 = new System.Windows.Forms.Label();
             this.panel14 = new System.Windows.Forms.Panel();
             this.label10 = new System.Windows.Forms.Label();
             this.panel15 = new System.Windows.Forms.Panel();
             this.label11 = new System.Windows.Forms.Label();
+            this.panel17 = new System.Windows.Forms.Panel();
+            this.label13 = new System.Windows.Forms.Label();
+            this.panel18 = new System.Windows.Forms.Panel();
+            this.label14 = new System.Windows.Forms.Label();
+            this.tableLayoutPanel18 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel19 = new System.Windows.Forms.TableLayoutPanel();
+            this.tableLayoutPanel20 = new System.Windows.Forms.TableLayoutPanel();
+            this.label18 = new System.Windows.Forms.Label();
+            this.payments_list = new System.Windows.Forms.DataGridView();
+            this.tableLayoutPanel21 = new System.Windows.Forms.TableLayoutPanel();
+            this.claim_list = new System.Windows.Forms.DataGridView();
+            this.label19 = new System.Windows.Forms.Label();
+            this.tableLayoutPanel22 = new System.Windows.Forms.TableLayoutPanel();
+            this.customer_merch = new System.Windows.Forms.DataGridView();
+            this.claim_amount1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label20 = new System.Windows.Forms.Label();
+            this.tableLayoutPanel23 = new System.Windows.Forms.TableLayoutPanel();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel_orders = new System.Windows.Forms.Panel();
             this.panel12 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel14 = new System.Windows.Forms.TableLayoutPanel();
             this.label6 = new System.Windows.Forms.Label();
+            this.orders_list = new System.Windows.Forms.DataGridView();
             this.merchandise = new System.Windows.Forms.TabPage();
             this.reports = new System.Windows.Forms.TabPage();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -113,6 +143,8 @@
             this.btnMerch = new System.Windows.Forms.Button();
             this.btnSales = new System.Windows.Forms.Button();
             this.btnDashboard = new System.Windows.Forms.Button();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.dashboard_e = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.sales_e = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.sell_e = new Bunifu.Framework.UI.BunifuElipse(this.components);
@@ -120,38 +152,26 @@
             this.merchandise_e = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.reports_e = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.users_e = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.panel16 = new System.Windows.Forms.Panel();
-            this.label12 = new System.Windows.Forms.Label();
-            this.panel17 = new System.Windows.Forms.Panel();
-            this.label13 = new System.Windows.Forms.Label();
-            this.panel18 = new System.Windows.Forms.Panel();
-            this.label14 = new System.Windows.Forms.Label();
-            this.panel19 = new System.Windows.Forms.Panel();
-            this.label15 = new System.Windows.Forms.Label();
-            this.panel13 = new System.Windows.Forms.Panel();
-            this.label9 = new System.Windows.Forms.Label();
-            this.panel20 = new System.Windows.Forms.Panel();
-            this.label16 = new System.Windows.Forms.Label();
-            this.panel21 = new System.Windows.Forms.Panel();
-            this.label17 = new System.Windows.Forms.Label();
-            this.tableLayoutPanel18 = new System.Windows.Forms.TableLayoutPanel();
-            this.tableLayoutPanel19 = new System.Windows.Forms.TableLayoutPanel();
-            this.tableLayoutPanel20 = new System.Windows.Forms.TableLayoutPanel();
-            this.label18 = new System.Windows.Forms.Label();
-            this.payments_list = new System.Windows.Forms.DataGridView();
-            this.tableLayoutPanel21 = new System.Windows.Forms.TableLayoutPanel();
-            this.label19 = new System.Windows.Forms.Label();
-            this.claim_list = new System.Windows.Forms.DataGridView();
-            this.tableLayoutPanel22 = new System.Windows.Forms.TableLayoutPanel();
-            this.label20 = new System.Windows.Forms.Label();
-            this.customer_merch = new System.Windows.Forms.DataGridView();
-            this.claim_amount1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tableLayoutPanel23 = new System.Windows.Forms.TableLayoutPanel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.orders_list = new System.Windows.Forms.DataGridView();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panel22 = new System.Windows.Forms.Panel();
+            this.orders_or = new System.Windows.Forms.Label();
+            this.panel23 = new System.Windows.Forms.Panel();
+            this.orders_orderdate = new System.Windows.Forms.Label();
+            this.panel24 = new System.Windows.Forms.Panel();
+            this.orders_custname = new System.Windows.Forms.Label();
+            this.panel25 = new System.Windows.Forms.Panel();
+            this.orders_custcluster = new System.Windows.Forms.Label();
+            this.panel26 = new System.Windows.Forms.Panel();
+            this.orders_ordercontact = new System.Windows.Forms.Label();
+            this.panel27 = new System.Windows.Forms.Panel();
+            this.ordes_orderstatus = new System.Windows.Forms.Label();
+            this.panel28 = new System.Windows.Forms.Panel();
+            this.orders_paystatus = new System.Windows.Forms.Label();
+            this.panel29 = new System.Windows.Forms.Panel();
+            this.orders_totaldue = new System.Windows.Forms.Label();
+            this.panel30 = new System.Windows.Forms.Panel();
+            this.orders_amtpaid = new System.Windows.Forms.Label();
+            this.panel31 = new System.Windows.Forms.Panel();
+            this.orders_balance = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.superpanel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -188,23 +208,16 @@
             this.panel10.SuspendLayout();
             this.tableLayoutPanel16.SuspendLayout();
             this.tableLayoutPanel17.SuspendLayout();
+            this.panel21.SuspendLayout();
+            this.panel20.SuspendLayout();
+            this.panel13.SuspendLayout();
+            this.panel19.SuspendLayout();
+            this.panel16.SuspendLayout();
             this.panel11.SuspendLayout();
             this.panel14.SuspendLayout();
             this.panel15.SuspendLayout();
-            this.panel_orders.SuspendLayout();
-            this.panel12.SuspendLayout();
-            this.tableLayoutPanel14.SuspendLayout();
-            this.panel2.SuspendLayout();
-            this.tableLayoutPanel12.SuspendLayout();
-            this.panel6.SuspendLayout();
-            this.panel7.SuspendLayout();
-            this.panel16.SuspendLayout();
             this.panel17.SuspendLayout();
             this.panel18.SuspendLayout();
-            this.panel19.SuspendLayout();
-            this.panel13.SuspendLayout();
-            this.panel20.SuspendLayout();
-            this.panel21.SuspendLayout();
             this.tableLayoutPanel18.SuspendLayout();
             this.tableLayoutPanel19.SuspendLayout();
             this.tableLayoutPanel20.SuspendLayout();
@@ -214,8 +227,25 @@
             this.tableLayoutPanel22.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.customer_merch)).BeginInit();
             this.tableLayoutPanel23.SuspendLayout();
+            this.panel_orders.SuspendLayout();
+            this.panel12.SuspendLayout();
+            this.tableLayoutPanel14.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.orders_list)).BeginInit();
+            this.panel2.SuspendLayout();
+            this.tableLayoutPanel12.SuspendLayout();
+            this.panel6.SuspendLayout();
+            this.panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel22.SuspendLayout();
+            this.panel23.SuspendLayout();
+            this.panel24.SuspendLayout();
+            this.panel25.SuspendLayout();
+            this.panel26.SuspendLayout();
+            this.panel27.SuspendLayout();
+            this.panel28.SuspendLayout();
+            this.panel29.SuspendLayout();
+            this.panel30.SuspendLayout();
+            this.panel31.SuspendLayout();
             this.SuspendLayout();
             // 
             // exit_main
@@ -314,6 +344,7 @@
             this.sales_browser.SelectedIndex = 0;
             this.sales_browser.Size = new System.Drawing.Size(964, 645);
             this.sales_browser.TabIndex = 0;
+            this.sales_browser.SelectedIndexChanged += new System.EventHandler(this.sales_browser_SelectedIndexChanged);
             // 
             // sell
             // 
@@ -805,6 +836,7 @@
             this.order_checkout.TabIndex = 11;
             this.order_checkout.Text = "CHECKOUT";
             this.order_checkout.UseVisualStyleBackColor = false;
+            this.order_checkout.Click += new System.EventHandler(this.order_checkout_Click);
             // 
             // orderline
             // 
@@ -1022,9 +1054,9 @@
             this.panel9.BackColor = System.Drawing.Color.Transparent;
             this.panel9.Controls.Add(this.tableLayoutPanel15);
             this.panel9.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel9.Location = new System.Drawing.Point(327, 3);
+            this.panel9.Location = new System.Drawing.Point(328, 3);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(620, 604);
+            this.panel9.Size = new System.Drawing.Size(619, 604);
             this.panel9.TabIndex = 1;
             // 
             // tableLayoutPanel15
@@ -1041,7 +1073,7 @@
             this.tableLayoutPanel15.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 27.0073F));
             this.tableLayoutPanel15.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 72.9927F));
             this.tableLayoutPanel15.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 55F));
-            this.tableLayoutPanel15.Size = new System.Drawing.Size(620, 604);
+            this.tableLayoutPanel15.Size = new System.Drawing.Size(619, 604);
             this.tableLayoutPanel15.TabIndex = 0;
             // 
             // panel8
@@ -1050,7 +1082,7 @@
             this.panel8.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel8.Location = new System.Drawing.Point(3, 3);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(614, 142);
+            this.panel8.Size = new System.Drawing.Size(613, 142);
             this.panel8.TabIndex = 0;
             // 
             // panel10
@@ -1059,7 +1091,7 @@
             this.panel10.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel10.Location = new System.Drawing.Point(0, 0);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(614, 142);
+            this.panel10.Size = new System.Drawing.Size(613, 142);
             this.panel10.TabIndex = 0;
             // 
             // tableLayoutPanel16
@@ -1077,7 +1109,7 @@
             this.tableLayoutPanel16.RowCount = 2;
             this.tableLayoutPanel16.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 19.23077F));
             this.tableLayoutPanel16.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 80.76923F));
-            this.tableLayoutPanel16.Size = new System.Drawing.Size(608, 135);
+            this.tableLayoutPanel16.Size = new System.Drawing.Size(607, 135);
             this.tableLayoutPanel16.TabIndex = 0;
             // 
             // label7
@@ -1101,6 +1133,16 @@
             this.tableLayoutPanel17.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel17.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel17.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.tableLayoutPanel17.Controls.Add(this.panel31, 3, 4);
+            this.tableLayoutPanel17.Controls.Add(this.panel30, 3, 3);
+            this.tableLayoutPanel17.Controls.Add(this.panel29, 3, 2);
+            this.tableLayoutPanel17.Controls.Add(this.panel28, 3, 1);
+            this.tableLayoutPanel17.Controls.Add(this.panel27, 3, 0);
+            this.tableLayoutPanel17.Controls.Add(this.panel26, 1, 4);
+            this.tableLayoutPanel17.Controls.Add(this.panel25, 1, 3);
+            this.tableLayoutPanel17.Controls.Add(this.panel24, 1, 2);
+            this.tableLayoutPanel17.Controls.Add(this.panel23, 1, 1);
+            this.tableLayoutPanel17.Controls.Add(this.panel22, 1, 0);
             this.tableLayoutPanel17.Controls.Add(this.panel21, 2, 4);
             this.tableLayoutPanel17.Controls.Add(this.panel20, 2, 3);
             this.tableLayoutPanel17.Controls.Add(this.panel13, 2, 1);
@@ -1120,8 +1162,113 @@
             this.tableLayoutPanel17.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel17.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel17.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel17.Size = new System.Drawing.Size(602, 104);
+            this.tableLayoutPanel17.Size = new System.Drawing.Size(601, 104);
             this.tableLayoutPanel17.TabIndex = 5;
+            // 
+            // panel21
+            // 
+            this.panel21.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel21.Controls.Add(this.label17);
+            this.panel21.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel21.Location = new System.Drawing.Point(303, 83);
+            this.panel21.Name = "panel21";
+            this.panel21.Size = new System.Drawing.Size(144, 18);
+            this.panel21.TabIndex = 2;
+            // 
+            // label17
+            // 
+            this.label17.Dock = System.Windows.Forms.DockStyle.Left;
+            this.label17.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.Location = new System.Drawing.Point(0, 0);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(109, 18);
+            this.label17.TabIndex = 0;
+            this.label17.Text = "Balance:";
+            this.label17.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // panel20
+            // 
+            this.panel20.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel20.Controls.Add(this.label16);
+            this.panel20.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel20.Location = new System.Drawing.Point(303, 63);
+            this.panel20.Name = "panel20";
+            this.panel20.Size = new System.Drawing.Size(144, 14);
+            this.panel20.TabIndex = 2;
+            // 
+            // label16
+            // 
+            this.label16.Dock = System.Windows.Forms.DockStyle.Left;
+            this.label16.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Location = new System.Drawing.Point(0, 0);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(109, 14);
+            this.label16.TabIndex = 0;
+            this.label16.Text = "Amount Paid:";
+            this.label16.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // panel13
+            // 
+            this.panel13.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel13.Controls.Add(this.label9);
+            this.panel13.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel13.Location = new System.Drawing.Point(303, 23);
+            this.panel13.Name = "panel13";
+            this.panel13.Size = new System.Drawing.Size(144, 14);
+            this.panel13.TabIndex = 2;
+            // 
+            // label9
+            // 
+            this.label9.Dock = System.Windows.Forms.DockStyle.Left;
+            this.label9.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(0, 0);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(109, 14);
+            this.label9.TabIndex = 0;
+            this.label9.Text = "Payment Status:";
+            this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // panel19
+            // 
+            this.panel19.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel19.Controls.Add(this.label15);
+            this.panel19.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel19.Location = new System.Drawing.Point(303, 43);
+            this.panel19.Name = "panel19";
+            this.panel19.Size = new System.Drawing.Size(144, 14);
+            this.panel19.TabIndex = 2;
+            // 
+            // label15
+            // 
+            this.label15.Dock = System.Windows.Forms.DockStyle.Left;
+            this.label15.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Location = new System.Drawing.Point(0, 0);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(109, 14);
+            this.label15.TabIndex = 0;
+            this.label15.Text = "Total Due:";
+            this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // panel16
+            // 
+            this.panel16.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel16.Controls.Add(this.label12);
+            this.panel16.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel16.Location = new System.Drawing.Point(3, 83);
+            this.panel16.Name = "panel16";
+            this.panel16.Size = new System.Drawing.Size(144, 18);
+            this.panel16.TabIndex = 4;
+            // 
+            // label12
+            // 
+            this.label12.Dock = System.Windows.Forms.DockStyle.Left;
+            this.label12.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(0, 0);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(98, 18);
+            this.label12.TabIndex = 1;
+            this.label12.Text = "Contact:";
+            this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // panel11
             // 
@@ -1186,6 +1333,267 @@
             this.label11.Text = "Cluster:";
             this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
+            // panel17
+            // 
+            this.panel17.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel17.Controls.Add(this.label13);
+            this.panel17.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel17.Location = new System.Drawing.Point(3, 23);
+            this.panel17.Name = "panel17";
+            this.panel17.Size = new System.Drawing.Size(144, 14);
+            this.panel17.TabIndex = 1;
+            // 
+            // label13
+            // 
+            this.label13.Dock = System.Windows.Forms.DockStyle.Left;
+            this.label13.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(0, 0);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(109, 14);
+            this.label13.TabIndex = 0;
+            this.label13.Text = "Order Date:";
+            this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // panel18
+            // 
+            this.panel18.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel18.Controls.Add(this.label14);
+            this.panel18.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel18.Location = new System.Drawing.Point(303, 3);
+            this.panel18.Name = "panel18";
+            this.panel18.Size = new System.Drawing.Size(144, 14);
+            this.panel18.TabIndex = 2;
+            // 
+            // label14
+            // 
+            this.label14.Dock = System.Windows.Forms.DockStyle.Left;
+            this.label14.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(0, 0);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(114, 14);
+            this.label14.TabIndex = 0;
+            this.label14.Text = "Order Status:";
+            this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // tableLayoutPanel18
+            // 
+            this.tableLayoutPanel18.ColumnCount = 2;
+            this.tableLayoutPanel18.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel18.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel18.Controls.Add(this.tableLayoutPanel19, 0, 0);
+            this.tableLayoutPanel18.Controls.Add(this.tableLayoutPanel22, 1, 0);
+            this.tableLayoutPanel18.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel18.Location = new System.Drawing.Point(3, 151);
+            this.tableLayoutPanel18.Name = "tableLayoutPanel18";
+            this.tableLayoutPanel18.RowCount = 1;
+            this.tableLayoutPanel18.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel18.Size = new System.Drawing.Size(613, 394);
+            this.tableLayoutPanel18.TabIndex = 1;
+            // 
+            // tableLayoutPanel19
+            // 
+            this.tableLayoutPanel19.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.tableLayoutPanel19.ColumnCount = 1;
+            this.tableLayoutPanel19.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel19.Controls.Add(this.tableLayoutPanel20, 0, 0);
+            this.tableLayoutPanel19.Controls.Add(this.tableLayoutPanel21, 0, 1);
+            this.tableLayoutPanel19.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel19.Location = new System.Drawing.Point(3, 3);
+            this.tableLayoutPanel19.Name = "tableLayoutPanel19";
+            this.tableLayoutPanel19.RowCount = 2;
+            this.tableLayoutPanel19.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 28.64078F));
+            this.tableLayoutPanel19.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 71.35922F));
+            this.tableLayoutPanel19.Size = new System.Drawing.Size(300, 388);
+            this.tableLayoutPanel19.TabIndex = 0;
+            // 
+            // tableLayoutPanel20
+            // 
+            this.tableLayoutPanel20.ColumnCount = 1;
+            this.tableLayoutPanel20.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel20.Controls.Add(this.label18, 0, 0);
+            this.tableLayoutPanel20.Controls.Add(this.payments_list, 0, 1);
+            this.tableLayoutPanel20.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel20.Location = new System.Drawing.Point(3, 3);
+            this.tableLayoutPanel20.Name = "tableLayoutPanel20";
+            this.tableLayoutPanel20.RowCount = 2;
+            this.tableLayoutPanel20.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 19.64286F));
+            this.tableLayoutPanel20.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 80.35714F));
+            this.tableLayoutPanel20.Size = new System.Drawing.Size(294, 105);
+            this.tableLayoutPanel20.TabIndex = 0;
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Dock = System.Windows.Forms.DockStyle.Left;
+            this.label18.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.ForeColor = System.Drawing.Color.Purple;
+            this.label18.Location = new System.Drawing.Point(3, 0);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(100, 20);
+            this.label18.TabIndex = 5;
+            this.label18.Text = "Payments";
+            this.label18.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // payments_list
+            // 
+            this.payments_list.AllowUserToAddRows = false;
+            this.payments_list.AllowUserToDeleteRows = false;
+            this.payments_list.BackgroundColor = System.Drawing.Color.WhiteSmoke;
+            this.payments_list.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.payments_list.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.payments_list.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.payments_list.Location = new System.Drawing.Point(3, 23);
+            this.payments_list.Name = "payments_list";
+            this.payments_list.ReadOnly = true;
+            this.payments_list.RowTemplate.Height = 24;
+            this.payments_list.Size = new System.Drawing.Size(288, 79);
+            this.payments_list.TabIndex = 6;
+            // 
+            // tableLayoutPanel21
+            // 
+            this.tableLayoutPanel21.ColumnCount = 1;
+            this.tableLayoutPanel21.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel21.Controls.Add(this.claim_list, 0, 1);
+            this.tableLayoutPanel21.Controls.Add(this.label19, 0, 0);
+            this.tableLayoutPanel21.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel21.Location = new System.Drawing.Point(3, 114);
+            this.tableLayoutPanel21.Name = "tableLayoutPanel21";
+            this.tableLayoutPanel21.RowCount = 2;
+            this.tableLayoutPanel21.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.333333F));
+            this.tableLayoutPanel21.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 91.66666F));
+            this.tableLayoutPanel21.Size = new System.Drawing.Size(294, 271);
+            this.tableLayoutPanel21.TabIndex = 1;
+            // 
+            // claim_list
+            // 
+            this.claim_list.AllowUserToAddRows = false;
+            this.claim_list.AllowUserToDeleteRows = false;
+            this.claim_list.BackgroundColor = System.Drawing.Color.WhiteSmoke;
+            this.claim_list.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.claim_list.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.claim_list.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.claim_list.Location = new System.Drawing.Point(3, 25);
+            this.claim_list.Name = "claim_list";
+            this.claim_list.ReadOnly = true;
+            this.claim_list.RowTemplate.Height = 24;
+            this.claim_list.Size = new System.Drawing.Size(288, 243);
+            this.claim_list.TabIndex = 7;
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Dock = System.Windows.Forms.DockStyle.Left;
+            this.label19.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.ForeColor = System.Drawing.Color.Purple;
+            this.label19.Location = new System.Drawing.Point(3, 0);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(68, 22);
+            this.label19.TabIndex = 6;
+            this.label19.Text = "Claims";
+            this.label19.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // tableLayoutPanel22
+            // 
+            this.tableLayoutPanel22.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.tableLayoutPanel22.ColumnCount = 1;
+            this.tableLayoutPanel22.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel22.Controls.Add(this.customer_merch, 0, 1);
+            this.tableLayoutPanel22.Controls.Add(this.label20, 0, 0);
+            this.tableLayoutPanel22.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel22.Location = new System.Drawing.Point(309, 3);
+            this.tableLayoutPanel22.Name = "tableLayoutPanel22";
+            this.tableLayoutPanel22.RowCount = 2;
+            this.tableLayoutPanel22.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5.927835F));
+            this.tableLayoutPanel22.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 94.07217F));
+            this.tableLayoutPanel22.Size = new System.Drawing.Size(301, 388);
+            this.tableLayoutPanel22.TabIndex = 1;
+            // 
+            // customer_merch
+            // 
+            this.customer_merch.AllowUserToAddRows = false;
+            this.customer_merch.AllowUserToDeleteRows = false;
+            this.customer_merch.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.customer_merch.BackgroundColor = System.Drawing.Color.WhiteSmoke;
+            this.customer_merch.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.customer_merch.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.customer_merch.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.claim_amount1});
+            this.customer_merch.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.customer_merch.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
+            this.customer_merch.Location = new System.Drawing.Point(4, 26);
+            this.customer_merch.Margin = new System.Windows.Forms.Padding(4);
+            this.customer_merch.Name = "customer_merch";
+            this.customer_merch.RowHeadersVisible = false;
+            this.customer_merch.RowTemplate.Height = 24;
+            this.customer_merch.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.customer_merch.Size = new System.Drawing.Size(293, 358);
+            this.customer_merch.TabIndex = 34;
+            // 
+            // claim_amount1
+            // 
+            this.claim_amount1.HeaderText = "CLAIM";
+            this.claim_amount1.Name = "claim_amount1";
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Dock = System.Windows.Forms.DockStyle.Left;
+            this.label20.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.ForeColor = System.Drawing.Color.Purple;
+            this.label20.Location = new System.Drawing.Point(3, 0);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(129, 22);
+            this.label20.TabIndex = 6;
+            this.label20.Text = "Merchandise";
+            this.label20.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // tableLayoutPanel23
+            // 
+            this.tableLayoutPanel23.ColumnCount = 2;
+            this.tableLayoutPanel23.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel23.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel23.Controls.Add(this.button2, 1, 0);
+            this.tableLayoutPanel23.Controls.Add(this.button1, 0, 0);
+            this.tableLayoutPanel23.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel23.Location = new System.Drawing.Point(3, 551);
+            this.tableLayoutPanel23.Name = "tableLayoutPanel23";
+            this.tableLayoutPanel23.RowCount = 1;
+            this.tableLayoutPanel23.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel23.Size = new System.Drawing.Size(613, 50);
+            this.tableLayoutPanel23.TabIndex = 2;
+            // 
+            // button2
+            // 
+            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
+            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.Location = new System.Drawing.Point(309, 3);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(301, 44);
+            this.button2.TabIndex = 24;
+            this.button2.Text = "Claim";
+            this.button2.UseVisualStyleBackColor = false;
+            // 
+            // button1
+            // 
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(3, 3);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(300, 44);
+            this.button1.TabIndex = 23;
+            this.button1.Text = "Pay Due";
+            this.button1.UseVisualStyleBackColor = false;
+            // 
             // panel_orders
             // 
             this.panel_orders.BackColor = System.Drawing.Color.Transparent;
@@ -1193,7 +1601,7 @@
             this.panel_orders.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel_orders.Location = new System.Drawing.Point(3, 3);
             this.panel_orders.Name = "panel_orders";
-            this.panel_orders.Size = new System.Drawing.Size(318, 604);
+            this.panel_orders.Size = new System.Drawing.Size(319, 604);
             this.panel_orders.TabIndex = 0;
             // 
             // panel12
@@ -1205,7 +1613,7 @@
             this.panel12.Controls.Add(this.tableLayoutPanel14);
             this.panel12.Location = new System.Drawing.Point(6, 6);
             this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(309, 592);
+            this.panel12.Size = new System.Drawing.Size(310, 592);
             this.panel12.TabIndex = 0;
             // 
             // tableLayoutPanel14
@@ -1221,7 +1629,8 @@
             this.tableLayoutPanel14.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 26.59575F));
             this.tableLayoutPanel14.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 73.40426F));
             this.tableLayoutPanel14.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 497F));
-            this.tableLayoutPanel14.Size = new System.Drawing.Size(309, 592);
+            this.tableLayoutPanel14.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel14.Size = new System.Drawing.Size(310, 592);
             this.tableLayoutPanel14.TabIndex = 0;
             // 
             // label6
@@ -1236,6 +1645,21 @@
             this.label6.TabIndex = 3;
             this.label6.Text = "Orders";
             this.label6.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // orders_list
+            // 
+            this.orders_list.AllowUserToAddRows = false;
+            this.orders_list.AllowUserToDeleteRows = false;
+            this.orders_list.BackgroundColor = System.Drawing.Color.WhiteSmoke;
+            this.orders_list.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.orders_list.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.orders_list.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.orders_list.Location = new System.Drawing.Point(3, 97);
+            this.orders_list.Name = "orders_list";
+            this.orders_list.ReadOnly = true;
+            this.orders_list.RowTemplate.Height = 24;
+            this.orders_list.Size = new System.Drawing.Size(304, 492);
+            this.orders_list.TabIndex = 7;
             // 
             // merchandise
             // 
@@ -1407,6 +1831,25 @@
             this.btnDashboard.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnDashboard.UseVisualStyleBackColor = false;
             // 
+            // panel7
+            // 
+            this.panel7.Controls.Add(this.pictureBox1);
+            this.panel7.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel7.Location = new System.Drawing.Point(3, 3);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(214, 178);
+            this.panel7.TabIndex = 1;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::cs_merch.Properties.Resources.CSMS;
+            this.pictureBox1.Location = new System.Drawing.Point(-74, -18);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(364, 252);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
             // dashboard_e
             // 
             this.dashboard_e.ElipseRadius = 5;
@@ -1442,405 +1885,215 @@
             this.users_e.ElipseRadius = 5;
             this.users_e.TargetControl = this.btnUsers;
             // 
-            // panel7
+            // panel22
             // 
-            this.panel7.Controls.Add(this.pictureBox1);
-            this.panel7.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel7.Location = new System.Drawing.Point(3, 3);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(214, 178);
-            this.panel7.TabIndex = 1;
+            this.panel22.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel22.Controls.Add(this.orders_or);
+            this.panel22.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel22.Location = new System.Drawing.Point(153, 3);
+            this.panel22.Name = "panel22";
+            this.panel22.Size = new System.Drawing.Size(144, 14);
+            this.panel22.TabIndex = 8;
             // 
-            // panel16
+            // orders_or
             // 
-            this.panel16.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panel16.Controls.Add(this.label12);
-            this.panel16.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel16.Location = new System.Drawing.Point(3, 83);
-            this.panel16.Name = "panel16";
-            this.panel16.Size = new System.Drawing.Size(144, 18);
-            this.panel16.TabIndex = 4;
+            this.orders_or.Dock = System.Windows.Forms.DockStyle.Right;
+            this.orders_or.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.orders_or.Location = new System.Drawing.Point(22, 0);
+            this.orders_or.Name = "orders_or";
+            this.orders_or.Size = new System.Drawing.Size(122, 14);
+            this.orders_or.TabIndex = 2;
+            this.orders_or.Text = "{ORDER NO}";
+            this.orders_or.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // label12
+            // panel23
             // 
-            this.label12.Dock = System.Windows.Forms.DockStyle.Left;
-            this.label12.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(0, 0);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(98, 18);
-            this.label12.TabIndex = 1;
-            this.label12.Text = "Contact:";
-            this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.panel23.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel23.Controls.Add(this.orders_orderdate);
+            this.panel23.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel23.Location = new System.Drawing.Point(153, 23);
+            this.panel23.Name = "panel23";
+            this.panel23.Size = new System.Drawing.Size(144, 14);
+            this.panel23.TabIndex = 8;
             // 
-            // panel17
+            // orders_orderdate
             // 
-            this.panel17.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panel17.Controls.Add(this.label13);
-            this.panel17.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel17.Location = new System.Drawing.Point(3, 23);
-            this.panel17.Name = "panel17";
-            this.panel17.Size = new System.Drawing.Size(144, 14);
-            this.panel17.TabIndex = 1;
+            this.orders_orderdate.Dock = System.Windows.Forms.DockStyle.Right;
+            this.orders_orderdate.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.orders_orderdate.Location = new System.Drawing.Point(22, 0);
+            this.orders_orderdate.Name = "orders_orderdate";
+            this.orders_orderdate.Size = new System.Drawing.Size(122, 14);
+            this.orders_orderdate.TabIndex = 2;
+            this.orders_orderdate.Text = "{ORDER DATE}";
+            this.orders_orderdate.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // label13
+            // panel24
             // 
-            this.label13.Dock = System.Windows.Forms.DockStyle.Left;
-            this.label13.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(0, 0);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(109, 14);
-            this.label13.TabIndex = 0;
-            this.label13.Text = "Order Date:";
-            this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.panel24.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel24.Controls.Add(this.orders_custname);
+            this.panel24.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel24.Location = new System.Drawing.Point(153, 43);
+            this.panel24.Name = "panel24";
+            this.panel24.Size = new System.Drawing.Size(144, 14);
+            this.panel24.TabIndex = 8;
             // 
-            // panel18
+            // orders_custname
             // 
-            this.panel18.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panel18.Controls.Add(this.label14);
-            this.panel18.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel18.Location = new System.Drawing.Point(303, 3);
-            this.panel18.Name = "panel18";
-            this.panel18.Size = new System.Drawing.Size(144, 14);
-            this.panel18.TabIndex = 2;
+            this.orders_custname.Dock = System.Windows.Forms.DockStyle.Right;
+            this.orders_custname.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.orders_custname.Location = new System.Drawing.Point(22, 0);
+            this.orders_custname.Name = "orders_custname";
+            this.orders_custname.Size = new System.Drawing.Size(122, 14);
+            this.orders_custname.TabIndex = 2;
+            this.orders_custname.Text = "{CUSTOMER}";
+            this.orders_custname.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // label14
+            // panel25
             // 
-            this.label14.Dock = System.Windows.Forms.DockStyle.Left;
-            this.label14.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(0, 0);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(114, 14);
-            this.label14.TabIndex = 0;
-            this.label14.Text = "Order Status:";
-            this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.panel25.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel25.Controls.Add(this.orders_custcluster);
+            this.panel25.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel25.Location = new System.Drawing.Point(153, 63);
+            this.panel25.Name = "panel25";
+            this.panel25.Size = new System.Drawing.Size(144, 14);
+            this.panel25.TabIndex = 8;
             // 
-            // panel19
+            // orders_custcluster
             // 
-            this.panel19.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panel19.Controls.Add(this.label15);
-            this.panel19.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel19.Location = new System.Drawing.Point(303, 43);
-            this.panel19.Name = "panel19";
-            this.panel19.Size = new System.Drawing.Size(144, 14);
-            this.panel19.TabIndex = 2;
+            this.orders_custcluster.Dock = System.Windows.Forms.DockStyle.Right;
+            this.orders_custcluster.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.orders_custcluster.Location = new System.Drawing.Point(22, 0);
+            this.orders_custcluster.Name = "orders_custcluster";
+            this.orders_custcluster.Size = new System.Drawing.Size(122, 14);
+            this.orders_custcluster.TabIndex = 2;
+            this.orders_custcluster.Text = "{CLUSTER}";
+            this.orders_custcluster.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // label15
+            // panel26
             // 
-            this.label15.Dock = System.Windows.Forms.DockStyle.Left;
-            this.label15.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(0, 0);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(109, 14);
-            this.label15.TabIndex = 0;
-            this.label15.Text = "Total Due:";
-            this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.panel26.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel26.Controls.Add(this.orders_ordercontact);
+            this.panel26.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel26.Location = new System.Drawing.Point(153, 83);
+            this.panel26.Name = "panel26";
+            this.panel26.Size = new System.Drawing.Size(144, 18);
+            this.panel26.TabIndex = 8;
             // 
-            // panel13
+            // orders_ordercontact
             // 
-            this.panel13.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panel13.Controls.Add(this.label9);
-            this.panel13.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel13.Location = new System.Drawing.Point(303, 23);
-            this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(144, 14);
-            this.panel13.TabIndex = 2;
+            this.orders_ordercontact.Dock = System.Windows.Forms.DockStyle.Right;
+            this.orders_ordercontact.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.orders_ordercontact.Location = new System.Drawing.Point(22, 0);
+            this.orders_ordercontact.Name = "orders_ordercontact";
+            this.orders_ordercontact.Size = new System.Drawing.Size(122, 18);
+            this.orders_ordercontact.TabIndex = 2;
+            this.orders_ordercontact.Text = "{CONTACT}";
+            this.orders_ordercontact.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // label9
+            // panel27
             // 
-            this.label9.Dock = System.Windows.Forms.DockStyle.Left;
-            this.label9.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(0, 0);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(109, 14);
-            this.label9.TabIndex = 0;
-            this.label9.Text = "Payment Status:";
-            this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.panel27.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel27.Controls.Add(this.ordes_orderstatus);
+            this.panel27.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel27.Location = new System.Drawing.Point(453, 3);
+            this.panel27.Name = "panel27";
+            this.panel27.Size = new System.Drawing.Size(145, 14);
+            this.panel27.TabIndex = 8;
             // 
-            // panel20
+            // ordes_orderstatus
             // 
-            this.panel20.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panel20.Controls.Add(this.label16);
-            this.panel20.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel20.Location = new System.Drawing.Point(303, 63);
-            this.panel20.Name = "panel20";
-            this.panel20.Size = new System.Drawing.Size(144, 14);
-            this.panel20.TabIndex = 2;
+            this.ordes_orderstatus.Dock = System.Windows.Forms.DockStyle.Right;
+            this.ordes_orderstatus.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ordes_orderstatus.Location = new System.Drawing.Point(23, 0);
+            this.ordes_orderstatus.Name = "ordes_orderstatus";
+            this.ordes_orderstatus.Size = new System.Drawing.Size(122, 14);
+            this.ordes_orderstatus.TabIndex = 2;
+            this.ordes_orderstatus.Text = "{ORDER STATUS}";
+            this.ordes_orderstatus.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // label16
+            // panel28
             // 
-            this.label16.Dock = System.Windows.Forms.DockStyle.Left;
-            this.label16.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(0, 0);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(109, 14);
-            this.label16.TabIndex = 0;
-            this.label16.Text = "Amount Paid:";
-            this.label16.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.panel28.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel28.Controls.Add(this.orders_paystatus);
+            this.panel28.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel28.Location = new System.Drawing.Point(453, 23);
+            this.panel28.Name = "panel28";
+            this.panel28.Size = new System.Drawing.Size(145, 14);
+            this.panel28.TabIndex = 8;
             // 
-            // panel21
+            // orders_paystatus
             // 
-            this.panel21.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panel21.Controls.Add(this.label17);
-            this.panel21.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel21.Location = new System.Drawing.Point(303, 83);
-            this.panel21.Name = "panel21";
-            this.panel21.Size = new System.Drawing.Size(144, 18);
-            this.panel21.TabIndex = 2;
+            this.orders_paystatus.Dock = System.Windows.Forms.DockStyle.Right;
+            this.orders_paystatus.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.orders_paystatus.Location = new System.Drawing.Point(23, 0);
+            this.orders_paystatus.Name = "orders_paystatus";
+            this.orders_paystatus.Size = new System.Drawing.Size(122, 14);
+            this.orders_paystatus.TabIndex = 2;
+            this.orders_paystatus.Text = "{PAYMENT STAUS}";
+            this.orders_paystatus.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // label17
+            // panel29
             // 
-            this.label17.Dock = System.Windows.Forms.DockStyle.Left;
-            this.label17.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(0, 0);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(109, 18);
-            this.label17.TabIndex = 0;
-            this.label17.Text = "Balance:";
-            this.label17.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.panel29.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel29.Controls.Add(this.orders_totaldue);
+            this.panel29.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel29.Location = new System.Drawing.Point(453, 43);
+            this.panel29.Name = "panel29";
+            this.panel29.Size = new System.Drawing.Size(145, 14);
+            this.panel29.TabIndex = 8;
             // 
-            // tableLayoutPanel18
+            // orders_totaldue
             // 
-            this.tableLayoutPanel18.ColumnCount = 2;
-            this.tableLayoutPanel18.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel18.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel18.Controls.Add(this.tableLayoutPanel19, 0, 0);
-            this.tableLayoutPanel18.Controls.Add(this.tableLayoutPanel22, 1, 0);
-            this.tableLayoutPanel18.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel18.Location = new System.Drawing.Point(3, 151);
-            this.tableLayoutPanel18.Name = "tableLayoutPanel18";
-            this.tableLayoutPanel18.RowCount = 1;
-            this.tableLayoutPanel18.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel18.Size = new System.Drawing.Size(614, 394);
-            this.tableLayoutPanel18.TabIndex = 1;
+            this.orders_totaldue.Dock = System.Windows.Forms.DockStyle.Right;
+            this.orders_totaldue.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.orders_totaldue.Location = new System.Drawing.Point(23, 0);
+            this.orders_totaldue.Name = "orders_totaldue";
+            this.orders_totaldue.Size = new System.Drawing.Size(122, 14);
+            this.orders_totaldue.TabIndex = 2;
+            this.orders_totaldue.Text = "{TOTAL DUE}";
+            this.orders_totaldue.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // tableLayoutPanel19
+            // panel30
             // 
-            this.tableLayoutPanel19.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.tableLayoutPanel19.ColumnCount = 1;
-            this.tableLayoutPanel19.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel19.Controls.Add(this.tableLayoutPanel20, 0, 0);
-            this.tableLayoutPanel19.Controls.Add(this.tableLayoutPanel21, 0, 1);
-            this.tableLayoutPanel19.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel19.Location = new System.Drawing.Point(3, 3);
-            this.tableLayoutPanel19.Name = "tableLayoutPanel19";
-            this.tableLayoutPanel19.RowCount = 2;
-            this.tableLayoutPanel19.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 28.64078F));
-            this.tableLayoutPanel19.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 71.35922F));
-            this.tableLayoutPanel19.Size = new System.Drawing.Size(301, 388);
-            this.tableLayoutPanel19.TabIndex = 0;
+            this.panel30.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel30.Controls.Add(this.orders_amtpaid);
+            this.panel30.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel30.Location = new System.Drawing.Point(453, 63);
+            this.panel30.Name = "panel30";
+            this.panel30.Size = new System.Drawing.Size(145, 14);
+            this.panel30.TabIndex = 8;
             // 
-            // tableLayoutPanel20
+            // orders_amtpaid
             // 
-            this.tableLayoutPanel20.ColumnCount = 1;
-            this.tableLayoutPanel20.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel20.Controls.Add(this.label18, 0, 0);
-            this.tableLayoutPanel20.Controls.Add(this.payments_list, 0, 1);
-            this.tableLayoutPanel20.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel20.Location = new System.Drawing.Point(3, 3);
-            this.tableLayoutPanel20.Name = "tableLayoutPanel20";
-            this.tableLayoutPanel20.RowCount = 2;
-            this.tableLayoutPanel20.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 19.64286F));
-            this.tableLayoutPanel20.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 80.35714F));
-            this.tableLayoutPanel20.Size = new System.Drawing.Size(295, 105);
-            this.tableLayoutPanel20.TabIndex = 0;
+            this.orders_amtpaid.Dock = System.Windows.Forms.DockStyle.Right;
+            this.orders_amtpaid.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.orders_amtpaid.Location = new System.Drawing.Point(23, 0);
+            this.orders_amtpaid.Name = "orders_amtpaid";
+            this.orders_amtpaid.Size = new System.Drawing.Size(122, 14);
+            this.orders_amtpaid.TabIndex = 2;
+            this.orders_amtpaid.Text = "{AMOUNT PAID}";
+            this.orders_amtpaid.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // label18
+            // panel31
             // 
-            this.label18.AutoSize = true;
-            this.label18.Dock = System.Windows.Forms.DockStyle.Left;
-            this.label18.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.ForeColor = System.Drawing.Color.Purple;
-            this.label18.Location = new System.Drawing.Point(3, 0);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(100, 20);
-            this.label18.TabIndex = 5;
-            this.label18.Text = "Payments";
-            this.label18.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.panel31.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel31.Controls.Add(this.orders_balance);
+            this.panel31.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel31.Location = new System.Drawing.Point(453, 83);
+            this.panel31.Name = "panel31";
+            this.panel31.Size = new System.Drawing.Size(145, 18);
+            this.panel31.TabIndex = 8;
             // 
-            // payments_list
+            // orders_balance
             // 
-            this.payments_list.AllowUserToAddRows = false;
-            this.payments_list.AllowUserToDeleteRows = false;
-            this.payments_list.BackgroundColor = System.Drawing.Color.WhiteSmoke;
-            this.payments_list.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.payments_list.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.payments_list.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.payments_list.Location = new System.Drawing.Point(3, 23);
-            this.payments_list.Name = "payments_list";
-            this.payments_list.ReadOnly = true;
-            this.payments_list.RowTemplate.Height = 24;
-            this.payments_list.Size = new System.Drawing.Size(289, 79);
-            this.payments_list.TabIndex = 6;
-            // 
-            // tableLayoutPanel21
-            // 
-            this.tableLayoutPanel21.ColumnCount = 1;
-            this.tableLayoutPanel21.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel21.Controls.Add(this.claim_list, 0, 1);
-            this.tableLayoutPanel21.Controls.Add(this.label19, 0, 0);
-            this.tableLayoutPanel21.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel21.Location = new System.Drawing.Point(3, 114);
-            this.tableLayoutPanel21.Name = "tableLayoutPanel21";
-            this.tableLayoutPanel21.RowCount = 2;
-            this.tableLayoutPanel21.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.333333F));
-            this.tableLayoutPanel21.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 91.66666F));
-            this.tableLayoutPanel21.Size = new System.Drawing.Size(295, 271);
-            this.tableLayoutPanel21.TabIndex = 1;
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.Dock = System.Windows.Forms.DockStyle.Left;
-            this.label19.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.ForeColor = System.Drawing.Color.Purple;
-            this.label19.Location = new System.Drawing.Point(3, 0);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(68, 22);
-            this.label19.TabIndex = 6;
-            this.label19.Text = "Claims";
-            this.label19.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            // 
-            // claim_list
-            // 
-            this.claim_list.AllowUserToAddRows = false;
-            this.claim_list.AllowUserToDeleteRows = false;
-            this.claim_list.BackgroundColor = System.Drawing.Color.WhiteSmoke;
-            this.claim_list.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.claim_list.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.claim_list.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.claim_list.Location = new System.Drawing.Point(3, 25);
-            this.claim_list.Name = "claim_list";
-            this.claim_list.ReadOnly = true;
-            this.claim_list.RowTemplate.Height = 24;
-            this.claim_list.Size = new System.Drawing.Size(289, 243);
-            this.claim_list.TabIndex = 7;
-            // 
-            // tableLayoutPanel22
-            // 
-            this.tableLayoutPanel22.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.tableLayoutPanel22.ColumnCount = 1;
-            this.tableLayoutPanel22.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel22.Controls.Add(this.customer_merch, 0, 1);
-            this.tableLayoutPanel22.Controls.Add(this.label20, 0, 0);
-            this.tableLayoutPanel22.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel22.Location = new System.Drawing.Point(310, 3);
-            this.tableLayoutPanel22.Name = "tableLayoutPanel22";
-            this.tableLayoutPanel22.RowCount = 2;
-            this.tableLayoutPanel22.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 5.927835F));
-            this.tableLayoutPanel22.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 94.07217F));
-            this.tableLayoutPanel22.Size = new System.Drawing.Size(301, 388);
-            this.tableLayoutPanel22.TabIndex = 1;
-            // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Dock = System.Windows.Forms.DockStyle.Left;
-            this.label20.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.ForeColor = System.Drawing.Color.Purple;
-            this.label20.Location = new System.Drawing.Point(3, 0);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(129, 22);
-            this.label20.TabIndex = 6;
-            this.label20.Text = "Merchandise";
-            this.label20.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            // 
-            // customer_merch
-            // 
-            this.customer_merch.AllowUserToAddRows = false;
-            this.customer_merch.AllowUserToDeleteRows = false;
-            this.customer_merch.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.customer_merch.BackgroundColor = System.Drawing.Color.WhiteSmoke;
-            this.customer_merch.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.customer_merch.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.customer_merch.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.claim_amount1});
-            this.customer_merch.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.customer_merch.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnEnter;
-            this.customer_merch.Location = new System.Drawing.Point(4, 26);
-            this.customer_merch.Margin = new System.Windows.Forms.Padding(4);
-            this.customer_merch.Name = "customer_merch";
-            this.customer_merch.RowHeadersVisible = false;
-            this.customer_merch.RowTemplate.Height = 24;
-            this.customer_merch.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.customer_merch.Size = new System.Drawing.Size(293, 358);
-            this.customer_merch.TabIndex = 34;
-            // 
-            // claim_amount1
-            // 
-            this.claim_amount1.HeaderText = "CLAIM";
-            this.claim_amount1.Name = "claim_amount1";
-            // 
-            // tableLayoutPanel23
-            // 
-            this.tableLayoutPanel23.ColumnCount = 2;
-            this.tableLayoutPanel23.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel23.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel23.Controls.Add(this.button2, 1, 0);
-            this.tableLayoutPanel23.Controls.Add(this.button1, 0, 0);
-            this.tableLayoutPanel23.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel23.Location = new System.Drawing.Point(3, 551);
-            this.tableLayoutPanel23.Name = "tableLayoutPanel23";
-            this.tableLayoutPanel23.RowCount = 1;
-            this.tableLayoutPanel23.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel23.Size = new System.Drawing.Size(614, 50);
-            this.tableLayoutPanel23.TabIndex = 2;
-            // 
-            // button1
-            // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(3, 3);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(301, 44);
-            this.button1.TabIndex = 23;
-            this.button1.Text = "Pay Due";
-            this.button1.UseVisualStyleBackColor = false;
-            // 
-            // button2
-            // 
-            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
-            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(310, 3);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(301, 44);
-            this.button2.TabIndex = 24;
-            this.button2.Text = "Claim";
-            this.button2.UseVisualStyleBackColor = false;
-            // 
-            // orders_list
-            // 
-            this.orders_list.AllowUserToAddRows = false;
-            this.orders_list.AllowUserToDeleteRows = false;
-            this.orders_list.BackgroundColor = System.Drawing.Color.WhiteSmoke;
-            this.orders_list.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.orders_list.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.orders_list.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.orders_list.Location = new System.Drawing.Point(3, 97);
-            this.orders_list.Name = "orders_list";
-            this.orders_list.ReadOnly = true;
-            this.orders_list.RowTemplate.Height = 24;
-            this.orders_list.Size = new System.Drawing.Size(303, 492);
-            this.orders_list.TabIndex = 7;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::cs_merch.Properties.Resources.CSMS;
-            this.pictureBox1.Location = new System.Drawing.Point(-74, -18);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(364, 252);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
+            this.orders_balance.Dock = System.Windows.Forms.DockStyle.Right;
+            this.orders_balance.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.orders_balance.Location = new System.Drawing.Point(23, 0);
+            this.orders_balance.Name = "orders_balance";
+            this.orders_balance.Size = new System.Drawing.Size(122, 18);
+            this.orders_balance.TabIndex = 2;
+            this.orders_balance.Text = "{BALANCE}";
+            this.orders_balance.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // Main
             // 
@@ -1893,24 +2146,16 @@
             this.tableLayoutPanel16.ResumeLayout(false);
             this.tableLayoutPanel16.PerformLayout();
             this.tableLayoutPanel17.ResumeLayout(false);
+            this.panel21.ResumeLayout(false);
+            this.panel20.ResumeLayout(false);
+            this.panel13.ResumeLayout(false);
+            this.panel19.ResumeLayout(false);
+            this.panel16.ResumeLayout(false);
             this.panel11.ResumeLayout(false);
             this.panel14.ResumeLayout(false);
             this.panel15.ResumeLayout(false);
-            this.panel_orders.ResumeLayout(false);
-            this.panel12.ResumeLayout(false);
-            this.tableLayoutPanel14.ResumeLayout(false);
-            this.tableLayoutPanel14.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            this.tableLayoutPanel12.ResumeLayout(false);
-            this.panel6.ResumeLayout(false);
-            this.panel7.ResumeLayout(false);
-            this.panel16.ResumeLayout(false);
             this.panel17.ResumeLayout(false);
             this.panel18.ResumeLayout(false);
-            this.panel19.ResumeLayout(false);
-            this.panel13.ResumeLayout(false);
-            this.panel20.ResumeLayout(false);
-            this.panel21.ResumeLayout(false);
             this.tableLayoutPanel18.ResumeLayout(false);
             this.tableLayoutPanel19.ResumeLayout(false);
             this.tableLayoutPanel20.ResumeLayout(false);
@@ -1923,8 +2168,26 @@
             this.tableLayoutPanel22.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.customer_merch)).EndInit();
             this.tableLayoutPanel23.ResumeLayout(false);
+            this.panel_orders.ResumeLayout(false);
+            this.panel12.ResumeLayout(false);
+            this.tableLayoutPanel14.ResumeLayout(false);
+            this.tableLayoutPanel14.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.orders_list)).EndInit();
+            this.panel2.ResumeLayout(false);
+            this.tableLayoutPanel12.ResumeLayout(false);
+            this.panel6.ResumeLayout(false);
+            this.panel7.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel22.ResumeLayout(false);
+            this.panel23.ResumeLayout(false);
+            this.panel24.ResumeLayout(false);
+            this.panel25.ResumeLayout(false);
+            this.panel26.ResumeLayout(false);
+            this.panel27.ResumeLayout(false);
+            this.panel28.ResumeLayout(false);
+            this.panel29.ResumeLayout(false);
+            this.panel30.ResumeLayout(false);
+            this.panel31.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -2053,6 +2316,26 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel23;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.DataGridView orders_list;
+        private System.Windows.Forms.Panel panel31;
+        private System.Windows.Forms.Label orders_balance;
+        private System.Windows.Forms.Panel panel30;
+        private System.Windows.Forms.Label orders_amtpaid;
+        private System.Windows.Forms.Panel panel29;
+        private System.Windows.Forms.Label orders_totaldue;
+        private System.Windows.Forms.Panel panel28;
+        private System.Windows.Forms.Label orders_paystatus;
+        private System.Windows.Forms.Panel panel27;
+        private System.Windows.Forms.Label ordes_orderstatus;
+        private System.Windows.Forms.Panel panel26;
+        private System.Windows.Forms.Label orders_ordercontact;
+        private System.Windows.Forms.Panel panel25;
+        private System.Windows.Forms.Label orders_custcluster;
+        private System.Windows.Forms.Panel panel24;
+        private System.Windows.Forms.Label orders_custname;
+        private System.Windows.Forms.Panel panel23;
+        private System.Windows.Forms.Label orders_orderdate;
+        private System.Windows.Forms.Panel panel22;
+        private System.Windows.Forms.Label orders_or;
+        public System.Windows.Forms.DataGridView orders_list;
     }
 }
