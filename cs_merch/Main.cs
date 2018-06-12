@@ -31,7 +31,7 @@ namespace cs_merch
         int order_status;
         decimal change;
         int customer_id;
-        string paystatus;
+        int paystatus;
         string temp_merchname;
         int temp_qty = 0;
         int temp_merchid = 0;
@@ -41,33 +41,6 @@ namespace cs_merch
         int currCustomerNo = 0;
         string custfn;
         string custln;
-
-        public void checkoutOrder(decimal payment, decimal change, string paystatus)
-        {
-
-            DateTime date = DateTime.Now;
-            var order_date = date.Date;
-
-            order_status = 1;
-            customer_id = int.Parse(selectedCustIDTxt.Text);
-            this.paystatus = paystatus;
-            this.payment = payment;
-            this.change = change;
-
-            conn.Insert("orders", "order_date", DateTime.Now.ToString("yyyy-MM-dd"), "order_status", "1", "customer_id", customer_id.ToString(), "payment_status", paystatus).GetQueryData();
-            conn.Insert("order_payment", "order_id", conn.lastID, "payment", payment.ToString(), "payment_date",
-                DateTime.Now.ToString("yyyy-MM-dd")).GetQueryData();
-            //orderline.ColumnCount = 5;
-            string temp_orderid;
-            temp_orderid = conn.lastID;
-            foreach (DataGridViewRow rows in orderline.Rows)
-            {
-                MessageBox.Show(rows.Cells[0].Value.ToString());
-                conn.Insert("orderline", "order_id", temp_orderid, "merch_id", rows.Cells[3].Value.ToString(), "quantity", rows.Cells[1].Value.ToString(), "total_price", rows.Cells[2].Value.ToString()).GetQueryData();
-            }
-
-
-        }
 
         private void getOrderId()
         {
@@ -306,6 +279,7 @@ namespace cs_merch
                                     .Where("o.order_id", selectedOrder)
                                     .Group("order_id")
                                     .GetQueryData();
+            /*
             orderCname.Text = customerDetails.Rows[0][0].ToString();
             orderCcontact.Text = customerDetails.Rows[0][1].ToString();
             orderCcluster.Text = customerDetails.Rows[0][2].ToString();
@@ -313,6 +287,7 @@ namespace cs_merch
             orderOpstatus.Text = customerDetails.Rows[0][4].ToString();
             orderOcdate.Text = customerDetails.Rows[0][5].ToString();
             orderOstatus.Text = customerDetails.Rows[0][6].ToString();
+            */
             customer_merch.DataSource = conn.Select("orderline=ol", "ol.orderline_id", "m.merch_name", "ol.quantity", "ol.quantity_claimed")
                                         .NJoin("merchandise=m")
                                         .NJoin("orders=o")
@@ -500,6 +475,34 @@ namespace cs_merch
                 chkout.checkoutform = this;
                 chkout.ShowDialog(this);
             }
+        }
+
+        public void recordOrder(decimal payment, decimal change, int paystatus)
+        {
+
+            DateTime date = DateTime.Now;
+            var order_date = date.Date;
+
+            order_status = 1;
+            customer_id = int.Parse(selectedCustIDTxt.Text);
+            this.paystatus = paystatus;
+            this.payment = payment;
+            this.change = change;
+
+            conn.Insert("orders", "order_status", "1", "customer_id", customer_id.ToString(), "payment_status", paystatus.ToString()).GetQueryData();
+            string temp_orderid;
+            temp_orderid = conn.lastID;
+            conn.Insert("order_payment", "order_id", conn.lastID, "payment", payment.ToString(), "payment_date",
+                DateTime.Now.ToString("yyyy-MM-dd")).GetQueryData();
+            //orderline.ColumnCount = 5;
+
+            foreach (DataGridViewRow rows in orderline.Rows)
+            {
+                MessageBox.Show(rows.Cells[0].Value.ToString());
+                conn.Insert("orderline", "order_id", temp_orderid, "merch_id", rows.Cells[3].Value.ToString(), "quantity", rows.Cells[1].Value.ToString(), "total_price", rows.Cells[2].Value.ToString(), "quantity_claimed", "0").GetQueryData();
+            }
+
+
         }
 
         private void sales_browser_SelectedIndexChanged(object sender, EventArgs e)

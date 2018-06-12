@@ -91,6 +91,26 @@
             this.tableLayoutPanel16 = new System.Windows.Forms.TableLayoutPanel();
             this.label7 = new System.Windows.Forms.Label();
             this.tableLayoutPanel17 = new System.Windows.Forms.TableLayoutPanel();
+            this.panel31 = new System.Windows.Forms.Panel();
+            this.orders_balance = new System.Windows.Forms.Label();
+            this.panel30 = new System.Windows.Forms.Panel();
+            this.orders_amtpaid = new System.Windows.Forms.Label();
+            this.panel29 = new System.Windows.Forms.Panel();
+            this.orders_totaldue = new System.Windows.Forms.Label();
+            this.panel28 = new System.Windows.Forms.Panel();
+            this.orders_paystatus = new System.Windows.Forms.Label();
+            this.panel27 = new System.Windows.Forms.Panel();
+            this.ordes_orderstatus = new System.Windows.Forms.Label();
+            this.panel26 = new System.Windows.Forms.Panel();
+            this.orders_ordercontact = new System.Windows.Forms.Label();
+            this.panel25 = new System.Windows.Forms.Panel();
+            this.orders_custcluster = new System.Windows.Forms.Label();
+            this.panel24 = new System.Windows.Forms.Panel();
+            this.orders_custname = new System.Windows.Forms.Label();
+            this.panel23 = new System.Windows.Forms.Panel();
+            this.orders_orderdate = new System.Windows.Forms.Label();
+            this.panel22 = new System.Windows.Forms.Panel();
+            this.orders_or = new System.Windows.Forms.Label();
             this.panel21 = new System.Windows.Forms.Panel();
             this.label17 = new System.Windows.Forms.Label();
             this.panel20 = new System.Windows.Forms.Panel();
@@ -152,26 +172,6 @@
             this.merchandise_e = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.reports_e = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.users_e = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            this.panel22 = new System.Windows.Forms.Panel();
-            this.orders_or = new System.Windows.Forms.Label();
-            this.panel23 = new System.Windows.Forms.Panel();
-            this.orders_orderdate = new System.Windows.Forms.Label();
-            this.panel24 = new System.Windows.Forms.Panel();
-            this.orders_custname = new System.Windows.Forms.Label();
-            this.panel25 = new System.Windows.Forms.Panel();
-            this.orders_custcluster = new System.Windows.Forms.Label();
-            this.panel26 = new System.Windows.Forms.Panel();
-            this.orders_ordercontact = new System.Windows.Forms.Label();
-            this.panel27 = new System.Windows.Forms.Panel();
-            this.ordes_orderstatus = new System.Windows.Forms.Label();
-            this.panel28 = new System.Windows.Forms.Panel();
-            this.orders_paystatus = new System.Windows.Forms.Label();
-            this.panel29 = new System.Windows.Forms.Panel();
-            this.orders_totaldue = new System.Windows.Forms.Label();
-            this.panel30 = new System.Windows.Forms.Panel();
-            this.orders_amtpaid = new System.Windows.Forms.Label();
-            this.panel31 = new System.Windows.Forms.Panel();
-            this.orders_balance = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.superpanel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -208,6 +208,16 @@
             this.panel10.SuspendLayout();
             this.tableLayoutPanel16.SuspendLayout();
             this.tableLayoutPanel17.SuspendLayout();
+            this.panel31.SuspendLayout();
+            this.panel30.SuspendLayout();
+            this.panel29.SuspendLayout();
+            this.panel28.SuspendLayout();
+            this.panel27.SuspendLayout();
+            this.panel26.SuspendLayout();
+            this.panel25.SuspendLayout();
+            this.panel24.SuspendLayout();
+            this.panel23.SuspendLayout();
+            this.panel22.SuspendLayout();
             this.panel21.SuspendLayout();
             this.panel20.SuspendLayout();
             this.panel13.SuspendLayout();
@@ -236,16 +246,6 @@
             this.panel6.SuspendLayout();
             this.panel7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.panel22.SuspendLayout();
-            this.panel23.SuspendLayout();
-            this.panel24.SuspendLayout();
-            this.panel25.SuspendLayout();
-            this.panel26.SuspendLayout();
-            this.panel27.SuspendLayout();
-            this.panel28.SuspendLayout();
-            this.panel29.SuspendLayout();
-            this.panel30.SuspendLayout();
-            this.panel31.SuspendLayout();
             this.SuspendLayout();
             // 
             // exit_main
@@ -1165,6 +1165,216 @@
             this.tableLayoutPanel17.Size = new System.Drawing.Size(601, 104);
             this.tableLayoutPanel17.TabIndex = 5;
             // 
+            // panel31
+            // 
+            this.panel31.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel31.Controls.Add(this.orders_balance);
+            this.panel31.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel31.Location = new System.Drawing.Point(453, 83);
+            this.panel31.Name = "panel31";
+            this.panel31.Size = new System.Drawing.Size(145, 18);
+            this.panel31.TabIndex = 8;
+            // 
+            // orders_balance
+            // 
+            this.orders_balance.Dock = System.Windows.Forms.DockStyle.Right;
+            this.orders_balance.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.orders_balance.Location = new System.Drawing.Point(23, 0);
+            this.orders_balance.Name = "orders_balance";
+            this.orders_balance.Size = new System.Drawing.Size(122, 18);
+            this.orders_balance.TabIndex = 2;
+            this.orders_balance.Text = "{BALANCE}";
+            this.orders_balance.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // panel30
+            // 
+            this.panel30.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel30.Controls.Add(this.orders_amtpaid);
+            this.panel30.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel30.Location = new System.Drawing.Point(453, 63);
+            this.panel30.Name = "panel30";
+            this.panel30.Size = new System.Drawing.Size(145, 14);
+            this.panel30.TabIndex = 8;
+            // 
+            // orders_amtpaid
+            // 
+            this.orders_amtpaid.Dock = System.Windows.Forms.DockStyle.Right;
+            this.orders_amtpaid.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.orders_amtpaid.Location = new System.Drawing.Point(23, 0);
+            this.orders_amtpaid.Name = "orders_amtpaid";
+            this.orders_amtpaid.Size = new System.Drawing.Size(122, 14);
+            this.orders_amtpaid.TabIndex = 2;
+            this.orders_amtpaid.Text = "{AMOUNT PAID}";
+            this.orders_amtpaid.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // panel29
+            // 
+            this.panel29.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel29.Controls.Add(this.orders_totaldue);
+            this.panel29.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel29.Location = new System.Drawing.Point(453, 43);
+            this.panel29.Name = "panel29";
+            this.panel29.Size = new System.Drawing.Size(145, 14);
+            this.panel29.TabIndex = 8;
+            // 
+            // orders_totaldue
+            // 
+            this.orders_totaldue.Dock = System.Windows.Forms.DockStyle.Right;
+            this.orders_totaldue.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.orders_totaldue.Location = new System.Drawing.Point(23, 0);
+            this.orders_totaldue.Name = "orders_totaldue";
+            this.orders_totaldue.Size = new System.Drawing.Size(122, 14);
+            this.orders_totaldue.TabIndex = 2;
+            this.orders_totaldue.Text = "{TOTAL DUE}";
+            this.orders_totaldue.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // panel28
+            // 
+            this.panel28.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel28.Controls.Add(this.orders_paystatus);
+            this.panel28.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel28.Location = new System.Drawing.Point(453, 23);
+            this.panel28.Name = "panel28";
+            this.panel28.Size = new System.Drawing.Size(145, 14);
+            this.panel28.TabIndex = 8;
+            // 
+            // orders_paystatus
+            // 
+            this.orders_paystatus.Dock = System.Windows.Forms.DockStyle.Right;
+            this.orders_paystatus.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.orders_paystatus.Location = new System.Drawing.Point(23, 0);
+            this.orders_paystatus.Name = "orders_paystatus";
+            this.orders_paystatus.Size = new System.Drawing.Size(122, 14);
+            this.orders_paystatus.TabIndex = 2;
+            this.orders_paystatus.Text = "{PAYMENT STAUS}";
+            this.orders_paystatus.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // panel27
+            // 
+            this.panel27.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel27.Controls.Add(this.ordes_orderstatus);
+            this.panel27.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel27.Location = new System.Drawing.Point(453, 3);
+            this.panel27.Name = "panel27";
+            this.panel27.Size = new System.Drawing.Size(145, 14);
+            this.panel27.TabIndex = 8;
+            // 
+            // ordes_orderstatus
+            // 
+            this.ordes_orderstatus.Dock = System.Windows.Forms.DockStyle.Right;
+            this.ordes_orderstatus.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ordes_orderstatus.Location = new System.Drawing.Point(23, 0);
+            this.ordes_orderstatus.Name = "ordes_orderstatus";
+            this.ordes_orderstatus.Size = new System.Drawing.Size(122, 14);
+            this.ordes_orderstatus.TabIndex = 2;
+            this.ordes_orderstatus.Text = "{ORDER STATUS}";
+            this.ordes_orderstatus.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // panel26
+            // 
+            this.panel26.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel26.Controls.Add(this.orders_ordercontact);
+            this.panel26.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel26.Location = new System.Drawing.Point(153, 83);
+            this.panel26.Name = "panel26";
+            this.panel26.Size = new System.Drawing.Size(144, 18);
+            this.panel26.TabIndex = 8;
+            // 
+            // orders_ordercontact
+            // 
+            this.orders_ordercontact.Dock = System.Windows.Forms.DockStyle.Right;
+            this.orders_ordercontact.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.orders_ordercontact.Location = new System.Drawing.Point(22, 0);
+            this.orders_ordercontact.Name = "orders_ordercontact";
+            this.orders_ordercontact.Size = new System.Drawing.Size(122, 18);
+            this.orders_ordercontact.TabIndex = 2;
+            this.orders_ordercontact.Text = "{CONTACT}";
+            this.orders_ordercontact.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // panel25
+            // 
+            this.panel25.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel25.Controls.Add(this.orders_custcluster);
+            this.panel25.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel25.Location = new System.Drawing.Point(153, 63);
+            this.panel25.Name = "panel25";
+            this.panel25.Size = new System.Drawing.Size(144, 14);
+            this.panel25.TabIndex = 8;
+            // 
+            // orders_custcluster
+            // 
+            this.orders_custcluster.Dock = System.Windows.Forms.DockStyle.Right;
+            this.orders_custcluster.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.orders_custcluster.Location = new System.Drawing.Point(22, 0);
+            this.orders_custcluster.Name = "orders_custcluster";
+            this.orders_custcluster.Size = new System.Drawing.Size(122, 14);
+            this.orders_custcluster.TabIndex = 2;
+            this.orders_custcluster.Text = "{CLUSTER}";
+            this.orders_custcluster.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // panel24
+            // 
+            this.panel24.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel24.Controls.Add(this.orders_custname);
+            this.panel24.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel24.Location = new System.Drawing.Point(153, 43);
+            this.panel24.Name = "panel24";
+            this.panel24.Size = new System.Drawing.Size(144, 14);
+            this.panel24.TabIndex = 8;
+            // 
+            // orders_custname
+            // 
+            this.orders_custname.Dock = System.Windows.Forms.DockStyle.Right;
+            this.orders_custname.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.orders_custname.Location = new System.Drawing.Point(22, 0);
+            this.orders_custname.Name = "orders_custname";
+            this.orders_custname.Size = new System.Drawing.Size(122, 14);
+            this.orders_custname.TabIndex = 2;
+            this.orders_custname.Text = "{CUSTOMER}";
+            this.orders_custname.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // panel23
+            // 
+            this.panel23.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel23.Controls.Add(this.orders_orderdate);
+            this.panel23.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel23.Location = new System.Drawing.Point(153, 23);
+            this.panel23.Name = "panel23";
+            this.panel23.Size = new System.Drawing.Size(144, 14);
+            this.panel23.TabIndex = 8;
+            // 
+            // orders_orderdate
+            // 
+            this.orders_orderdate.Dock = System.Windows.Forms.DockStyle.Right;
+            this.orders_orderdate.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.orders_orderdate.Location = new System.Drawing.Point(22, 0);
+            this.orders_orderdate.Name = "orders_orderdate";
+            this.orders_orderdate.Size = new System.Drawing.Size(122, 14);
+            this.orders_orderdate.TabIndex = 2;
+            this.orders_orderdate.Text = "{ORDER DATE}";
+            this.orders_orderdate.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // panel22
+            // 
+            this.panel22.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel22.Controls.Add(this.orders_or);
+            this.panel22.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel22.Location = new System.Drawing.Point(153, 3);
+            this.panel22.Name = "panel22";
+            this.panel22.Size = new System.Drawing.Size(144, 14);
+            this.panel22.TabIndex = 8;
+            // 
+            // orders_or
+            // 
+            this.orders_or.Dock = System.Windows.Forms.DockStyle.Right;
+            this.orders_or.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.orders_or.Location = new System.Drawing.Point(22, 0);
+            this.orders_or.Name = "orders_or";
+            this.orders_or.Size = new System.Drawing.Size(122, 14);
+            this.orders_or.TabIndex = 2;
+            this.orders_or.Text = "{ORDER NO}";
+            this.orders_or.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
             // panel21
             // 
             this.panel21.BackColor = System.Drawing.Color.WhiteSmoke;
@@ -1885,216 +2095,6 @@
             this.users_e.ElipseRadius = 5;
             this.users_e.TargetControl = this.btnUsers;
             // 
-            // panel22
-            // 
-            this.panel22.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panel22.Controls.Add(this.orders_or);
-            this.panel22.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel22.Location = new System.Drawing.Point(153, 3);
-            this.panel22.Name = "panel22";
-            this.panel22.Size = new System.Drawing.Size(144, 14);
-            this.panel22.TabIndex = 8;
-            // 
-            // orders_or
-            // 
-            this.orders_or.Dock = System.Windows.Forms.DockStyle.Right;
-            this.orders_or.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.orders_or.Location = new System.Drawing.Point(22, 0);
-            this.orders_or.Name = "orders_or";
-            this.orders_or.Size = new System.Drawing.Size(122, 14);
-            this.orders_or.TabIndex = 2;
-            this.orders_or.Text = "{ORDER NO}";
-            this.orders_or.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // panel23
-            // 
-            this.panel23.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panel23.Controls.Add(this.orders_orderdate);
-            this.panel23.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel23.Location = new System.Drawing.Point(153, 23);
-            this.panel23.Name = "panel23";
-            this.panel23.Size = new System.Drawing.Size(144, 14);
-            this.panel23.TabIndex = 8;
-            // 
-            // orders_orderdate
-            // 
-            this.orders_orderdate.Dock = System.Windows.Forms.DockStyle.Right;
-            this.orders_orderdate.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.orders_orderdate.Location = new System.Drawing.Point(22, 0);
-            this.orders_orderdate.Name = "orders_orderdate";
-            this.orders_orderdate.Size = new System.Drawing.Size(122, 14);
-            this.orders_orderdate.TabIndex = 2;
-            this.orders_orderdate.Text = "{ORDER DATE}";
-            this.orders_orderdate.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // panel24
-            // 
-            this.panel24.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panel24.Controls.Add(this.orders_custname);
-            this.panel24.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel24.Location = new System.Drawing.Point(153, 43);
-            this.panel24.Name = "panel24";
-            this.panel24.Size = new System.Drawing.Size(144, 14);
-            this.panel24.TabIndex = 8;
-            // 
-            // orders_custname
-            // 
-            this.orders_custname.Dock = System.Windows.Forms.DockStyle.Right;
-            this.orders_custname.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.orders_custname.Location = new System.Drawing.Point(22, 0);
-            this.orders_custname.Name = "orders_custname";
-            this.orders_custname.Size = new System.Drawing.Size(122, 14);
-            this.orders_custname.TabIndex = 2;
-            this.orders_custname.Text = "{CUSTOMER}";
-            this.orders_custname.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // panel25
-            // 
-            this.panel25.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panel25.Controls.Add(this.orders_custcluster);
-            this.panel25.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel25.Location = new System.Drawing.Point(153, 63);
-            this.panel25.Name = "panel25";
-            this.panel25.Size = new System.Drawing.Size(144, 14);
-            this.panel25.TabIndex = 8;
-            // 
-            // orders_custcluster
-            // 
-            this.orders_custcluster.Dock = System.Windows.Forms.DockStyle.Right;
-            this.orders_custcluster.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.orders_custcluster.Location = new System.Drawing.Point(22, 0);
-            this.orders_custcluster.Name = "orders_custcluster";
-            this.orders_custcluster.Size = new System.Drawing.Size(122, 14);
-            this.orders_custcluster.TabIndex = 2;
-            this.orders_custcluster.Text = "{CLUSTER}";
-            this.orders_custcluster.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // panel26
-            // 
-            this.panel26.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panel26.Controls.Add(this.orders_ordercontact);
-            this.panel26.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel26.Location = new System.Drawing.Point(153, 83);
-            this.panel26.Name = "panel26";
-            this.panel26.Size = new System.Drawing.Size(144, 18);
-            this.panel26.TabIndex = 8;
-            // 
-            // orders_ordercontact
-            // 
-            this.orders_ordercontact.Dock = System.Windows.Forms.DockStyle.Right;
-            this.orders_ordercontact.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.orders_ordercontact.Location = new System.Drawing.Point(22, 0);
-            this.orders_ordercontact.Name = "orders_ordercontact";
-            this.orders_ordercontact.Size = new System.Drawing.Size(122, 18);
-            this.orders_ordercontact.TabIndex = 2;
-            this.orders_ordercontact.Text = "{CONTACT}";
-            this.orders_ordercontact.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // panel27
-            // 
-            this.panel27.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panel27.Controls.Add(this.ordes_orderstatus);
-            this.panel27.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel27.Location = new System.Drawing.Point(453, 3);
-            this.panel27.Name = "panel27";
-            this.panel27.Size = new System.Drawing.Size(145, 14);
-            this.panel27.TabIndex = 8;
-            // 
-            // ordes_orderstatus
-            // 
-            this.ordes_orderstatus.Dock = System.Windows.Forms.DockStyle.Right;
-            this.ordes_orderstatus.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ordes_orderstatus.Location = new System.Drawing.Point(23, 0);
-            this.ordes_orderstatus.Name = "ordes_orderstatus";
-            this.ordes_orderstatus.Size = new System.Drawing.Size(122, 14);
-            this.ordes_orderstatus.TabIndex = 2;
-            this.ordes_orderstatus.Text = "{ORDER STATUS}";
-            this.ordes_orderstatus.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // panel28
-            // 
-            this.panel28.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panel28.Controls.Add(this.orders_paystatus);
-            this.panel28.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel28.Location = new System.Drawing.Point(453, 23);
-            this.panel28.Name = "panel28";
-            this.panel28.Size = new System.Drawing.Size(145, 14);
-            this.panel28.TabIndex = 8;
-            // 
-            // orders_paystatus
-            // 
-            this.orders_paystatus.Dock = System.Windows.Forms.DockStyle.Right;
-            this.orders_paystatus.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.orders_paystatus.Location = new System.Drawing.Point(23, 0);
-            this.orders_paystatus.Name = "orders_paystatus";
-            this.orders_paystatus.Size = new System.Drawing.Size(122, 14);
-            this.orders_paystatus.TabIndex = 2;
-            this.orders_paystatus.Text = "{PAYMENT STAUS}";
-            this.orders_paystatus.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // panel29
-            // 
-            this.panel29.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panel29.Controls.Add(this.orders_totaldue);
-            this.panel29.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel29.Location = new System.Drawing.Point(453, 43);
-            this.panel29.Name = "panel29";
-            this.panel29.Size = new System.Drawing.Size(145, 14);
-            this.panel29.TabIndex = 8;
-            // 
-            // orders_totaldue
-            // 
-            this.orders_totaldue.Dock = System.Windows.Forms.DockStyle.Right;
-            this.orders_totaldue.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.orders_totaldue.Location = new System.Drawing.Point(23, 0);
-            this.orders_totaldue.Name = "orders_totaldue";
-            this.orders_totaldue.Size = new System.Drawing.Size(122, 14);
-            this.orders_totaldue.TabIndex = 2;
-            this.orders_totaldue.Text = "{TOTAL DUE}";
-            this.orders_totaldue.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // panel30
-            // 
-            this.panel30.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panel30.Controls.Add(this.orders_amtpaid);
-            this.panel30.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel30.Location = new System.Drawing.Point(453, 63);
-            this.panel30.Name = "panel30";
-            this.panel30.Size = new System.Drawing.Size(145, 14);
-            this.panel30.TabIndex = 8;
-            // 
-            // orders_amtpaid
-            // 
-            this.orders_amtpaid.Dock = System.Windows.Forms.DockStyle.Right;
-            this.orders_amtpaid.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.orders_amtpaid.Location = new System.Drawing.Point(23, 0);
-            this.orders_amtpaid.Name = "orders_amtpaid";
-            this.orders_amtpaid.Size = new System.Drawing.Size(122, 14);
-            this.orders_amtpaid.TabIndex = 2;
-            this.orders_amtpaid.Text = "{AMOUNT PAID}";
-            this.orders_amtpaid.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // panel31
-            // 
-            this.panel31.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.panel31.Controls.Add(this.orders_balance);
-            this.panel31.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel31.Location = new System.Drawing.Point(453, 83);
-            this.panel31.Name = "panel31";
-            this.panel31.Size = new System.Drawing.Size(145, 18);
-            this.panel31.TabIndex = 8;
-            // 
-            // orders_balance
-            // 
-            this.orders_balance.Dock = System.Windows.Forms.DockStyle.Right;
-            this.orders_balance.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.orders_balance.Location = new System.Drawing.Point(23, 0);
-            this.orders_balance.Name = "orders_balance";
-            this.orders_balance.Size = new System.Drawing.Size(122, 18);
-            this.orders_balance.TabIndex = 2;
-            this.orders_balance.Text = "{BALANCE}";
-            this.orders_balance.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
             // Main
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -2146,6 +2146,16 @@
             this.tableLayoutPanel16.ResumeLayout(false);
             this.tableLayoutPanel16.PerformLayout();
             this.tableLayoutPanel17.ResumeLayout(false);
+            this.panel31.ResumeLayout(false);
+            this.panel30.ResumeLayout(false);
+            this.panel29.ResumeLayout(false);
+            this.panel28.ResumeLayout(false);
+            this.panel27.ResumeLayout(false);
+            this.panel26.ResumeLayout(false);
+            this.panel25.ResumeLayout(false);
+            this.panel24.ResumeLayout(false);
+            this.panel23.ResumeLayout(false);
+            this.panel22.ResumeLayout(false);
             this.panel21.ResumeLayout(false);
             this.panel20.ResumeLayout(false);
             this.panel13.ResumeLayout(false);
@@ -2178,16 +2188,6 @@
             this.panel6.ResumeLayout(false);
             this.panel7.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.panel22.ResumeLayout(false);
-            this.panel23.ResumeLayout(false);
-            this.panel24.ResumeLayout(false);
-            this.panel25.ResumeLayout(false);
-            this.panel26.ResumeLayout(false);
-            this.panel27.ResumeLayout(false);
-            this.panel28.ResumeLayout(false);
-            this.panel29.ResumeLayout(false);
-            this.panel30.ResumeLayout(false);
-            this.panel31.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

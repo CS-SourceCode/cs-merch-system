@@ -48,16 +48,16 @@ namespace cs_merch
                 if (totalprice > cash)
                 {
                     cashchange = totalprice - cash;
-                    payment_status = "DOWN";
+                    payment_status = 2;
                     MessageBox.Show("Insufficient Cash; this transaction will be recorded as DOWN Payment.");
                 }
                 else if (totalprice <= cash)
                 {
                     cashchange = totalprice - cash;
-                    payment_status = "FULLY PAID";
+                    payment_status = 1;
                     MessageBox.Show("This transaction will be recorded as FULLY PAID.");
                 }
-                parent.checkoutOrder(cash, cashchange, payment_status);
+                parent.recordOrder(cash, cashchange, payment_status);
             }
             this.Close();
         }
