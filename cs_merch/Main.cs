@@ -528,5 +528,10 @@ namespace cs_merch
             if (sales_browser.SelectedIndex == 1)
                 reloadOrders();
         }
+
+        private void orders_list_SelectionChanged(object sender, EventArgs e)
+        {
+            showOrderDetails();
+        }
     }
 }
