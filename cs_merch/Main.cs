@@ -273,12 +273,14 @@ namespace cs_merch
         private void showOrderDetails()
         {
             string selectedOrder = orders_list.SelectedRows[0].Cells[0].Value.ToString();
-            var customerDetails = conn.Select("orders=o", "CONCAT(c.firstname,' ',c.lastname) as name", "c.contact", "c.cluster", "MIN(op.payment_date)", "o.payment_status", "SUM(op.payment)", "o.order_status ")
+            var customerDetails = conn.Select("orders=o", "order_id", "MIN(op.payment_date)", "CONCAT(c.firstname,' ',c.lastname) as name", "c.cluster", "c.contact",  "o.order_status ", "o.payment_status", "SUM(ol.total_price) AS total","SUM(op.payment) AS paid")
                                     .NJoin("customer=c")
+                                    .NJoin("orderline=ol")
                                     .NJoin("order_payment=op")
                                     .Where("o.order_id", selectedOrder)
                                     .Group("order_id")
                                     .GetQueryData();
+            decimal balance = customerDetails.Rows[0][7] - customerDetails.Rows[0][8];
             /*
             orderCname.Text = customerDetails.Rows[0][0].ToString();
             orderCcontact.Text = customerDetails.Rows[0][1].ToString();
