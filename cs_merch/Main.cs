@@ -283,15 +283,15 @@ namespace cs_merch
             try
             {
                 orders_or.Text = customerDetails.Rows[0][0].ToString();
-                orders_orderdate = customerDetails.Rows[0][1].ToString();
-                orders_custname = customerDetails.Rows[0][2].ToString();
-                orders_custcluster = customerDetails.Rows[0][3].ToString();
-                orders_ordercontact = customerDetails.Rows[0][4].ToString();
-                ordes_orderstatus = customerDetails.Rows[0][5].ToString();
-                orders_paystatus = customerDetails.Rows[0][6].ToString();
-                orders_totaldue = customerDetails.Rows[0][7].ToString();
-                orders_amtpaid = customerDetails.Rows[0][8].ToString();
-                orders_balance = customerDetails.Rows[0][7] - customerDetails.Rows[0][8];
+                orders_orderdate.Text = customerDetails.Rows[0][1].ToString();
+                orders_custname.Text = customerDetails.Rows[0][2].ToString();
+                orders_custcluster.Text = customerDetails.Rows[0][3].ToString();
+                orders_ordercontact.Text = customerDetails.Rows[0][4].ToString();
+                ordes_orderstatus.Text = customerDetails.Rows[0][5].ToString();
+                orders_paystatus.Text = customerDetails.Rows[0][6].ToString();
+                orders_totaldue.Text = customerDetails.Rows[0][7].ToString();
+                orders_amtpaid.Text = customerDetails.Rows[0][8].ToString();
+                orders_balance.Text = (customerDetails.Rows[0][7] - customerDetails.Rows[0][8]).ToString();
             /*
             orderCname.Text = customerDetails.Rows[0][0].ToString();
             orderCcontact.Text = customerDetails.Rows[0][1].ToString();
@@ -320,6 +320,7 @@ namespace cs_merch
             }
             catch (Exception e)
             {
+                MessageBox.Show("Invalid Data in order");
             }
 
         }
@@ -531,7 +532,8 @@ namespace cs_merch
 
         private void orders_list_SelectionChanged(object sender, EventArgs e)
         {
-            showOrderDetails();
+            if(orders_list.SelectedRows.Count > 0)
+                showOrderDetails();
         }
     }
 }
