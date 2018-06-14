@@ -19,13 +19,14 @@ namespace cs_merch
         int payment_status = 0;
         Boolean _flag;
 
-        public Main_payment(Main main, decimal total, Boolean flag = false)
+        public Main_payment(Main main, decimal total, decimal amtpaid, Boolean flag = false)
         {
             _flag = flag;
             InitializeComponent();
             parent = main;
-            totalprice = total;
+            totalprice = Convert.ToDecimal(total);
             payment_total.Text = totalprice.ToString();
+            payment_paid.Text = amtpaid.ToString();
         }
 
         public Main checkoutform { get; internal set; }
@@ -47,19 +48,25 @@ namespace cs_merch
             {
                 if (totalprice > cash)
                 {
-                    cashchange = totalprice - cash;
+                    cashchange = Convert.ToDecimal(0.00);
                     payment_status = 2;
                     MessageBox.Show("Insufficient Cash; this transaction will be recorded as DOWN Payment.");
+                    parent.order_change.Text = cashchange.ToString();
                 }
                 else if (totalprice <= cash)
                 {
-                    cashchange = totalprice - cash;
+                    cashchange = cash - totalprice;
                     payment_status = 1;
                     MessageBox.Show("This transaction will be recorded as FULLY PAID.");
+                    parent.order_change.Text = cashchange.ToString();
                 }
                 parent.recordOrder(cash, cashchange, payment_status);
             }
             this.Close();
+            parent.sell_additem.Enabled = false;
+            parent.sell_removeitem.Enabled = false;
+            parent.sell_removeall.Enabled = false;
+            parent.order_checkout.Enabled = false;
         }
     }
 }

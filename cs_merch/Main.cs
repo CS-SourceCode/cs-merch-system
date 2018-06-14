@@ -38,6 +38,7 @@ namespace cs_merch
         decimal temp_price;
         decimal merch_total;
         decimal total_price;
+        decimal amt_paid = 0;
         int currCustomerNo = 0;
         string custfn;
         string custln;
@@ -46,7 +47,7 @@ namespace cs_merch
         {
             var orders_dt = conn.Select("orders", "MAX(order_id)").GetQueryData();
 
-            if (orders_dt.Rows.Count == 0)
+            if (orders_dt != null || orders_dt.Rows.Count == 0)
             {
                 //Should not preemptively insert into the database
                 //conn.Insert("orders", "order_id", "1").GetQueryData();
@@ -57,6 +58,10 @@ namespace cs_merch
                 int order_id = orders_dt.Rows[0][0] + 1;
                 order_no.Text = order_id.ToString();
             }
+            sell_additem.Text = "Add";
+            orderline.Rows.Clear();
+            orderline.Refresh();
+            price_total.Text = "0.00";
 
         }
 
@@ -87,20 +92,30 @@ namespace cs_merch
             var cust_dt = conn.Select("customer", "*")
                         .GetQueryData();
 
-            customer_list.DataSource = cust_dt;
-            customer_list.Columns["customer_id"].HeaderText = "ID";
-            customer_list.Columns["firstname"].HeaderText = "First Name";
-            customer_list.Columns["lastname"].HeaderText = "Last Name";
-            customer_list.Columns["contact"].HeaderText = "Contact";
-            customer_list.Columns["cluster"].HeaderText = "Cluster";
+            if(cust_dt != null || cust_dt.Rows.Count == 0)
+            {
+                customer_list.DataSource = cust_dt;
+                customer_list.Columns["customer_id"].HeaderText = "ID";
+                customer_list.Columns["firstname"].HeaderText = "First Name";
+                customer_list.Columns["lastname"].HeaderText = "Last Name";
+                customer_list.Columns["contact"].HeaderText = "Contact";
+                customer_list.Columns["cluster"].HeaderText = "Cluster";
+            }
+            else
+            {
+                customer_list.DataSource = cust_dt;
+                customer_list.Columns["customer_id"].HeaderText = "ID";
+                customer_list.Columns["firstname"].HeaderText = "First Name";
+                customer_list.Columns["lastname"].HeaderText = "Last Name";
+                customer_list.Columns["contact"].HeaderText = "Contact";
+                customer_list.Columns["cluster"].HeaderText = "Cluster";
 
-            currCustomerNo = Convert.ToInt32(customer_list.Rows[0].Cells["customer_id"].Value);
-            custfn = customer_list.Rows[0].Cells["firstname"].Value.ToString();
-            custln = customer_list.Rows[0].Cells["lastname"].Value.ToString();
-            selectedCustIDTxt.Text = currCustomerNo.ToString();
-            selectedCustNameTxt.Text = custfn + " " + custln;
-
-
+                currCustomerNo = Convert.ToInt32(customer_list.Rows[0].Cells["customer_id"].Value);
+                custfn = customer_list.Rows[0].Cells["firstname"].Value.ToString();
+                custln = customer_list.Rows[0].Cells["lastname"].Value.ToString();
+                selectedCustIDTxt.Text = currCustomerNo.ToString();
+                selectedCustNameTxt.Text = custfn + " " + custln;
+            }
         }
         private void main_close_Click(object sender, EventArgs e)
         {
@@ -263,7 +278,7 @@ namespace cs_merch
 
         private void reloadOrders()
         {
-            orders_list.DataSource = conn.Select("orders=o", "o.order_id", "MIN(op.payment_date) AS 'Order Date'", "o.order_status", "CONCAT(c.lastname, ', ', c.firstname) as customer")
+            orders_list.DataSource = conn.Select("orders=o", "o.order_id AS 'Order No.'", "MIN(op.payment_date) AS 'Order Date'", "o.order_status AS 'Order Status'", "CONCAT(c.lastname, ', ', c.firstname) AS 'Customer'")
                 .NJoin("order_payment=op")
                 .NJoin("customer=c")
                 .Group("order_id")
@@ -273,35 +288,33 @@ namespace cs_merch
         private void showOrderDetails()
         {
             string selectedOrder = orders_list.SelectedRows[0].Cells[0].Value.ToString();
-            var customerDetails = conn.Select("orders=o", "order_id", "MIN(op.payment_date)", "CONCAT(c.firstname,' ',c.lastname) as name", "c.cluster", "c.contact",  "o.order_status ", "o.payment_status", "SUM(ol.total_price) AS total","SUM(op.payment) AS paid")
+            var customerDetails = conn.Select("orders=o", "order_id", "MIN(op.payment_date)", "CONCAT(c.firstname,' ',c.lastname) as name", "c.cluster", "c.contact",  "o.order_status ", "o.payment_status", "SUM(op.payment) AS paid")
                                     .NJoin("customer=c")
                                     .NJoin("orderline=ol")
                                     .NJoin("order_payment=op")
                                     .Where("o.order_id", selectedOrder)
                                     .Group("order_id")
                                     .GetQueryData();
+            var totalprice = conn.Select("orderline", "SUM(total_price)")
+                .NJoin("orders=o")
+                .Where("o.order_id", selectedOrder)
+                .Group("o.order_id")
+                .GetQueryData()
+                .Rows[0][0];
             try
             {
                 orders_or.Text = customerDetails.Rows[0][0].ToString();
-                orders_orderdate.Text = customerDetails.Rows[0][1].ToString();
+                orders_orderdate.Text = customerDetails.Rows[0][1].ToString("yyyy-MM-dd");
                 orders_custname.Text = customerDetails.Rows[0][2].ToString();
                 orders_custcluster.Text = customerDetails.Rows[0][3].ToString();
                 orders_ordercontact.Text = customerDetails.Rows[0][4].ToString();
                 ordes_orderstatus.Text = customerDetails.Rows[0][5].ToString();
                 orders_paystatus.Text = customerDetails.Rows[0][6].ToString();
-                orders_totaldue.Text = customerDetails.Rows[0][7].ToString();
-                orders_amtpaid.Text = customerDetails.Rows[0][8].ToString();
-                orders_balance.Text = (customerDetails.Rows[0][7] - customerDetails.Rows[0][8]).ToString();
-            /*
-            orderCname.Text = customerDetails.Rows[0][0].ToString();
-            orderCcontact.Text = customerDetails.Rows[0][1].ToString();
-            orderCcluster.Text = customerDetails.Rows[0][2].ToString();
-            orderOdate.Text = customerDetails.Rows[0][3].ToString();
-            orderOpstatus.Text = customerDetails.Rows[0][4].ToString();
-            orderOcdate.Text = customerDetails.Rows[0][5].ToString();
-            orderOstatus.Text = customerDetails.Rows[0][6].ToString();
-            */
-            customer_merch.DataSource = conn.Select("orderline=ol", "ol.orderline_id", "m.merch_name", "ol.quantity", "ol.quantity_claimed")
+                orders_totaldue.Text = totalprice.ToString();
+                orders_amtpaid.Text = customerDetails.Rows[0][7].ToString();
+                orders_balance.Text = (totalprice - customerDetails.Rows[0][7]).ToString();
+
+            customer_merch.DataSource = conn.Select("orderline=ol", "ol.orderline_id", "m.merch_name AS 'Merchandise'", "ol.quantity AS 'Quantity'", "ol.quantity_claimed AS 'Claimed'")
                                         .NJoin("merchandise=m")
                                         .NJoin("orders=o")
                                         .Where("o.order_id", selectedOrder)
@@ -312,7 +325,8 @@ namespace cs_merch
             customer_merch.Columns[1].ReadOnly = true;
             customer_merch.Columns[2].ReadOnly = true;
             customer_merch.Columns[3].ReadOnly = true;
-            claim_list.DataSource = conn.Select("order_claim=oc", "m.merch_name", "oc.quantity_no", "oc.date_claimed")
+            customer_merch.Columns[4].ReadOnly = true;
+            claim_list.DataSource = conn.Select("order_claim=oc", "m.merch_name AS 'Merchandise'", "oc.quantity_no AS 'Quantity'", "oc.date_claimed AS 'Date Claimed'")
                                            .NJoin("orderline=ol")
                                            .NJoin("merchandise=m")
                                            .Where("ol.order_id", selectedOrder)
@@ -324,6 +338,21 @@ namespace cs_merch
             }
 
         }
+
+        public void paymentDetails()
+        {
+            string selectedOrder = orders_list.SelectedRows[0].Cells[0].Value.ToString();
+
+            payments_list.DataSource = conn.Select("order_payment", "*")
+                .Where("order_id", selectedOrder)
+                .GetQueryData();
+
+            payments_list.Columns[0].Visible = false;
+            payments_list.Columns[1].Visible = false;
+            payments_list.Columns[2].HeaderText = "Payment";
+            payments_list.Columns[3].HeaderText = "Date of Payment";
+        }
+
         private DataTable _connData;
 
         public void claimOrder(string olID, string quantity)
@@ -482,17 +511,24 @@ namespace cs_merch
 
         private void order_checkout_Click(object sender, EventArgs e)
         {
-            using (Unfocus p = new Unfocus(this))
+            if(orderline.Rows.Count == 0)
             {
-                //p.Location = new Point(48, 15);
-                //p.Location = new Point(0, 0);
-                p.Size = this.ClientRectangle.Size;
-                p.StartPosition = FormStartPosition.CenterScreen;
-                p.BringToFront();
+                MessageBox.Show("No Items in Orderline.");
+            }
+            else
+            {
+                using (Unfocus p = new Unfocus(this))
+                {
+                    //p.Location = new Point(48, 15);
+                    //p.Location = new Point(0, 0);
+                    p.Size = this.ClientRectangle.Size;
+                    p.StartPosition = FormStartPosition.CenterScreen;
+                    p.BringToFront();
 
-                Main_payment chkout = new Main_payment(this, total_price);
-                chkout.checkoutform = this;
-                chkout.ShowDialog(this);
+                    Main_payment chkout = new Main_payment(this, total_price, Convert.ToDecimal(amt_paid));
+                    chkout.checkoutform = this;
+                    chkout.ShowDialog(this);
+                }
             }
         }
 
@@ -517,7 +553,7 @@ namespace cs_merch
 
             foreach (DataGridViewRow rows in orderline.Rows)
             {
-                MessageBox.Show(rows.Cells[0].Value.ToString());
+                //MessageBox.Show(rows.Cells[0].Value.ToString());
                 conn.Insert("orderline", "order_id", temp_orderid, "merch_id", rows.Cells[3].Value.ToString(), "quantity", rows.Cells[1].Value.ToString(), "total_price", rows.Cells[2].Value.ToString(), "quantity_claimed", "0").GetQueryData();
             }
 
@@ -535,5 +571,59 @@ namespace cs_merch
             if(orders_list.SelectedRows.Count > 0)
                 showOrderDetails();
         }
+
+        private void orders_paydue_Click(object sender, EventArgs e)
+        {
+            string selectedOrder = orders_list.SelectedRows[0].Cells[0].Value.ToString();
+            var total_price = conn.Select("orderline", "SUM(total_price)")
+                .Where("order_id", selectedOrder)
+                .Group("order_id")
+                .GetQueryData()
+                .Rows[0][0];
+            var amt_paid = conn.Select("order_payment", "SUM(payment)")
+                .Where("order_id", selectedOrder)
+                .Group("order_id")
+                .GetQueryData()
+                .Rows[0][0];
+            using (Unfocus p = new Unfocus(this))
+            {
+                //p.Location = new Point(48, 15);
+                //p.Location = new Point(0, 0);
+                p.Size = this.ClientRectangle.Size;
+                p.StartPosition = FormStartPosition.CenterScreen;
+                p.BringToFront();
+
+                Main_payment paydue = new Main_payment(this, Convert.ToDecimal(total_price), Convert.ToDecimal(amt_paid), true);
+                paydue.checkoutform = this;
+                paydue.ShowDialog(this);
+            }
+        }
+
+        private void orders_list_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            paymentDetails();
+        }
+
+        private void orders_claim_Click(object sender, EventArgs e)
+        {
+            var quantities = _connData;
+            int i = 0;
+            foreach (DataRow quantity in quantities.Rows)
+            {
+                //checks if the value is null, if true claiming is set to 0
+                var claiming = customer_merch.Rows[i++].Cells[0].Value?.ToString() ?? 0.ToString();
+                claimOrder(quantity[0].ToString(), claiming);
+            }
+        }
+
+        private void order_new_Click(object sender, EventArgs e)
+        {
+            getOrderId();
+            sell_additem.Enabled = true;
+            sell_removeitem.Enabled = true;
+            sell_removeall.Enabled = true;
+            order_checkout.Enabled = true;
+        }
+
     }
 }

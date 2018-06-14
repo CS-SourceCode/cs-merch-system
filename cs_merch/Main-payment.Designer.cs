@@ -37,9 +37,11 @@
             this.label1 = new System.Windows.Forms.Label();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.payment_paid = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.payment_total = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label8 = new System.Windows.Forms.Label();
@@ -49,8 +51,6 @@
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.payment_close = new System.Windows.Forms.Button();
             this.payment_record = new System.Windows.Forms.Button();
-            this.payment_total = new System.Windows.Forms.Label();
-            this.payment_paid = new System.Windows.Forms.Label();
             this.superpanel.SuspendLayout();
             this.panel1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -104,6 +104,7 @@
             this.exit_payment.Name = "exit_payment";
             this.exit_payment.Size = new System.Drawing.Size(34, 28);
             this.exit_payment.TabIndex = 4;
+            this.exit_payment.TabStop = false;
             this.exit_payment.Text = "X";
             this.exit_payment.UseVisualStyleBackColor = false;
             this.exit_payment.Click += new System.EventHandler(this.exit_payment_Click);
@@ -168,6 +169,17 @@
             this.panel6.Size = new System.Drawing.Size(241, 64);
             this.panel6.TabIndex = 3;
             // 
+            // payment_paid
+            // 
+            this.payment_paid.Dock = System.Windows.Forms.DockStyle.Right;
+            this.payment_paid.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.payment_paid.Location = new System.Drawing.Point(119, 0);
+            this.payment_paid.Name = "payment_paid";
+            this.payment_paid.Size = new System.Drawing.Size(122, 64);
+            this.payment_paid.TabIndex = 3;
+            this.payment_paid.Text = "{PAYMENT DUE}";
+            this.payment_paid.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.Color.WhiteSmoke;
@@ -198,6 +210,17 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(241, 64);
             this.panel4.TabIndex = 1;
+            // 
+            // payment_total
+            // 
+            this.payment_total.Dock = System.Windows.Forms.DockStyle.Right;
+            this.payment_total.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.payment_total.Location = new System.Drawing.Point(119, 0);
+            this.payment_total.Name = "payment_total";
+            this.payment_total.Size = new System.Drawing.Size(122, 64);
+            this.payment_total.TabIndex = 2;
+            this.payment_total.Text = "{PAYMENT DUE}";
+            this.payment_total.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // panel2
             // 
@@ -253,7 +276,6 @@
             this.payment_cash.BorderThickness = 3;
             this.payment_cash.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.payment_cash.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.payment_cash.Enabled = false;
             this.payment_cash.Font = new System.Drawing.Font("Century Gothic", 9.75F);
             this.payment_cash.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.payment_cash.isPassword = false;
@@ -262,7 +284,6 @@
             this.payment_cash.Name = "payment_cash";
             this.payment_cash.Size = new System.Drawing.Size(485, 52);
             this.payment_cash.TabIndex = 7;
-            this.payment_cash.Text = "Enter Cash";
             this.payment_cash.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // label2
@@ -324,28 +345,6 @@
             this.payment_record.UseVisualStyleBackColor = false;
             this.payment_record.Click += new System.EventHandler(this.payment_record_Click);
             // 
-            // payment_total
-            // 
-            this.payment_total.Dock = System.Windows.Forms.DockStyle.Right;
-            this.payment_total.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.payment_total.Location = new System.Drawing.Point(119, 0);
-            this.payment_total.Name = "payment_total";
-            this.payment_total.Size = new System.Drawing.Size(122, 64);
-            this.payment_total.TabIndex = 2;
-            this.payment_total.Text = "{PAYMENT DUE}";
-            this.payment_total.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // payment_paid
-            // 
-            this.payment_paid.Dock = System.Windows.Forms.DockStyle.Right;
-            this.payment_paid.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.payment_paid.Location = new System.Drawing.Point(119, 0);
-            this.payment_paid.Name = "payment_paid";
-            this.payment_paid.Size = new System.Drawing.Size(122, 64);
-            this.payment_paid.TabIndex = 3;
-            this.payment_paid.Text = "{PAYMENT DUE}";
-            this.payment_paid.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
             // Main_payment
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -355,6 +354,7 @@
             this.Controls.Add(this.superpanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Main_payment";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Main_payment";
             this.superpanel.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
