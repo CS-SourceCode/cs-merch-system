@@ -328,6 +328,7 @@
             this.payment_close.TabIndex = 26;
             this.payment_close.Text = "Close";
             this.payment_close.UseVisualStyleBackColor = false;
+            this.payment_close.Click += new System.EventHandler(this.payment_close_Click);
             // 
             // payment_record
             // 

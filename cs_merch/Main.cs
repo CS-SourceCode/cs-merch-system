@@ -21,6 +21,7 @@ namespace cs_merch
             InitializeComponent();
             setMerchandise();
             setCustomerlist();
+            setReferrals();
             getOrderId();
         }
 
@@ -47,7 +48,7 @@ namespace cs_merch
         {
             var orders_dt = conn.Select("orders", "MAX(order_id)").GetQueryData();
 
-            if (orders_dt != null || orders_dt.Rows.Count == 0)
+            if (orders_dt == null || orders_dt.Rows.Count == 0)
             {
                 //Should not preemptively insert into the database
                 //conn.Insert("orders", "order_id", "1").GetQueryData();
@@ -62,7 +63,6 @@ namespace cs_merch
             orderline.Rows.Clear();
             orderline.Refresh();
             price_total.Text = "0.00";
-
         }
 
         private void setMerchandise()
@@ -117,6 +117,19 @@ namespace cs_merch
                 selectedCustNameTxt.Text = custfn + " " + custln;
             }
         }
+
+        
+
+        public void setReferrals()
+        {
+            DataTable referrals_dt = new DataTable();
+            referrals_dt = conn.Select("referrals", "*").GetQueryData();
+
+            order_referral.ValueMember = "referral_id";
+            order_referral.DisplayMember = "lastname";
+            order_referral.DataSource = referrals_dt;
+        }
+
         private void main_close_Click(object sender, EventArgs e)
         {
             Program.looper = false;
@@ -128,32 +141,74 @@ namespace cs_merch
         //SIDE BAR CONTROLS//
         private void btnDashboard_Click(object sender, EventArgs e)
         {
-                main_browser.SelectTab("dashboard");
-                btnDashboard.BackColor = Color.LightGray;
+            main_browser.SelectTab("dashboard");
+            btnDashboard.BackColor = Color.LightGray;
+            btnSales.BackColor = Color.WhiteSmoke;
+            btnSell.BackColor = Color.WhiteSmoke;
+            btnOrders.BackColor = Color.WhiteSmoke;
+            btnMerch.BackColor = Color.WhiteSmoke;
+            btnReports.BackColor = Color.WhiteSmoke;
+            btnUsers.BackColor = Color.WhiteSmoke;
+            
         }
         private void btnSales_Click(object sender, EventArgs e)
         {
-                main_browser.SelectTab("sales");
+            main_browser.SelectTab("sales");
+            btnDashboard.BackColor = Color.WhiteSmoke;
+            btnSales.BackColor = Color.LightGray;
+            btnSell.BackColor = Color.WhiteSmoke;
+            btnOrders.BackColor = Color.WhiteSmoke;
+            btnMerch.BackColor = Color.WhiteSmoke;
+            btnReports.BackColor = Color.WhiteSmoke;
+            btnUsers.BackColor = Color.WhiteSmoke;
         }
 
         private void btnSell_Click(object sender, EventArgs e)
         {
-                sales_browser.SelectTab("sell");
+            sales_browser.SelectTab("sell");
+            btnDashboard.BackColor = Color.WhiteSmoke;
+            btnSales.BackColor = Color.WhiteSmoke;
+            btnSell.BackColor = Color.LightGray;
+            btnOrders.BackColor = Color.WhiteSmoke;
+            btnMerch.BackColor = Color.WhiteSmoke;
+            btnReports.BackColor = Color.WhiteSmoke;
+            btnUsers.BackColor = Color.WhiteSmoke;
         }
 
         private void btnOrders_Click(object sender, EventArgs e)
         {
-                sales_browser.SelectTab("orders");
+            sales_browser.SelectTab("orders");
+            btnDashboard.BackColor = Color.WhiteSmoke;
+            btnSales.BackColor = Color.WhiteSmoke;
+            btnSell.BackColor = Color.WhiteSmoke;
+            btnOrders.BackColor = Color.LightGray;
+            btnMerch.BackColor = Color.WhiteSmoke;
+            btnReports.BackColor = Color.WhiteSmoke;
+            btnUsers.BackColor = Color.WhiteSmoke;
         }
 
         private void btnMerch_Click(object sender, EventArgs e)
         {
-                main_browser.SelectTab("merchandise");
+            main_browser.SelectTab("merchandise");
+            btnDashboard.BackColor = Color.WhiteSmoke;
+            btnSales.BackColor = Color.WhiteSmoke;
+            btnSell.BackColor = Color.WhiteSmoke;
+            btnOrders.BackColor = Color.WhiteSmoke;
+            btnMerch.BackColor = Color.LightGray;
+            btnReports.BackColor = Color.WhiteSmoke;
+            btnUsers.BackColor = Color.WhiteSmoke;
         }
 
         private void btnReports_Click(object sender, EventArgs e)
         {
-                main_browser.SelectTab("reports");
+            main_browser.SelectTab("reports");
+            btnDashboard.BackColor = Color.WhiteSmoke;
+            btnSales.BackColor = Color.WhiteSmoke;
+            btnSell.BackColor = Color.WhiteSmoke;
+            btnOrders.BackColor = Color.WhiteSmoke;
+            btnMerch.BackColor = Color.WhiteSmoke;
+            btnReports.BackColor = Color.LightGray;
+            btnUsers.BackColor = Color.WhiteSmoke;
         }
         private void btnUsers_Click(object sender, EventArgs e)
         {
@@ -162,8 +217,8 @@ namespace cs_merch
 
         private void exit_login_Click(object sender, EventArgs e)
         {
-                Program.looper = false;
-                this.Close();
+            Program.looper = false;
+            this.Close();
         }
 
         private void sell_additem_Click(object sender, EventArgs e)
@@ -278,11 +333,13 @@ namespace cs_merch
 
         private void reloadOrders()
         {
-            orders_list.DataSource = conn.Select("orders=o", "o.order_id AS 'Order No.'", "MIN(op.payment_date) AS 'Order Date'", "o.order_status AS 'Order Status'", "CONCAT(c.lastname, ', ', c.firstname) AS 'Customer'")
-                .NJoin("order_payment=op")
-                .NJoin("customer=c")
-                .Group("order_id")
+            orders_list.DataSource = conn.Select("orders=o", "o.order_id AS 'Order No.'", "MIN(op.payment_date) AS 'Order Date'", "o.order_status AS 'Order Status'", "CONCAT(c.lastname, ', ', c.firstname) AS 'Customer'", "CONCAT(r.lastname, ', ', r.firstname) AS 'Referral'")
+                .LJoin("order_payment=op", "o.order_id", "op.order_id")
+                .LJoin("customer=c", "o.customer_id", "c.customer_id")
+                .LJoin("referrals=r", "o.refer_id", "r.referral_id")
+                .Group("o.order_id")
                 .GetQueryData();
+
         }
 
         private void showOrderDetails()
@@ -544,7 +601,7 @@ namespace cs_merch
             this.payment = payment;
             this.change = change;
 
-            conn.Insert("orders", "order_status", "1", "customer_id", customer_id.ToString(), "payment_status", paystatus.ToString()).GetQueryData();
+            conn.Insert("orders", "order_status", "1", "customer_id", customer_id.ToString(), "payment_status", paystatus.ToString(), "refer_id", order_referral.SelectedValue.ToString()).GetQueryData();
             string temp_orderid;
             temp_orderid = conn.lastID;
             conn.Insert("order_payment", "order_id", conn.lastID, "payment", payment.ToString(), "payment_date",
@@ -623,6 +680,11 @@ namespace cs_merch
             sell_removeitem.Enabled = true;
             sell_removeall.Enabled = true;
             order_checkout.Enabled = true;
+        }
+
+        private void customer_searchbtn_Click(object sender, EventArgs e)
+        {
+
         }
 
     }

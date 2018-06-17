@@ -83,6 +83,7 @@
             this.exit_main.TabIndex = 3;
             this.exit_main.Text = "X";
             this.exit_main.UseVisualStyleBackColor = false;
+            this.exit_main.Click += new System.EventHandler(this.exit_main_Click);
             // 
             // panel2
             // 

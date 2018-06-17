@@ -58,7 +58,13 @@ namespace cs_merch
                     conn.Insert("customer", "firstname", customer_fname.Text, "lastname", customer_lname.Text, "contact", customer_contact.Text, "cluster", customer_cluster.Text).GetQueryData();
                 }
                 mainMenu.setCustomerlist();
+                
             }
+        }
+
+        private void exit_main_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

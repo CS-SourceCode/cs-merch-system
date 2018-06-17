@@ -68,5 +68,10 @@ namespace cs_merch
             parent.sell_removeall.Enabled = false;
             parent.order_checkout.Enabled = false;
         }
+
+        private void payment_close_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

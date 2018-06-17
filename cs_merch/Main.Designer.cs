@@ -82,6 +82,10 @@
             this.label4 = new System.Windows.Forms.Label();
             this.price_total = new Bunifu.Framework.UI.BunifuMetroTextbox();
             this.order_change = new Bunifu.Framework.UI.BunifuMetroTextbox();
+            this.tableLayoutPanel25 = new System.Windows.Forms.TableLayoutPanel();
+            this.panel32 = new System.Windows.Forms.Panel();
+            this.label21 = new System.Windows.Forms.Label();
+            this.order_referral = new System.Windows.Forms.ComboBox();
             this.orders = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel13 = new System.Windows.Forms.TableLayoutPanel();
             this.panel9 = new System.Windows.Forms.Panel();
@@ -173,6 +177,7 @@
             this.merchandise_e = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.reports_e = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.users_e = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.customer_searchbtn = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.superpanel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -201,6 +206,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.orderline)).BeginInit();
             this.tableLayoutPanel10.SuspendLayout();
             this.tableLayoutPanel11.SuspendLayout();
+            this.tableLayoutPanel25.SuspendLayout();
+            this.panel32.SuspendLayout();
             this.orders.SuspendLayout();
             this.tableLayoutPanel13.SuspendLayout();
             this.panel9.SuspendLayout();
@@ -699,7 +706,7 @@
             this.selectedCustIDTxt.Name = "selectedCustIDTxt";
             this.selectedCustIDTxt.Size = new System.Drawing.Size(54, 33);
             this.selectedCustIDTxt.TabIndex = 0;
-            this.selectedCustIDTxt.Text = "bunifuMetroTextbox1";
+            this.selectedCustIDTxt.Text = "ID";
             this.selectedCustIDTxt.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // selectedCustNameTxt
@@ -719,11 +726,12 @@
             this.selectedCustNameTxt.Name = "selectedCustNameTxt";
             this.selectedCustNameTxt.Size = new System.Drawing.Size(345, 33);
             this.selectedCustNameTxt.TabIndex = 1;
-            this.selectedCustNameTxt.Text = "bunifuMetroTextbox2";
+            this.selectedCustNameTxt.Text = "Customer";
             this.selectedCustNameTxt.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // panel4
             // 
+            this.panel4.Controls.Add(this.customer_searchbtn);
             this.panel4.Controls.Add(this.customer_list);
             this.panel4.Controls.Add(this.customer_search);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -798,16 +806,17 @@
             this.tableLayoutPanel9.Controls.Add(this.label3, 0, 0);
             this.tableLayoutPanel9.Controls.Add(this.order_checkout, 0, 5);
             this.tableLayoutPanel9.Controls.Add(this.orderline, 0, 3);
-            this.tableLayoutPanel9.Controls.Add(this.tableLayoutPanel10, 0, 2);
+            this.tableLayoutPanel9.Controls.Add(this.tableLayoutPanel10, 0, 1);
             this.tableLayoutPanel9.Controls.Add(this.tableLayoutPanel11, 0, 4);
+            this.tableLayoutPanel9.Controls.Add(this.tableLayoutPanel25, 0, 2);
             this.tableLayoutPanel9.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel9.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel9.Name = "tableLayoutPanel9";
             this.tableLayoutPanel9.RowCount = 6;
             this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 24F));
-            this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26F));
             this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.59783F));
-            this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 89.40218F));
+            this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 34F));
+            this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 89.40217F));
             this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 124F));
             this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 49F));
             this.tableLayoutPanel9.Size = new System.Drawing.Size(330, 592);
@@ -854,13 +863,13 @@
             this.merch_price,
             this.merch_id});
             this.orderline.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.orderline.Location = new System.Drawing.Point(3, 92);
+            this.orderline.Location = new System.Drawing.Point(3, 99);
             this.orderline.Name = "orderline";
             this.orderline.ReadOnly = true;
             this.orderline.RowHeadersVisible = false;
             this.orderline.RowTemplate.Height = 24;
             this.orderline.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.orderline.Size = new System.Drawing.Size(324, 323);
+            this.orderline.Size = new System.Drawing.Size(324, 316);
             this.orderline.TabIndex = 12;
             // 
             // merch_name
@@ -900,11 +909,11 @@
             this.tableLayoutPanel10.Controls.Add(this.order_new, 0, 0);
             this.tableLayoutPanel10.Controls.Add(this.order_no, 0, 0);
             this.tableLayoutPanel10.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel10.Location = new System.Drawing.Point(3, 53);
+            this.tableLayoutPanel10.Location = new System.Drawing.Point(3, 27);
             this.tableLayoutPanel10.Name = "tableLayoutPanel10";
             this.tableLayoutPanel10.RowCount = 1;
             this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel10.Size = new System.Drawing.Size(324, 33);
+            this.tableLayoutPanel10.Size = new System.Drawing.Size(324, 32);
             this.tableLayoutPanel10.TabIndex = 13;
             // 
             // order_new
@@ -917,7 +926,7 @@
             this.order_new.ForeColor = System.Drawing.Color.White;
             this.order_new.Location = new System.Drawing.Point(65, 3);
             this.order_new.Name = "order_new";
-            this.order_new.Size = new System.Drawing.Size(256, 27);
+            this.order_new.Size = new System.Drawing.Size(256, 26);
             this.order_new.TabIndex = 22;
             this.order_new.Text = "New Order";
             this.order_new.UseVisualStyleBackColor = false;
@@ -1026,6 +1035,51 @@
             this.order_change.TabIndex = 7;
             this.order_change.Text = "Change";
             this.order_change.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            // 
+            // tableLayoutPanel25
+            // 
+            this.tableLayoutPanel25.ColumnCount = 2;
+            this.tableLayoutPanel25.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 21.60494F));
+            this.tableLayoutPanel25.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 78.39507F));
+            this.tableLayoutPanel25.Controls.Add(this.panel32, 0, 0);
+            this.tableLayoutPanel25.Controls.Add(this.order_referral, 1, 0);
+            this.tableLayoutPanel25.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel25.Location = new System.Drawing.Point(3, 65);
+            this.tableLayoutPanel25.Name = "tableLayoutPanel25";
+            this.tableLayoutPanel25.RowCount = 1;
+            this.tableLayoutPanel25.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel25.Size = new System.Drawing.Size(324, 28);
+            this.tableLayoutPanel25.TabIndex = 15;
+            // 
+            // panel32
+            // 
+            this.panel32.Controls.Add(this.label21);
+            this.panel32.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel32.Location = new System.Drawing.Point(3, 3);
+            this.panel32.Name = "panel32";
+            this.panel32.Size = new System.Drawing.Size(64, 22);
+            this.panel32.TabIndex = 0;
+            // 
+            // label21
+            // 
+            this.label21.Dock = System.Windows.Forms.DockStyle.Left;
+            this.label21.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label21.Location = new System.Drawing.Point(0, 0);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(98, 22);
+            this.label21.TabIndex = 1;
+            this.label21.Text = "Referral:";
+            this.label21.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // order_referral
+            // 
+            this.order_referral.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.order_referral.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.order_referral.FormattingEnabled = true;
+            this.order_referral.Location = new System.Drawing.Point(73, 3);
+            this.order_referral.Name = "order_referral";
+            this.order_referral.Size = new System.Drawing.Size(248, 26);
+            this.order_referral.TabIndex = 1;
             // 
             // orders
             // 
@@ -1925,7 +1979,7 @@
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(253)))), ((int)(((byte)(253)))));
+            this.panel2.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panel2.Controls.Add(this.tableLayoutPanel12);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel2.Location = new System.Drawing.Point(0, 22);
@@ -1978,6 +2032,7 @@
             this.btnReports.Text = "Reports";
             this.btnReports.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnReports.UseVisualStyleBackColor = false;
+            this.btnReports.Click += new System.EventHandler(this.btnReports_Click);
             // 
             // btnUsers
             // 
@@ -1994,6 +2049,7 @@
             this.btnUsers.Text = "Users";
             this.btnUsers.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnUsers.UseVisualStyleBackColor = false;
+            this.btnUsers.Click += new System.EventHandler(this.btnUsers_Click);
             // 
             // btnOrders
             // 
@@ -2010,6 +2066,7 @@
             this.btnOrders.Text = "       Orders";
             this.btnOrders.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnOrders.UseVisualStyleBackColor = false;
+            this.btnOrders.Click += new System.EventHandler(this.btnOrders_Click);
             // 
             // btnSell
             // 
@@ -2026,6 +2083,7 @@
             this.btnSell.Text = "       Sell";
             this.btnSell.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSell.UseVisualStyleBackColor = false;
+            this.btnSell.Click += new System.EventHandler(this.btnSell_Click);
             // 
             // btnMerch
             // 
@@ -2042,6 +2100,7 @@
             this.btnMerch.Text = "Merchandise";
             this.btnMerch.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnMerch.UseVisualStyleBackColor = false;
+            this.btnMerch.Click += new System.EventHandler(this.btnMerch_Click);
             // 
             // btnSales
             // 
@@ -2058,6 +2117,7 @@
             this.btnSales.Text = "Sales";
             this.btnSales.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSales.UseVisualStyleBackColor = false;
+            this.btnSales.Click += new System.EventHandler(this.btnSales_Click);
             // 
             // btnDashboard
             // 
@@ -2074,6 +2134,7 @@
             this.btnDashboard.Text = "Dashboard";
             this.btnDashboard.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnDashboard.UseVisualStyleBackColor = false;
+            this.btnDashboard.Click += new System.EventHandler(this.btnDashboard_Click);
             // 
             // panel7
             // 
@@ -2129,6 +2190,22 @@
             this.users_e.ElipseRadius = 5;
             this.users_e.TargetControl = this.btnUsers;
             // 
+            // customer_searchbtn
+            // 
+            this.customer_searchbtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.customer_searchbtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
+            this.customer_searchbtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.customer_searchbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.customer_searchbtn.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.customer_searchbtn.ForeColor = System.Drawing.Color.White;
+            this.customer_searchbtn.Location = new System.Drawing.Point(340, 3);
+            this.customer_searchbtn.Name = "customer_searchbtn";
+            this.customer_searchbtn.Size = new System.Drawing.Size(78, 32);
+            this.customer_searchbtn.TabIndex = 24;
+            this.customer_searchbtn.Text = "Search";
+            this.customer_searchbtn.UseVisualStyleBackColor = false;
+            this.customer_searchbtn.Click += new System.EventHandler(this.customer_searchbtn_Click);
+            // 
             // Main
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -2171,6 +2248,8 @@
             this.tableLayoutPanel10.ResumeLayout(false);
             this.tableLayoutPanel11.ResumeLayout(false);
             this.tableLayoutPanel11.PerformLayout();
+            this.tableLayoutPanel25.ResumeLayout(false);
+            this.panel32.ResumeLayout(false);
             this.orders.ResumeLayout(false);
             this.tableLayoutPanel13.ResumeLayout(false);
             this.panel9.ResumeLayout(false);
@@ -2373,5 +2452,10 @@
         public System.Windows.Forms.Button sell_additem;
         public System.Windows.Forms.Button order_checkout;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel24;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel25;
+        private System.Windows.Forms.Panel panel32;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.ComboBox order_referral;
+        private System.Windows.Forms.Button customer_searchbtn;
     }
 }
