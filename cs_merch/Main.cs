@@ -92,7 +92,7 @@ namespace cs_merch
             var cust_dt = conn.Select("customer", "*")
                         .GetQueryData();
 
-            if(cust_dt != null || cust_dt.Rows.Count == 0)
+            if(cust_dt == null || cust_dt.Rows.Count == 0)
             {
                 customer_list.DataSource = cust_dt;
                 customer_list.Columns["customer_id"].HeaderText = "ID";
