@@ -62,6 +62,7 @@
             this.selectedCustIDTxt = new Bunifu.Framework.UI.BunifuMetroTextbox();
             this.selectedCustNameTxt = new Bunifu.Framework.UI.BunifuMetroTextbox();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.customer_searchbtn = new System.Windows.Forms.Button();
             this.customer_list = new System.Windows.Forms.DataGridView();
             this.customer_search = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.panel5 = new System.Windows.Forms.Panel();
@@ -157,6 +158,13 @@
             this.orders_list = new System.Windows.Forms.DataGridView();
             this.merchandise = new System.Windows.Forms.TabPage();
             this.tableLayoutPanel24 = new System.Windows.Forms.TableLayoutPanel();
+            this.panel33 = new System.Windows.Forms.Panel();
+            this.tableLayoutPanel26 = new System.Windows.Forms.TableLayoutPanel();
+            this.merchandise_list = new System.Windows.Forms.DataGridView();
+            this.label22 = new System.Windows.Forms.Label();
+            this.tableLayoutPanel27 = new System.Windows.Forms.TableLayoutPanel();
+            this.label23 = new System.Windows.Forms.Label();
+            this.panel34 = new System.Windows.Forms.Panel();
             this.reports = new System.Windows.Forms.TabPage();
             this.panel2 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel12 = new System.Windows.Forms.TableLayoutPanel();
@@ -177,7 +185,6 @@
             this.merchandise_e = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.reports_e = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.users_e = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            this.customer_searchbtn = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.superpanel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -250,6 +257,11 @@
             this.tableLayoutPanel14.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.orders_list)).BeginInit();
             this.merchandise.SuspendLayout();
+            this.tableLayoutPanel24.SuspendLayout();
+            this.panel33.SuspendLayout();
+            this.tableLayoutPanel26.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.merchandise_list)).BeginInit();
+            this.tableLayoutPanel27.SuspendLayout();
             this.panel2.SuspendLayout();
             this.tableLayoutPanel12.SuspendLayout();
             this.panel6.SuspendLayout();
@@ -740,6 +752,22 @@
             this.panel4.Size = new System.Drawing.Size(421, 208);
             this.panel4.TabIndex = 1;
             // 
+            // customer_searchbtn
+            // 
+            this.customer_searchbtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.customer_searchbtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
+            this.customer_searchbtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.customer_searchbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.customer_searchbtn.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.customer_searchbtn.ForeColor = System.Drawing.Color.White;
+            this.customer_searchbtn.Location = new System.Drawing.Point(340, 3);
+            this.customer_searchbtn.Name = "customer_searchbtn";
+            this.customer_searchbtn.Size = new System.Drawing.Size(78, 32);
+            this.customer_searchbtn.TabIndex = 24;
+            this.customer_searchbtn.Text = "Search";
+            this.customer_searchbtn.UseVisualStyleBackColor = false;
+            this.customer_searchbtn.Click += new System.EventHandler(this.customer_searchbtn_Click);
+            // 
             // customer_list
             // 
             this.customer_list.AllowUserToAddRows = false;
@@ -1057,7 +1085,7 @@
             this.panel32.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel32.Location = new System.Drawing.Point(3, 3);
             this.panel32.Name = "panel32";
-            this.panel32.Size = new System.Drawing.Size(64, 22);
+            this.panel32.Size = new System.Drawing.Size(63, 22);
             this.panel32.TabIndex = 0;
             // 
             // label21
@@ -1076,9 +1104,9 @@
             this.order_referral.Dock = System.Windows.Forms.DockStyle.Fill;
             this.order_referral.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.order_referral.FormattingEnabled = true;
-            this.order_referral.Location = new System.Drawing.Point(73, 3);
+            this.order_referral.Location = new System.Drawing.Point(72, 3);
             this.order_referral.Name = "order_referral";
-            this.order_referral.Size = new System.Drawing.Size(248, 26);
+            this.order_referral.Size = new System.Drawing.Size(249, 26);
             this.order_referral.TabIndex = 1;
             // 
             // orders
@@ -1957,16 +1985,108 @@
             this.tableLayoutPanel24.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.tableLayoutPanel24.ColumnCount = 2;
-            this.tableLayoutPanel24.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel24.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel24.ColumnCount = 1;
+            this.tableLayoutPanel24.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 64.93092F));
+            this.tableLayoutPanel24.Controls.Add(this.panel33, 0, 0);
             this.tableLayoutPanel24.Location = new System.Drawing.Point(16, 37);
             this.tableLayoutPanel24.Name = "tableLayoutPanel24";
-            this.tableLayoutPanel24.RowCount = 2;
-            this.tableLayoutPanel24.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel24.RowCount = 1;
             this.tableLayoutPanel24.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel24.Size = new System.Drawing.Size(941, 601);
             this.tableLayoutPanel24.TabIndex = 0;
+            // 
+            // panel33
+            // 
+            this.panel33.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel33.Controls.Add(this.tableLayoutPanel26);
+            this.panel33.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel33.Location = new System.Drawing.Point(3, 3);
+            this.panel33.Name = "panel33";
+            this.panel33.Size = new System.Drawing.Size(935, 595);
+            this.panel33.TabIndex = 0;
+            // 
+            // tableLayoutPanel26
+            // 
+            this.tableLayoutPanel26.ColumnCount = 1;
+            this.tableLayoutPanel26.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel26.Controls.Add(this.merchandise_list, 0, 1);
+            this.tableLayoutPanel26.Controls.Add(this.label22, 0, 0);
+            this.tableLayoutPanel26.Controls.Add(this.tableLayoutPanel27, 0, 2);
+            this.tableLayoutPanel26.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel26.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel26.Name = "tableLayoutPanel26";
+            this.tableLayoutPanel26.RowCount = 3;
+            this.tableLayoutPanel26.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 8.86076F));
+            this.tableLayoutPanel26.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 91.13924F));
+            this.tableLayoutPanel26.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 165F));
+            this.tableLayoutPanel26.Size = new System.Drawing.Size(935, 595);
+            this.tableLayoutPanel26.TabIndex = 0;
+            // 
+            // merchandise_list
+            // 
+            this.merchandise_list.AllowUserToAddRows = false;
+            this.merchandise_list.AllowUserToDeleteRows = false;
+            this.merchandise_list.BackgroundColor = System.Drawing.Color.WhiteSmoke;
+            this.merchandise_list.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.merchandise_list.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.merchandise_list.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.merchandise_list.Location = new System.Drawing.Point(3, 41);
+            this.merchandise_list.Name = "merchandise_list";
+            this.merchandise_list.ReadOnly = true;
+            this.merchandise_list.RowHeadersVisible = false;
+            this.merchandise_list.RowTemplate.Height = 24;
+            this.merchandise_list.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.merchandise_list.Size = new System.Drawing.Size(929, 385);
+            this.merchandise_list.TabIndex = 5;
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Dock = System.Windows.Forms.DockStyle.Left;
+            this.label22.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label22.ForeColor = System.Drawing.Color.Purple;
+            this.label22.Location = new System.Drawing.Point(3, 0);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(129, 38);
+            this.label22.TabIndex = 6;
+            this.label22.Text = "Merchandise";
+            this.label22.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // tableLayoutPanel27
+            // 
+            this.tableLayoutPanel27.ColumnCount = 1;
+            this.tableLayoutPanel27.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel27.Controls.Add(this.label23, 0, 0);
+            this.tableLayoutPanel27.Controls.Add(this.panel34, 0, 1);
+            this.tableLayoutPanel27.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel27.Location = new System.Drawing.Point(3, 432);
+            this.tableLayoutPanel27.Name = "tableLayoutPanel27";
+            this.tableLayoutPanel27.RowCount = 2;
+            this.tableLayoutPanel27.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 13.75F));
+            this.tableLayoutPanel27.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 86.25F));
+            this.tableLayoutPanel27.Size = new System.Drawing.Size(929, 160);
+            this.tableLayoutPanel27.TabIndex = 7;
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Dock = System.Windows.Forms.DockStyle.Left;
+            this.label23.Font = new System.Drawing.Font("Century Gothic", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label23.ForeColor = System.Drawing.Color.Purple;
+            this.label23.Location = new System.Drawing.Point(3, 0);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(69, 22);
+            this.label23.TabIndex = 7;
+            this.label23.Text = "Details";
+            this.label23.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // panel34
+            // 
+            this.panel34.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel34.Location = new System.Drawing.Point(3, 25);
+            this.panel34.Name = "panel34";
+            this.panel34.Size = new System.Drawing.Size(923, 132);
+            this.panel34.TabIndex = 8;
             // 
             // reports
             // 
@@ -2190,22 +2310,6 @@
             this.users_e.ElipseRadius = 5;
             this.users_e.TargetControl = this.btnUsers;
             // 
-            // customer_searchbtn
-            // 
-            this.customer_searchbtn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.customer_searchbtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(38)))), ((int)(((byte)(38)))));
-            this.customer_searchbtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.customer_searchbtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.customer_searchbtn.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.customer_searchbtn.ForeColor = System.Drawing.Color.White;
-            this.customer_searchbtn.Location = new System.Drawing.Point(340, 3);
-            this.customer_searchbtn.Name = "customer_searchbtn";
-            this.customer_searchbtn.Size = new System.Drawing.Size(78, 32);
-            this.customer_searchbtn.TabIndex = 24;
-            this.customer_searchbtn.Text = "Search";
-            this.customer_searchbtn.UseVisualStyleBackColor = false;
-            this.customer_searchbtn.Click += new System.EventHandler(this.customer_searchbtn_Click);
-            // 
             // Main
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -2297,6 +2401,13 @@
             this.tableLayoutPanel14.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.orders_list)).EndInit();
             this.merchandise.ResumeLayout(false);
+            this.tableLayoutPanel24.ResumeLayout(false);
+            this.panel33.ResumeLayout(false);
+            this.tableLayoutPanel26.ResumeLayout(false);
+            this.tableLayoutPanel26.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.merchandise_list)).EndInit();
+            this.tableLayoutPanel27.ResumeLayout(false);
+            this.tableLayoutPanel27.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.tableLayoutPanel12.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
@@ -2457,5 +2568,12 @@
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.ComboBox order_referral;
         private System.Windows.Forms.Button customer_searchbtn;
+        private System.Windows.Forms.Panel panel33;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel26;
+        private System.Windows.Forms.DataGridView merchandise_list;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel27;
+        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.Panel panel34;
     }
 }
